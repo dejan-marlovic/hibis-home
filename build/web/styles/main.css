@@ -1,0 +1,201 @@
+body {
+  font-family: Helvetica, sans-serif; }
+
+video {
+  width: 100%; }
+
+#header img {
+  height: 7em;
+  width: 7em; }
+#header nav li {
+  display: inline-block; }
+  #header nav li :after {
+    content: " ";
+    margin: 0.3em; }
+
+#content .row {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+#content #left_blue_text {
+  margin: 1em 0 1em 0;
+  font-weight: 700;
+  font-size: 1.4em; }
+#content #pdf_publications_box {
+  border: thin dashed #6D6E72;
+  padding: 0.5em; }
+  #content #pdf_publications_box .pdf_download_button {
+    overflow: visible;
+    padding: 0.3em;
+    width: 4em;
+    display: inline; }
+    #content #pdf_publications_box .pdf_download_button img {
+      height: 2.5em;
+      width: 2.5em;
+      transform: rotate(90deg);
+      margin-left: -0.5em; }
+#content button {
+  color: #1E3362;
+  background: #E8E8E8;
+  padding: 0.5em; }
+#content .link_description {
+  color: #6D6E72;
+  display: block;
+  padding-bottom: 0.3em; }
+#content #search_box {
+  background: #98D9EB;
+  position: relative;
+  margin-top: -3em;
+  padding: 1.5em; }
+  #content #search_box input {
+    height: 1.5em;
+    margin-bottom: 0; }
+
+#footer {
+  margin-top: -2em; }
+  #footer a img {
+    height: 2.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; }
+  #footer .border-left {
+    border-left: 1px solid #CECECE; }
+  #footer .border-right {
+    border-right: 1px solid #CECECE; }
+
+h2 {
+  padding: 0.5em 1em 0.5em 1em;
+  font-size: 1.8em; }
+  h2 span {
+    font-size: 0.6em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1em; }
+
+p {
+  text-align: justify;
+  line-height: 1.5;
+  color: #6D6E72;
+  font-size: 0.9em; }
+
+.pdf_download_button {
+  overflow: visible;
+  padding: 0.3em;
+  width: 4em;
+  display: inline; }
+  .pdf_download_button img {
+    height: 2.5em;
+    width: 2.5em;
+    transform: rotate(90deg);
+    margin-left: -0.5em; }
+
+.color-white {
+  color: white; }
+
+.color-1 {
+  color: #0BADDB; }
+
+.color-1-light {
+  color: #98D9EB; }
+
+.color-2 {
+  color: #1E3362; }
+
+.color-3 {
+  color: #CECECE; }
+
+.color-3-dark {
+  color: #6D6E72; }
+
+.background-white {
+  background: white; }
+
+.background-color-2 {
+  background-color: #1E3362; }
+
+.background-color-3 {
+  background: #CECECE; }
+
+.background-color-3-light {
+  background: #E8E8E8; }
+
+.white-gray-gradient {
+  background: -webkit-linear-gradient(white, #FBFBFB, #FDFDFD, #F8F8F8, #E8E8E8, #CECECE);
+  background: -o-linear-gradient(white, #FBFBFB, #FDFDFD, #F8F8F8, #E8E8E8, #CECECE);
+  background: -moz-linear-gradient(white, #FBFBFB, #FDFDFD, #F8F8F8, #E8E8E8, #CECECE);
+  background: linear-gradient(white, #FBFBFB, #FDFDFD, #F8F8F8, #E8E8E8, #CECECE); }
+
+.gray-white-gradient {
+  background: -webkit-linear-gradient(#E8E8E8, #CECECE, #F8F8F8, #FDFDFD, #FBFBFB, white);
+  background: -o-linear-gradient(#E8E8E8, #CECECE, #F8F8F8, #FDFDFD, #FBFBFB, white);
+  background: -moz-linear-gradient(#E8E8E8, #CECECE, #F8F8F8, #FDFDFD, #FBFBFB, white);
+  background: linear-gradient(#E8E8E8, #CECECE, #F8F8F8, #FDFDFD, #FBFBFB, white); }
+
+.box-shadow {
+  -webkit-box-shadow: 5px 10px 30px #999999;
+  -o-box-shadow: 5px 10px 30px #999999;
+  -moz-box-shadow: 5px 10px 30px #999999;
+  box-shadow: 5px 10px 30px #999999; }
+
+.bold {
+  font-weight: bold; }
+
+.bolder {
+  font-weight: bolder; }
+
+.normal {
+  font-weight: normal; }
+
+.padding-top-2 {
+  padding-top: 2em; }
+
+.padding-top-1 {
+  padding-top: 1em; }
+
+.padding-top-0-5 {
+  padding-top: 0.5em; }
+
+.padding-top-1-5 {
+  padding-top: 1.5em; }
+
+.padding-1-5 {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em; }
+
+.padding-left-0-5 {
+  padding-left: 0.5em; }
+
+.float-left {
+  float: left; }
+
+.no-margin {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important; }
+
+.overflow-visible {
+  overflow: visible; }
+
+.line-height-105 {
+  line-height: 105%; }
+
+.blue-border {
+  border: solid 1px #98D9EB; }
+
+.right-blue-border {
+  border-right: solid 1px #98D9EB; }
+
+.left-blue-border {
+  border-left: solid 1px #98D9EB; }
+
+.top-blue-border {
+  border-top: solid 0.1em #98D9EB; }
+
+.bottom-blue-border {
+  border-bottom: solid 0.1em #98D9EB; }
+
+@media screen and (min-width: 64em) {
+  .large-border-left {
+    border-left: 1px solid; } }
+
+/*# sourceMappingURL=main.css.map */
