@@ -260,6 +260,11 @@ p
   margin-bottom: 0 !important;
   margin-top: 0 !important;  }
 
+.large-margin-left-1
+{
+
+  margin-left: 1em }
+
 //style
 .overflow-visible
 {
@@ -292,4 +297,9 @@ p
   } }
 
 
-
+@media screen and (max-width: 40em)
+{
+  .large-margin-left-1
+  {
+    margin: 0;
+  } }
