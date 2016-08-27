@@ -4,9 +4,6 @@ body {
 video {
   width: 100%; }
 
-#header img {
-  height: 7em;
-  width: 7em; }
 #header nav li {
   display: inline-block; }
   #header nav li :after {
