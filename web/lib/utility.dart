@@ -25,4 +25,5 @@ class Utility
   static final DateFormat dfDay = new DateFormat.d();
   static final DateFormat dfMonth = new DateFormat.MMMM();
   static final DateFormat dfMonthYear = new DateFormat.yMMMM();
+  static final DateFormat dfMySql = new DateFormat("yyyy-MM-dd");
 }

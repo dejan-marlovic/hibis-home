@@ -23,11 +23,12 @@ if ($msg == "get_rows")
     $where = Utility::valid_or_value("where", $params, "1");
     $orderBy = Utility::valid_or_value("order_by", $params, "id");
     $limit = Utility::valid_or_value("limit", $params, "100");
-    Messsenger::respond($DB->get_rows($system, $columns, $where, $orderBy, $limit), true);
+    Messenger::respond($DB->get_rows($system, $columns, $where, $orderBy, $limit), true);
 }
 
-
-
-
-Messsenger::respond($DB->get_rows("events", "*"), true);
+else
+{
+    require_once(__DIR__ . '/../lib.hibis.com/' . $system . '.php');
+    Messenger::respond($system::parse($msg, $params), true);
+}
 

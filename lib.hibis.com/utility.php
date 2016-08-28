@@ -17,7 +17,7 @@ class Utility
     public static function valid_or_die($param, $param_name = null)
     {
         require_once(__DIR__ . '/messenger.php');
-        isset($param) or Messsenger::respond("Required parameter missing", false, $param_name);
+        isset($param) or Messenger::respond("Required parameter missing", false, $param_name);
         return $param;
     }
 }

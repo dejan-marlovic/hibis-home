@@ -1,6 +1,6 @@
 <?php
 
-class Messsenger
+class Messenger
 {
     public static function respond($result, $success, $extra = null)
     {

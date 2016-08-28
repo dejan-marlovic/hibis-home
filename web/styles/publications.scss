@@ -1,0 +1,32 @@
+@import "colors";
+@import "mixins";
+
+div.book-column
+{
+  min-height: 15.5em;
+
+  img
+  {
+    border: 1px solid $color-2;
+  }
+}
+
+.book-brief
+{
+  color: $color-1;
+  position: absolute;
+  padding: 1em;
+  margin: 0 1em 0 0;
+  background-color: white;
+  border: 1px solid $color-1;
+  text-align: left;
+  @include box-shadow(1px 1px 2px $color-1);
+}
+
+div.article-column
+{
+  min-height: 9em;
+  padding-top: 0.5em;
+  margin-bottom: 2em;
+  background-color: $color-3-light;
+}

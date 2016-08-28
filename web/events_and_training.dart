@@ -5,7 +5,8 @@ import 'dart:async';
 import 'dart:html';
 import 'lib/page.dart';
 import 'lib/messenger.dart';
-import 'lib/event_manager.dart';
+import 'lib/dynamic_html.dart';
+import 'lib/utility.dart';
 
 Future main() async
 {
@@ -20,27 +21,29 @@ Future main() async
     row = response.getNextRow();
   }
 
-  DivElement eventsContainer = querySelector("#upcoming-events");
-  response = await Messenger.post(new Request("get_rows", "events", {"order_by":"id DESC", "limit":"3"}));
+  DateTime now = new DateTime.now();
+  String strNow = Utility.dfMySql.format(now);
+  DivElement upcomingEventsContainer = querySelector("#upcoming-events");
+  response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start > '$strNow'", "order_by":"date_start DESC", "limit":"3"}));
   row = response.getNextRow();
   while (row != null)
   {
-    eventsContainer.append(EventManager.generateEventRowHtml(row));
+    upcomingEventsContainer.append(DynamicHtml.generateEventRow(row, true));
     row = response.getNextRow();
   }
 
+  DivElement pastEventsContainer = querySelector("#past-events");
+  response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start < '$strNow'", "order_by":"date_start DESC"}));
+  row = response.getNextRow();
+  while (row != null)
+  {
+    pastEventsContainer.append(DynamicHtml.generateEventRow(row));
+    row = response.getNextRow();
+  }
 
   Page.show();
 }
 
-DivElement generateEventRow(Map<String, String> data)
-{
-  DivElement row = new DivElement();
-
-
-
-  return row;
-}
 
 DivElement generateCourseRow(Map<String, String> data)
 {
@@ -73,8 +76,16 @@ DivElement generateCourseRow(Map<String, String> data)
   {
     if (e.button == 0)
     {
-      if (descLongContainer.classes.contains("is-hidden")) descLongContainer.classes.remove("is-hidden");
-      else descLongContainer.classes.add("is-hidden");
+      if (descLongContainer.classes.contains("is-hidden"))
+      {
+        descLongContainer.classes.remove("is-hidden");
+        toggle.setInnerHtml("&lt;less&gt;");
+      }
+      else
+      {
+        descLongContainer.classes.add("is-hidden");
+        toggle.setInnerHtml("&lt;more&gt;");
+      }
     }
 
   });

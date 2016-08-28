@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:html';
 import 'messenger.dart';
 import 'utility.dart';
+import 'dynamic_html.dart';
 
 class Page
 {
@@ -26,7 +27,7 @@ class Page
       Map<String, String> row = response.getNextRow();
       while (row != null)
       {
-        container.append(generateArticleRowHtml(row));
+        container.append(DynamicHtml.generateArticleRow(row));
         row = response.getNextRow();
       }
     }
@@ -53,46 +54,6 @@ class Page
     String response = await HttpRequest.getString(source);
     if (into != null) into.setInnerHtml(response, validator:htmlValidator);
     return response;
-  }
-
-  static DivElement generateArticleRowHtml(Map<String, String> data)
-  {
-    DivElement row = new DivElement();
-    DivElement col1 = new DivElement();
-    DivElement col2 = new DivElement();
-    HeadingElement name = new HeadingElement.h4();
-    SpanElement date = new SpanElement();
-    AnchorElement link = new AnchorElement(href:data["url_pdf"]);
-    DivElement viewPdfContainer = new DivElement();
-    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
-    SpanElement viewPdfLabel = new SpanElement();
-    row.append(col1);
-    row.append(col2);
-    col2.append(name);
-    col2.append(date);
-    col2.append(link);
-    link.append(viewPdfContainer);
-    viewPdfContainer.append(viewPdfIcon);
-    viewPdfContainer.append(viewPdfLabel);
-
-    row.className = "bold row collapse";
-    col1.className = "small-1 columns";
-    col2.className = "small-11 columns";
-    name.className = "color-2 bold no-margin";
-    date.className = "link_description normal";
-    viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
-    viewPdfLabel.className = "normal";
-
-    col1.setInnerHtml("&raquo;");
-    name.setInnerHtml(data["name"]);
-
-    DateTime dt = DateTime.parse(data["date"]);
-
-    date.setInnerHtml(Utility.dfMonthYear.format(dt));
-    /// TODO phrase
-    viewPdfLabel.setInnerHtml(" view PDF");
-
-    return row;
   }
 
   static final NodeValidator htmlValidator = new NodeValidatorBuilder.common()
