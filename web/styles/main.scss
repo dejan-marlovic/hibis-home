@@ -14,12 +14,6 @@ $color_4_light:#FBFBFB;
 $color_4_dark: #F8F8F8;
 
 //mixin
-@mixin linear-gradient($colors...)
-{
-  background: -webkit-linear-gradient($colors);
-  background: -o-linear-gradient($colors);
-  background: -moz-linear-gradient($colors);
-  background: linear-gradient($colors);  }
 @mixin box-shadow($shadows)
 {
   -webkit-box-shadow: $shadows;
@@ -27,9 +21,27 @@ $color_4_dark: #F8F8F8;
   -moz-box-shadow: $shadows;
   box-shadow: $shadows;  }
 
+@mixin linear-gradient($colors...)
+{
+  background: -webkit-linear-gradient($colors);
+  background: -o-linear-gradient($colors);
+  background: -moz-linear-gradient($colors);
+  background: linear-gradient($colors);  }
+
+@mixin transition($value)
+{
+  transition: $value;
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+}
+
 body
 {
-   font-family: $font_stack;  }
+  opacity: 0;
+  font-family: $font_stack;
+  @include transition(opacity 0.5s ease);
+}
 
 video
 {
@@ -283,6 +295,12 @@ p
 .bottom-blue-border
 {
   border-bottom: solid 0.1em  $color_1_light;  }
+
+.twitter-container
+{
+  min-height:11em;
+}
+
 
 @media screen and (min-width: 64em)
 {

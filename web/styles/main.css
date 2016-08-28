@@ -1,5 +1,10 @@
 body {
-  font-family: Helvetica, sans-serif; }
+  opacity: 0;
+  font-family: Helvetica, sans-serif;
+  transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease; }
 
 video {
   width: 100%; }
@@ -193,6 +198,9 @@ p {
 
 .bottom-blue-border {
   border-bottom: solid 0.1em #98D9EB; }
+
+.twitter-container {
+  min-height: 11em; }
 
 @media screen and (min-width: 64em) {
   .large-border-left {
