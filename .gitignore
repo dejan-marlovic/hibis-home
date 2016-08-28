@@ -3,6 +3,8 @@
 .pub/
 packages/
 build/
+.packages
+
 
 # Windows image file caches
 Thumbs.db
@@ -136,3 +138,5 @@ web/video/packages/string_scanner/
 web/video/packages/typed_data/
 web/video/packages/watcher/
 web/video/packages/yaml/
+*.packages
+web/pdf/
