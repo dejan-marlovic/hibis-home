@@ -1,0 +1,9 @@
+@import "colors";
+
+div.long-description-container
+{
+  border-top: 1px solid $color_1_light;
+  border-bottom: 0.5em solid $color-1-light;
+  margin-bottom: 2em;
+  padding-top: 1em;
+}

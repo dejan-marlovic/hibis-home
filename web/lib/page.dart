@@ -6,6 +6,7 @@ library page;
 import 'dart:async';
 import 'dart:html';
 import 'messenger.dart';
+import 'utility.dart';
 
 class Page
 {
@@ -19,18 +20,23 @@ class Page
       twitterWidget.charset = "utf-8";
       document.body.append(twitterWidget);
 
+      DivElement container = panelRight.querySelector("#pdf_publications_box");
       /// List latest publications
       Response response = await Messenger.post(new Request("get_rows", "publications", {"columns":"name, date, url_pdf", "order_by":"id DESC", "limit":"3"}));
       Map<String, String> row = response.getNextRow();
       while (row != null)
       {
-        print(row);
+        container.append(generateArticleRowHtml(row));
         row = response.getNextRow();
       }
     }
     else if (panelRightSmall != null)
     {
-
+      await importHtml("inc-panel-right-small.html", panelRightSmall);
+      ScriptElement twitterWidget = new ScriptElement();
+      twitterWidget.src = "//platform.twitter.com/widgets.js";
+      twitterWidget.charset = "utf-8";
+      document.body.append(twitterWidget);
     }
 
     if (header != null) await importHtml("inc-header.html", header);
@@ -51,30 +57,42 @@ class Page
 
   static DivElement generateArticleRowHtml(Map<String, String> data)
   {
+    DivElement row = new DivElement();
+    DivElement col1 = new DivElement();
+    DivElement col2 = new DivElement();
+    HeadingElement name = new HeadingElement.h4();
+    SpanElement date = new SpanElement();
+    AnchorElement link = new AnchorElement(href:data["url_pdf"]);
+    DivElement viewPdfContainer = new DivElement();
+    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
+    SpanElement viewPdfLabel = new SpanElement();
+    row.append(col1);
+    row.append(col2);
+    col2.append(name);
+    col2.append(date);
+    col2.append(link);
+    link.append(viewPdfContainer);
+    viewPdfContainer.append(viewPdfIcon);
+    viewPdfContainer.append(viewPdfLabel);
 
+    row.className = "bold row collapse";
+    col1.className = "small-1 columns";
+    col2.className = "small-11 columns";
+    name.className = "color-2 bold no-margin";
+    date.className = "link_description normal";
+    viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
+    viewPdfLabel.className = "normal";
 
-    /*
+    col1.setInnerHtml("&raquo;");
+    name.setInnerHtml(data["name"]);
 
-    <div class="bold row collapse">
-                <div class="small-1 columns">
-                    <span>&raquo;</span>
-                </div>
-                <div class="small-11 columns">
-                    <a><h4 class="color-2 bold no-margin lang-exp" data-exp=blinkers_off_counter-fraud_pdf_link">"Blinkers off":counter-fraud,is it a self-serving profession"</h4></a>
-                    <span class="link_description normal">April - May 2016</span>
-                    <a>
-                        <div class="pdf_download_button background-color-3-light color-2">
-                            <img src="gfx/blue_arrow.png"/>
-                            <span class="normal langexp" data-exp="view_pdf"> view PDF</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+    DateTime dt = DateTime.parse(data["date"]);
 
+    date.setInnerHtml(Utility.dfMonthYear.format(dt));
+    /// TODO phrase
+    viewPdfLabel.setInnerHtml(" view PDF");
 
-     */
-
-
+    return row;
   }
 
   static final NodeValidator htmlValidator = new NodeValidatorBuilder.common()

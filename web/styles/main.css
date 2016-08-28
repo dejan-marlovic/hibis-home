@@ -49,8 +49,9 @@ video {
   margin-top: -3em;
   padding: 1.5em; }
   #content #search_box input {
-    height: 1.5em;
-    margin-bottom: 0; }
+    height: 2em;
+    margin-bottom: 0;
+    color: #1E3362; }
 
 #footer {
   margin-top: -2em; }
@@ -139,6 +140,13 @@ p {
   -o-box-shadow: 5px 10px 30px #999999;
   -moz-box-shadow: 5px 10px 30px #999999;
   box-shadow: 5px 10px 30px #999999; }
+
+.clickable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer; }
 
 .bold {
   font-weight: bold; }

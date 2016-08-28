@@ -1,17 +1,6 @@
+@import "colors";
+
 $font_stack: Helvetica, sans-serif;
-//blue
-$color_1: #0BADDB;
-$color_1_light: #98D9EB;
-//indigo
-$color_2: #1E3362;
-//gray
-$color_3: #CECECE;
-$color_3_light:#E8E8E8;
-$color_3_dark: #6D6E72;
-//white
-$color_4: #FDFDFD;
-$color_4_light:#FBFBFB;
-$color_4_dark: #F8F8F8;
 
 //mixin
 @mixin box-shadow($shadows)
@@ -34,6 +23,14 @@ $color_4_dark: #F8F8F8;
   -webkit-transition: $value;
   -moz-transition: $value;
   -o-transition: $value;
+}
+
+@mixin user-select($value)
+{
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
 }
 
 body
@@ -81,19 +78,19 @@ video
     padding: 0.5em;
 
     .pdf_download_button
-   {
-     overflow: visible;
-     padding: 0.3em;
-     width: 4em;
-     display: inline;
-     img
-     {
-       height: 2.5em;
-       width: 2.5em;
-       transform: rotate(90deg);
-       margin-left: -0.5em;
-     }
-   }
+    {
+      overflow: visible;
+      padding: 0.3em;
+      width: 4em;
+      display: inline;
+      img
+      {
+        height: 2.5em;
+        width: 2.5em;
+        transform: rotate(90deg);
+        margin-left: -0.5em;
+      }
+    }
   }
 
   button
@@ -117,8 +114,9 @@ video
     padding: 1.5em;
     input
     {
-      height: 1.5em;
+      height: 2em;
       margin-bottom: 0;
+      color: $color_2;
     }
   }
 }
@@ -163,8 +161,8 @@ h4
 p
 {
   text-align: justify;
-   line-height: 1.5;
-   color: $color_3_dark;
+  line-height: 1.5;
+  color: $color_3_dark;
   font-size: 0.9em;
 }
 
@@ -224,6 +222,12 @@ p
 .box-shadow
 {
   @include box-shadow(5px 10px 30px #999999);  }
+
+.clickable
+{
+  @include user-select(none);
+  cursor: pointer;
+}
 
 //font-weight
 .bold
