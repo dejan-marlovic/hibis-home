@@ -1,2 +1,0 @@
-1.19.0
-dart_to_js_script_rewriter
