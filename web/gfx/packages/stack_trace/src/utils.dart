@@ -2,11 +2,15 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-library stack_trace.src.utils;
+import 'package:path/path.dart' as p;
 
 /// The line used in the string representation of stack chains to represent
 /// the gap between traces.
 const chainGap = '===== asynchronous gap ===========================\n';
+
+// TODO(nweiz): When cross-platform imports work, use them to set this.
+/// Whether we're running in a JS context.
+final bool inJS = p.style == p.Style.url;
 
 /// Returns [string] with enough spaces added to the end to make it [length]
 /// characters long.
@@ -20,21 +24,4 @@ String padRight(String string, int length) {
   }
 
   return result.toString();
-}
-
-/// Flattens nested lists inside an iterable into a single list containing only
-/// non-list elements.
-List flatten(Iterable nested) {
-  var result = [];
-  helper(list) {
-    for (var element in list) {
-      if (element is List) {
-        helper(element);
-      } else {
-        result.add(element);
-      }
-    }
-  }
-  helper(nested);
-  return result;
 }

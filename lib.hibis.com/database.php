@@ -13,7 +13,7 @@ class Database
         catch (PDOException $e)
         {
             require_once(__DIR__ . '/messenger.php');
-            Messsenger::respond("Server database error", false, $e->getMessage());
+            Messenger::respond("Server database error", false, $e->getMessage());
         }
     }
 
@@ -45,7 +45,7 @@ class Database
         }
         catch (PDOException $e)
         {
-            Messsenger::respond("Server database error", false, $e->getMessage());
+            Messenger::respond("Server database error", false, $e->getMessage());
         }
         return null;
     }
@@ -56,10 +56,14 @@ class Database
         {
             $stmnt = $this->dbh->prepare($statement);
             if ($stmnt->execute($array) == true) return $stmnt->fetchAll($fetch);
+            else
+            {
+                Messenger::respond("Server database error", false, $this->dbh->errorInfo());
+            }
         }
         catch (PDOException $e)
         {
-            Messsenger::respond("Server database error", false, $e->getMessage());
+            Messenger::respond("Server database error", false, $e->getMessage());
         }
         return null;
     }
@@ -75,7 +79,7 @@ class Database
         }
         catch (PDOException $e)
         {
-            Messsenger::respond("Server database error", false, $e->getMessage());
+            Messenger::respond("Server database error", false, $e->getMessage());
         }
     }
 

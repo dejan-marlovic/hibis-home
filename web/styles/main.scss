@@ -1,37 +1,7 @@
 @import "colors";
+@import "mixins";
 
 $font_stack: Helvetica, sans-serif;
-
-//mixin
-@mixin box-shadow($shadows)
-{
-  -webkit-box-shadow: $shadows;
-  -o-box-shadow: $shadows;
-  -moz-box-shadow: $shadows;
-  box-shadow: $shadows;  }
-
-@mixin linear-gradient($colors...)
-{
-  background: -webkit-linear-gradient($colors);
-  background: -o-linear-gradient($colors);
-  background: -moz-linear-gradient($colors);
-  background: linear-gradient($colors);  }
-
-@mixin transition($value)
-{
-  transition: $value;
-  -webkit-transition: $value;
-  -moz-transition: $value;
-  -o-transition: $value;
-}
-
-@mixin user-select($value)
-{
-  -webkit-user-select: $value;
-  -moz-user-select: $value;
-  -ms-user-select: $value;
-  user-select: $value;
-}
 
 body
 {

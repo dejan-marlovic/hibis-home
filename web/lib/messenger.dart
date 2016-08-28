@@ -22,7 +22,6 @@ class Messenger
     return response;
   }
 
-
   static final String parserUrl = "http://api.hibis.com";
   static final String _user = "auto";
   static final String _password = "lok13rum";
@@ -50,10 +49,18 @@ class Response
 {
   Response(String response)
   {
-    Map<String, dynamic> r = JSON.decode(response);
-
-    _success = r["success"];
-    _result = r["result"];
+    print("response: $response");
+    if (response.isEmpty)
+    {
+      _result = new Map<String, String>();
+      _success = true;
+    }
+    else
+    {
+      Map<String, dynamic> r = JSON.decode(response);
+      _success = r["success"];
+      _result = r["result"];
+    }
   }
 
   Map<String, String> getRow([int index = 0])
@@ -65,8 +72,7 @@ class Response
 
   Map<String, String> getNextRow()
   {
-    if (isEmpty) throw new Exception(emptyResultMsg);
-    if (isMap && _nextRowIndex != 0 || isList && _nextRowIndex >= (_result as List).length) return null;
+    if (isEmpty || (isMap && _nextRowIndex != 0) || (isList && _nextRowIndex >= (_result as List).length)) return null;
     _nextRowIndex++;
     return isMap ? (_result as Map) : (_result as List)[_nextRowIndex-1];
   }

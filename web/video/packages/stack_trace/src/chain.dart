@@ -2,10 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-library stack_trace.chain;
-
 import 'dart:async';
-import 'dart:collection';
 import 'dart:math' as math;
 
 import 'frame.dart';
@@ -70,8 +67,8 @@ class Chain implements StackTrace {
   /// considered unhandled.
   ///
   /// If [callback] returns a value, it will be returned by [capture] as well.
-  static capture(callback(), {void onError(error, Chain chain),
-      bool when: true}) {
+  static /*=T*/ capture/*<T>*/(/*=T*/ callback(),
+      {void onError(error, Chain chain), bool when: true}) {
     if (!when) {
       var newOnError;
       if (onError != null) {
@@ -80,7 +77,8 @@ class Chain implements StackTrace {
         };
       }
 
-      return runZoned(callback, onError: newOnError);
+      // TODO(rnystrom): Remove this cast if runZoned() gets a generic type.
+      return runZoned(callback, onError: newOnError) as dynamic/*=T*/;
     }
 
     var spec = new StackZoneSpecification(onError);
@@ -93,7 +91,8 @@ class Chain implements StackTrace {
       }
     }, zoneSpecification: spec.toSpec(), zoneValues: {
       #stack_trace.stack_zone.spec: spec
-    });
+    }) as dynamic/*=T*/;
+    // TODO(rnystrom): Remove this cast if runZoned() gets a generic type.
   }
 
   /// Returns [futureOrStream] unmodified.
@@ -146,7 +145,7 @@ class Chain implements StackTrace {
 
   /// Returns a new [Chain] comprised of [traces].
   Chain(Iterable<Trace> traces)
-      : traces = new UnmodifiableListView<Trace>(traces.toList());
+      : traces = new List<Trace>.unmodifiable(traces);
 
   /// Returns a terser version of [this].
   ///
@@ -195,7 +194,7 @@ class Chain implements StackTrace {
   ///
   /// The trace version of a chain is just the concatenation of all the traces
   /// in the chain.
-  Trace toTrace() => new Trace(flatten(traces.map((trace) => trace.frames)));
+  Trace toTrace() => new Trace(traces.expand((trace) => trace.frames));
 
   String toString() {
     // Figure out the longest path so we know how much to pad.

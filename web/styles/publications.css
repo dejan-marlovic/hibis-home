@@ -1,0 +1,25 @@
+div.book-column {
+  min-height: 15.5em; }
+  div.book-column img {
+    border: 1px solid #1E3362; }
+
+.book-brief {
+  color: #0BADDB;
+  position: absolute;
+  padding: 1em;
+  margin: 0 1em 0 0;
+  background-color: white;
+  border: 1px solid #0BADDB;
+  text-align: left;
+  -webkit-box-shadow: 1px 1px 2px #0BADDB;
+  -o-box-shadow: 1px 1px 2px #0BADDB;
+  -moz-box-shadow: 1px 1px 2px #0BADDB;
+  box-shadow: 1px 1px 2px #0BADDB; }
+
+div.article-column {
+  min-height: 9em;
+  padding-top: 0.5em;
+  margin-bottom: 2em;
+  background-color: #E8E8E8; }
+
+/*# sourceMappingURL=publications.css.map */

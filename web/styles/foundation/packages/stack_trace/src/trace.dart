@@ -2,9 +2,6 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-library trace;
-
-import 'dart:collection';
 import 'dart:math' as math;
 
 import 'chain.dart';
@@ -83,12 +80,12 @@ class Trace implements StackTrace {
           "to 0.");
     }
 
-    try {
-      throw '';
-    } catch (_, nativeTrace) {
-      var trace = new Trace.from(nativeTrace);
-      return new LazyTrace(() => new Trace(trace.frames.skip(level + 1)));
-    }
+    var trace = new Trace.from(StackTrace.current);
+    return new LazyTrace(() {
+      // JS includes a frame for the call to StackTrace.current, but the VM
+      // doesn't, so we skip an extra frame in a JS context.
+      return new Trace(trace.frames.skip(level + (inJS ? 2 : 1)));
+    });
   }
 
   /// Returns a new stack trace containing the same data as [trace].
@@ -211,7 +208,7 @@ class Trace implements StackTrace {
 
   /// Returns a new [Trace] comprised of [frames].
   Trace(Iterable<Frame> frames)
-      : frames = new UnmodifiableListView<Frame>(frames.toList());
+      : frames = new List<Frame>.unmodifiable(frames);
 
   /// Returns a VM-style [StackTrace] object.
   ///
@@ -263,7 +260,7 @@ class Trace implements StackTrace {
       };
     }
 
-    var newFrames = [];
+    var newFrames = <Frame>[];
     for (var frame in frames.reversed) {
       if (frame is UnparsedFrame || !predicate(frame)) {
         newFrames.add(frame);

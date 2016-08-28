@@ -14,10 +14,10 @@
     <link rel="icon" type="image/png" href="gfx/favicon.png">
     <link rel="stylesheet" href="styles/foundation/foundation.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/publications.css">
     <script defer src="publications.dart" type="application/dart"></script>
     <script defer src="packages/browser/dart.js"></script>
 </head>
-
 <body>
 <div id="header" class="row"></div>
 <div id="content" class="row padding-top-2 gray-white-gradient">
@@ -40,47 +40,10 @@
                     <div class="columns">
                         <div class="row">
                             <div class="columns">
-                                <h3 class="bolder lang-exp color-2" data-exp="our_books_header">Our books</h3>
+                                <h3 class="bolder lang-exp color-2" data-exp="our_books_header">Our Books</h3>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="right-blue-border medium-3 columns">
-                                <img src="gfx/fraud_risk_book.png" alt="fraud risk book"/>
-                            </div>
-                            <div class="medium-3 color-1 padding-1-5  columns">
-                                <h4 class="bolder color-1 lang-exp" data-exp="fraud_risk_book_title">A SHORT GUIDE TO FRAUD RISK</h4>
-                                <p class="lang-exp" data-exp="fraud_risk_author_format">
-                                    Author: Nigel lyer and <br/>
-                                    Martin Samociuk<br/>
-                                    Format: Print book
-                                </p>
-                            </div>
-                            <div class="medium-3 right-blue-border columns">
-                                <img src="gfx/the_tightrope_book.png" alt="fraud risk book"/>
-                            </div>
-                            <div class="medium-3 color-1 padding-1-5 columns">
-                                <h4 class="bolder color-1 lang-exp" data-exp="the_tightrope_book_title">THE TIGHTROPE</h4>
-                                <p class="lang-exp" data-exp="the_tightrope_author_format">
-                                    Author: Nigel lyer <br/>
-                                    Format: Print book
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="right-blue-border medium-3 columns">
-                                <img src="gfx/fraud_resistance_book.png" alt="fraud risk book"/>
-                            </div>
-                            <div class="medium-3 color-1 padding-1-5  columns">
-                                <h4 class="bolder color-1 lang-exp" data-exp="fraud_resistance_book_title">FRAUD RESISTANCE</h4>
-                                <p class="lang-exp" data-exp="fraud_resistance_author_format">
-                                    Author: Nigel lyer and <br/>
-                                    Martin Samociuk<br/>
-                                    Format: Print book
-                                </p>
-                            </div>
-                            <div class="medium-3 right-blue-border columns">
-                            </div>
-                        </div>
+                        <div class="row" id="books-container"></div>
                     </div>
                 </div>
                 <div class="row collapse top-blue-border">
@@ -90,79 +53,8 @@
                             contact us directly, we are usually able to deliver directly from our stock.
                         </p>
                     </div>
-                    <div class="columns">
-                        <h3 class="bolder color-2">
-                            Publications
-                        </h3>
-                    </div>
-                    <div class="columns">
-                        <div class="row">
-                            <div class="medium-6 columns">
-                                <a><h4 class="color-2 bold no-margin lang-exp" data-exp=blinkers_off_counter-fraud_pdf_link">&raquo;&nbsp;&nbsp;"Blinkers off":counter-fraud,is it a self-serving profession"</h4></a>
-                                <span class="link_description normal">April - May 2016</span>
-                                <a>
-                                    <div class="pdf_download_button background-color-3-light color-2">
-                                        <img src="gfx/blue_arrow.png"/>
-                                        <span class="normal langexp" data-exp="view_pdf"> view PDF</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="medium-6 columns">
-                                <a><h4 class="color-2 bold no-margin lang-exp" data-exp=blinkers_off_counter-fraud_pdf_link">&raquo;&nbsp;&nbsp;"Blinkers off":counter-fraud,is it a self-serving profession"</h4></a>
-                                <span class="link_description normal">April - May 2016</span>
-                                <a>
-                                    <div class="pdf_download_button background-color-3-light color-2">
-                                        <img src="gfx/blue_arrow.png"/>
-                                        <span class="normal langexp" data-exp="view_pdf"> view PDF</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="medium-6 columns">
-                                <a><h4 class="color-2 bold lang-exp no-margin" data-exp=Blinkers_off_counter-fraud_pdf_link">&raquo;&nbsp;&nbsp;Why more rules do not mean better behavior</h4></a>
-                                <span class="link_description normal">February 2016</span>
-                                <a>
-                                    <div class="pdf_download_button color-2 background-color-3-light">
-                                        <img src="gfx/blue_arrow.png"/>
-                                        <span class="normal lang-exp" data-exp="view_pdf"> view PDF</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="medium-6 columns">
-                                <a><h4 class="color-2 bold lang-exp no-margin" data-exp=Blinkers_off_counter-fraud_pdf_link">&raquo;&nbsp;&nbsp;Why more rules do not mean better behavior</h4></a>
-                                <span class="link_description normal">February 2016</span>
-                                <a>
-                                    <div class="pdf_download_button color-2 background-color-3-light">
-                                        <img src="gfx/blue_arrow.png"/>
-                                        <span class="normal lang-exp" data-exp="view_pdf"> view PDF</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="medium-6 columns">
-                                <a><h4 class="color-2 bold lang-exp no-margin" data-exp=blinkers_off_counter-fraud_pdf_link">&raquo;&nbsp;&nbsp;Actions speak louder than rules</h4></a>
-                                <span class="link_description normal lang-exp" data-exp="april_may_2015">April - May 2015</span>
-                                <a>
-                                    <div class="pdf_download_button color-2 background-color-3-light">
-                                        <img src="gfx/blue_arrow.png"/>
-                                        <span class="normal lang-exp" data-exp="view_pdf"> view PDF</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="medium-6 columns">
-                                <a><h4 class="color-2 bold lang-exp no-margin" data-exp=blinkers_off_counter-fraud_pdf_link">&raquo;&nbsp;&nbsp;"Actions speak louder than rules</h4></a>
-                                <span class="link_description normal lang-exp" data-exp="april_may_2015">April - May 2015</span>
-                                <a>
-                                    <div class="pdf_download_button color-2 background-color-3-light">
-                                        <img src="gfx/blue_arrow.png"/>
-                                        <span class="normal lang-exp" data-exp="view_pdf"> view PDF</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="columns"><h3 class="bolder color-2">Publications</h3></div>
+                    <div class="columns"><div class="row" id="publications-container"></div></div>
                 </div>
             </div>
             <div class="large-3 medium-4 columns" id="panel-right-small"></div>
