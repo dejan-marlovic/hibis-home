@@ -166,6 +166,53 @@ p
   font-size: 0.9em;
 }
 
+form
+{
+  .row
+  {
+    margin-bottom:0.5rem !important;
+    margin-top:0.5rem !important;
+  }
+  input[type="text"]
+  {
+    height: 1.5em !important;
+    background-color: $color_3_light;
+  }
+
+  input[type="email"]
+  {
+    height: 1.5em !important;
+    background-color: $color_3_light;
+  }
+
+  input [type="checkbox"]
+  {
+    background-color: $color_3_light;
+  }
+  textarea
+  {
+    background-color: $color_3_light;
+  }
+  label
+  {
+    display: inline;
+  }
+  span
+  {
+    font-size: 0.7em;
+  }
+  button[type="submit"]
+  {
+    background: white !important;
+    color: $color_1_light !important;
+    border: solid 1px $color_1_light !important;
+    font-weight: bolder;
+    margin-top: 2em;
+  }
+}
+
+
+
 .pdf_download_button
 {
   overflow: visible;
@@ -240,6 +287,9 @@ p
 .normal
 {
   font-weight: normal;  }
+.bold-500
+{
+  font-weight: 500;  }
 
 //margin padding and positioning
 .padding-top-2
@@ -270,11 +320,18 @@ p
 {
   margin-bottom: 0 !important;
   margin-top: 0 !important;  }
-
 .large-margin-left-1
 {
 
   margin-left: 1em }
+.margin-bottom-2
+{
+  margin-bottom: 2em;
+}
+.margin-top-4
+{
+  margin-top: 4em;
+}
 
 //style
 .overflow-visible
@@ -299,24 +356,43 @@ p
 .bottom-blue-border
 {
   border-bottom: solid 0.1em  $color_1_light;  }
-
+.right-gray-border
+{
+  border-right: solid 0.1em  $color_3;
+}
 .twitter-container
 {
   min-height:11em;
 }
 
 
-@media screen and (min-width: 64em)
+@media screen and (min-width: 64.063em)
 {
   .large-border-left
   {
-    border-left: 1px solid;
+    border-left: 1px solid $color_3_dark;
   } }
+
+
+@media screen and (min-width: 40em)
+{
+  .medium-border-left
+  {
+    border-left: 1px solid $color_3_dark;
+  }
+}
 
 
 @media screen and (max-width: 40em)
 {
+  .small-border-left
+  {
+    border-left: 1px solid $color_3_dark;
+  }
   .large-margin-left-1
   {
     margin: 0;
-  } }
+  }
+}
+
+

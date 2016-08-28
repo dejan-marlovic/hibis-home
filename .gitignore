@@ -3,6 +3,8 @@
 .pub/
 packages/
 build/
+.packages
+pubspec.lock
 
 # Windows image file caches
 Thumbs.db
