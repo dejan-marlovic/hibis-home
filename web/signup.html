@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2016, Hibis. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibis - registration</title>
+    <link rel="icon" type="image/png" href="gfx/favicon.png">
+    <link rel="stylesheet" href="styles/foundation/foundation.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/publications.css">
+    <script defer src="signup.dart" type="application/dart"></script>
+    <script defer src="packages/browser/dart.js"></script>
+</head>
+<body>
+<div id="header" class="row"></div>
+<div id="content" class="row padding-top-2 gray-white-gradient">
+    <div class="overflow-visible background-white box-shadow large-10 large-offset-1 columns">
+        <div class="row no-margin">
+            <h2 class="columns color-white background-color-2 bolder lang-exp" data-exp="registration_form">Registration Form</h2>
+        </div>
+        <div class="row">
+            <div class="large-9 medium-8 columns">
+                <div class="row">
+                    <div class="columns">
+                        <p class="lang-exp" data-exp="registration_form_paragraph">
+                            Enter your details below, one submission per applicant.
+                            Fields marked with and asterisk (*) are required.
+                        </p>
+                    </div>
+                </div>
+                <!-- fields -->
+                <div class="row">
+                    <div class="large-6 columns">
+                        <div class="row">
+                            <div class="columns text-right">
+                                <h4 class="lang-exp color-1 bold" data-exp="billing_information">Billing Information</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="organisation" class="lang-exp" data-exp="organisation">Organisation*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="organisation" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="department" class="lang-exp" data-exp="department">Department</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="department" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="payment_reference" class="lang-exp" data-exp="payment_reference">Payment Reference*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="payment_reference" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="address" class="lang-exp" data-exp="address">Address</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="address" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="postal_code" class="lang-exp" data-exp="postal_code">Postal code*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="12" id="postal_code" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="city" class="lang-exp" data-exp="city">City*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="city" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="country" class="lang-exp" data-exp="country">Country*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="country" required />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="large-6 columns">
+                        <div class="row">
+                            <div class="columns text-right">
+                                <h4 class="lang-exp color-1 bold" data-exp="participant_information">Participant Information</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="firstname" class="lang-exp" data-exp="firstname">First Name*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="firstname" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="lastname" class="lang-exp" data-exp="lastname">Last Name*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="lastname" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="title" class="lang-exp" data-exp="title">Title</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="128" id="title" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="email" class="lang-exp" data-exp="email">E-mail*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="email" maxlength="256" id="email" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="telephone" class="lang-exp" data-exp="telephone">Telephone</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="256" id="telephone" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="discount_code" class="lang-exp" data-exp="discount_code">Discount code</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="64" id="discount_code" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="medium-5 columns text-right">
+                                <label for="anti_spam" class="lang-exp" data-exp="anti_spam">Anti-spam*</label>
+                            </div>
+                            <div class="medium-7 columns">
+                                <input type="text" maxlength="32" id="anti_spam" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="large-3 medium-4 columns" id="panel-right"></div>
+        </div>
+    </div>
+</div>
+<div id="footer" class="row background-color-3-light color-3"></div>
+</body>
+</html>

@@ -263,7 +263,7 @@ class DynamicHtml
     row1Col.className = "columns";
 
     name.className = "color-1 bolder padding-top-1";
-    toggle.className = "clickable";
+    toggle.className = "clickable no-margin";
     name.setInnerHtml("${data["firstname"]} ${data["lastname"]} +");
     shortDescription.setInnerHtml(data["description_short"]);
     toggle.setInnerHtml("&lt;Read more&gt;");
