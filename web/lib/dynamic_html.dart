@@ -144,7 +144,7 @@ class DynamicHtml
     return column;
   }
 
-  static DivElement generateEventRow(Map<String, String> data, [bool signup = false])
+  static DivElement generateEventRow(Map<String, String> data, [bool sign_up = false])
   {
     DivElement row = new DivElement();
     DivElement column = new DivElement();
@@ -210,7 +210,7 @@ class DynamicHtml
       }
     });
 
-    if (signup == true)
+    if (sign_up == true)
     {
       ButtonElement signUp = new ButtonElement();
       column.append(signUp);
@@ -227,6 +227,100 @@ class DynamicHtml
 
     }
 
+
+    return row;
+  }
+
+  static DivElement generateFellowRow(Map<String, String> data)
+  {
+    DivElement row = new DivElement();
+    DivElement column = new DivElement();
+    DivElement row1 = new DivElement();
+    DivElement hidden = new DivElement();
+    DivElement row2 = new DivElement();
+    DivElement row3 = new DivElement();
+    row.append(column);
+    column.append(row1);
+    column.append(hidden);
+    hidden.append(row2);
+    hidden.append(row3);
+    row.className = "row collapse";
+    column.className = "columns top-blue-border";
+    hidden.className = "is-hidden";
+
+    /// Row 1 (name + short desc + toggle)
+    DivElement row1Col = new DivElement();
+    HeadingElement name = new HeadingElement.h4();
+    ParagraphElement shortDescription = new ParagraphElement();
+    ParagraphElement toggle = new ParagraphElement();
+
+    row1.append(row1Col);
+    row1Col.append(name);
+    row1Col.append(shortDescription);
+    row1Col.append(toggle);
+
+    row1.className = "row";
+    row1Col.className = "columns";
+
+    name.className = "color-1 bolder padding-top-1";
+    toggle.className = "clickable";
+    name.setInnerHtml("${data["firstname"]} ${data["lastname"]} +");
+    shortDescription.setInnerHtml(data["description_short"]);
+    toggle.setInnerHtml("&lt;Read more&gt;");
+
+    toggle.onClick.listen((MouseEvent e)
+    {
+      if (e.button == 0)
+      {
+        if (hidden.classes.contains("is-hidden"))
+        {
+          hidden.classes.remove("is-hidden");
+          toggle.setInnerHtml("&lt;Show less&gt;");
+        }
+        else
+        {
+          hidden.classes.add("is-hidden");
+          toggle.setInnerHtml("&lt;Read more&gt;");
+        }
+      }
+    });
+
+
+    /// Row 2 (long description)
+    DivElement row2Col = new DivElement();
+    ParagraphElement longDescription = new ParagraphElement();
+    row2.append(row2Col);
+    row2Col.append(longDescription);
+
+    row2.className = "row";
+    row2Col.className = "columns";
+    longDescription.setInnerHtml(data["description_long"]);
+
+    /// Row 3 (portrait + contact info)
+    DivElement row3Col1 = new DivElement();
+    DivElement row3Col2 = new DivElement();
+    DivElement portrait = new DivElement();
+    HeadingElement contactHeader = new HeadingElement.h5();
+    AnchorElement email = new AnchorElement(href:"mailto:" + data["email"]);
+    ParagraphElement phone = new ParagraphElement();
+
+    row3.append(row3Col1);
+    row3Col1.append(portrait);
+    row3.append(row3Col2);
+    row3Col2.append(contactHeader);
+    row3Col2.append(email);
+    row3Col2.append(phone);
+
+    row3.className = "row";
+    row3Col1.className = "large-2 medium-3 small-4 columns";
+    row3Col2.className = "large-10 medium-9 small-8 columns";
+    portrait.className = "background-color-2";
+    portrait.style.height = "6.7em";
+    contactHeader.className = "bold";
+
+    contactHeader.setInnerHtml("Contact");
+    email.setInnerHtml(data["email"]);
+    phone.setInnerHtml("${data["phone"]} <br />${data["phone_2"]}");
 
     return row;
   }

@@ -49,7 +49,6 @@ class Response
 {
   Response(String response)
   {
-    print("response: $response");
     if (response.isEmpty)
     {
       _result = new Map<String, String>();
