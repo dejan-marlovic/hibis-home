@@ -231,11 +231,12 @@ form
 {
   background: $color_3_light;  }
 .white-gray-gradient
-{
-  @include linear-gradient(white, $color_4_light, $color_4, $color_4_dark, $color_3_light, $color_3);  }
+{ @include linear-gradient($color_4_light, $color_4, $color_3_light, $color_3_header);
+}
 .gray-white-gradient
 {
-  @include linear-gradient($color_3_light, $color_3, $color_4_dark, $color_4, $color_4_light, white);  }
+  @include linear-gradient($color_3_light 6em,$color_3 12em, white 24em);
+}
 .box-shadow
 {
   @include box-shadow(5px 10px 30px #999999);  }
