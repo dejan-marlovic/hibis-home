@@ -8,6 +8,7 @@ body
   opacity: 0;
   font-family: $font_stack;
   @include transition(opacity 0.5s ease);
+  background-color: $color_3_dark;
 }
 
 video
@@ -44,7 +45,7 @@ video
 
   #pdf_publications_box
   {
-    border: thin dashed $color_3_dark;
+    border: thin dashed $color_3_darker;
     padding: 0.5em;
 
     .pdf_download_button
@@ -72,7 +73,7 @@ video
 
   .link_description
   {
-    color: $color_3_dark;
+    color: $color_3_darker;
     display: block;
     padding-bottom: 0.3em;  }
 
@@ -98,9 +99,9 @@ video
   {
     img
     {
-      height: 2.5em;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
+      height: 3em;
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
   }
   .border-left
@@ -111,12 +112,24 @@ video
   {
     border-right: 1px solid $color_3;
   }
+  padding-bottom: 2em;
+  img.social_icon
+  {
+    display: inline;
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 0 0.5em 0;
+  }
+  p
+  {
+    font-size: 0.6em;
+  }
 }
 
 //headings
 h2
 {
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 0.5em 0 0.5em 0;
   font-size: 1.8em;
   span
   {
@@ -132,29 +145,25 @@ p
 {
   text-align: justify;
   line-height: 1.5;
-  color: $color_3_dark;
+  color: $color_3_darker;
   font-size: 0.9em;
 }
 
-form
+.form
 {
   .row
   {
     margin-bottom:0.5rem !important;
     margin-top:0.5rem !important;
   }
-  input[type="text"]
-  {
-    height: 1.5em !important;
-    background-color: $color_3_light;
-  }
 
-  input[type="email"]
-  {
-    height: 1.5em !important;
-    background-color: $color_3_light;
-  }
 
+  input[type="email"],input[type="text"]
+  {
+    height: 1.5em;
+    background-color: $color_3_light;
+    padding-left: 0.1em;
+  }
   input [type="checkbox"]
   {
     background-color: $color_3_light;
@@ -163,22 +172,18 @@ form
   {
     background-color: $color_3_light;
   }
-  label
-  {
-    display: inline;
-  }
   span
   {
     font-size: 0.7em;
   }
-  button[type="submit"]
+  button#submit
   {
-    background: white !important;
-    color: $color_1_light !important;
-    border: solid 1px $color_1_light !important;
+    background: white;
+    color: $color_1_light;
+    border: solid 1px $color_1_light;
     font-weight: bolder;
-    margin-top: 2em;
   }
+
 }
 
 
@@ -216,7 +221,7 @@ form
   color: $color_3;  }
 .color-3-dark
 {
-  color: $color_3_dark;  }
+  color: $color_3_darker;  }
 
 .background-white
 {
@@ -230,12 +235,16 @@ form
 .background-color-3-light
 {
   background: $color_3_light;  }
+
+.background-color-1-light
+{
+  background: $color_1_light;  }
 .white-gray-gradient
 { @include linear-gradient($color_4_light, $color_4, $color_3_light, $color_3_header);
 }
 .gray-white-gradient
 {
-  @include linear-gradient($color_3_light 6em,$color_3 12em, white 24em);
+  @include linear-gradient($color_3_light 12em, $color_3 30em, white 60em);
 }
 .box-shadow
 {
@@ -301,9 +310,12 @@ form
 }
 .margin-top-4
 {
-  margin-top: 4em;
+  margin-top: 4em !important;
 }
-
+.margin-top-1
+{
+  margin-top: 1em;
+}
 //style
 .overflow-visible
 {
@@ -336,20 +348,20 @@ form
   min-height:11em;
 }
 
-
 @media screen and (min-width: 64.063em)
 {
   .large-border-left
   {
-    border-left: 1px solid $color_3_dark;
-  } }
+    border-left: 1px solid $color_3_darker;
+  }
+}
 
 
 @media screen and (min-width: 40em)
 {
   .medium-border-left
   {
-    border-left: 1px solid $color_3_dark;
+    border-left: 1px solid $color_3_darker;
   }
 }
 
@@ -358,7 +370,7 @@ form
 {
   .small-border-left
   {
-    border-left: 1px solid $color_3_dark;
+    border-left: 1px solid $color_3_darker;
   }
   .large-margin-left-1
   {
