@@ -314,7 +314,7 @@ class DynamicHtml
     row3.className = "row";
     row3Col1.className = "large-2 medium-3 small-4 columns";
     row3Col2.className = "large-10 medium-9 small-8 columns";
-    portrait.className = "background-color-2";
+    portrait.className = "background-color-1-light";
     portrait.style.height = "6.7em";
     contactHeader.className = "bold";
 

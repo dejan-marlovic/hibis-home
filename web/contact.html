@@ -54,88 +54,88 @@
                 </div>
                 <div class="form">
                     <div class="text-right row">
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="organisation">Organisation*</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input type="text" maxlength="128" id="organisation" required />
+                        <div class="large-4 small-7 columns end">
+                            <input type="text" maxlength="128" id="organisation" tabindex="1" data-validation-message="Please enter the applicant's organisation" required />
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="firstname">First Name*</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="firstname" maxlength="128" required />
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="7" type="text" id="firstname" maxlength="128" data-validation-message="Please enter the applicant's firstname" required />
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="department">Department</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="department"/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="2" type="text" id="department"/>
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="lastname">Last name*</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="lastname" maxlength="128" required/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="8" type="text" id="lastname" maxlength="128" data-validation-message="Please enter the applicant's lastname" required/>
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="address">Address</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="address"/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="3" type="text" id="address"/>
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="title">Title</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" maxlength="64" id="title"/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="9" type="text" maxlength="64" id="title"/>
                         </div>
-                        <div class="large-2 medium-4 columns">
-                            <label class="color-3-dark" for="postal_code">Postal Code*</label>
+                        <div class="large-2 small-4 columns">
+                            <label class="color-3-dark" for="postal_code">Zip code*</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="postal_code" maxlength="32" required/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="4" type="text" id="postal_code" maxlength="32" data-validation-message="Please enter a valid zip/postal code" required/>
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="email">Email*</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="email" maxlength="256" id="email" required/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="10" type="email" maxlength="256" id="email" data-validation-message="Please enter a valid e-mail address" required/>
                         </div>
-                        <div class="large-2 medium-4 columns">
-                            <label class="color-3-dark" for="country">City*</label>
+                        <div class="large-2 small-4 columns">
+                            <label class="color-3-dark" for="city" >City*</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="city" maxlength="128" required/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="5" type="text" id="city" maxlength="128" data-validation-message="Please enter the applicant's city of residence" required/>
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="telephone">Telephone</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="telephone" maxlength="64"/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="11" type="text" id="telephone" maxlength="64" pattern="\+{0,1}[0-9]{6,32}" data-validation-message="Please enter a valid phone number without spaces" />
                         </div>
-                        <div class="large-2 medium-4 columns">
+                        <div class="large-2 small-4 columns">
                             <label class="color-3-dark" for="country">Country*</label>
                         </div>
-                        <div class="large-4 medium-8 columns">
-                            <input class="color-3-dark" type="text" id="country" maxlength="128" required/>
+                        <div class="large-4 small-7 columns end">
+                            <input class="color-3-dark" tabindex="6" type="text" id="country" maxlength="128" data-validation-message="Please enter the applicant's country" required/>
                         </div>
-                        <div class="large-2 medium-4 columns">
-                            <label class="color-3-dark" for="anti_spam">Anti-Spam*</label>
+                        <div class="large-2 small-4 columns">
+                            <label class="color-3-dark" for="anti_spam" title="Please enter the digits on the right">Anti-Spam*</label>
                         </div>
-                        <div class="large-2 medium-4 columns">
-                            <input class="color-3-dark" type="text" id="anti_spam" required />
+                        <div class="large-2 small-4 columns">
+                            <input class="color-3-dark" tabindex="12" type="text" id="anti_spam" data-validation-message="Please enter the digits on the right" required />
                         </div>
-                        <div class="text-left large-2 medium-4 columns">
-                            <span id="anti_spam_number" class="color-2"><--2209</span>
+                        <div class="text-left large-2 small-4 columns">
+                            <p id="anti_spam_number" class="color-3-dark"></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="columns">
-                            <label for="comments" class="color-2 bold-500">Requests/Comments (500 letters max.)</label>
+                            <label for="comments" class="color-3-dark">Requests/Comments (500 letters max.)</label>
                         </div>
                         <div class="columns">
-                            <textarea id="comments" rows="5" maxlength="500" required></textarea>
+                            <textarea id="comments" tabindex="13" rows="5" maxlength="500" required data-validation-message="Please enter a message"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -143,19 +143,19 @@
                             <label class="color-2">Do you want to join fraud academy forum?*</label>
                         </div>
                         <div class="columns">
-                            <input type="radio" value="1" id="forum_true" name="forum" class="forum" required checked/>
+                            <input tabindex="14" type="radio" value="1" id="forum_true" name="forum" class="forum" required checked/>
                             <label for="forum_true">Yes</label>
-                            <input type="radio" value="0" name="forum" id="forum_false" class="forum" required/>
+                            <input tabindex="15" type="radio" value="0" name="forum" id="forum_false" class="forum" required/>
                             <label for="forum_false">No</label>
                         </div>
                         <div class="columns">
-                            <p class="no-margin">I accept the <a href="terms.html">standard terms*</a></p>
+                            <p class="no-margin"><label for="accept_terms">I accept the <a href="terms.html">standard terms*</a></label></p>
                         </div>
                         <div class="columns">
-                            <input type="checkbox" id="accept_terms" required />
+                            <input tabindex="16" type="checkbox" id="accept_terms" data-validation-message="Please confirm that you accept our standard terms" required />
                         </div>
                         <div class="columns">
-                            <button class="margin-bottom-2" id="submit">SEND FORM</button>
+                            <button class="margin-bottom-2" tabindex="17" id="submit">SEND FORM</button>
                         </div>
                     </div>
                 </div>

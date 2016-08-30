@@ -25,7 +25,8 @@ video {
   font-size: 1.4em; }
 #content #pdf_publications_box {
   border: thin dashed #6D6E72;
-  padding: 0.5em; }
+  padding: 0.5em;
+  margin-bottom: 1em; }
   #content #pdf_publications_box .pdf_download_button {
     overflow: visible;
     padding: 0.3em;
@@ -178,6 +179,9 @@ p {
   -ms-user-select: none;
   user-select: none;
   cursor: pointer; }
+
+.invalid {
+  background-color: #ffeeee !important; }
 
 .bold {
   font-weight: bold; }

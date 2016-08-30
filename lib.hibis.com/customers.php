@@ -66,9 +66,7 @@ class Customers
         $subject = "New contact form submission";
         $message = "Email: ${params["email"]}\r\nComments:${dbVal["comments"]}";
 
-        mail("patrick.minogue@gmail.com", $subject, $message);
-
-        mail("dmarlovic83@gmail.com", $subject, $message);
+        //mail("patrick.minogue@gmail.com", $subject, $message);
 
         return $id;
     }

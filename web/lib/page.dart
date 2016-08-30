@@ -42,6 +42,16 @@ class Page
 
     if (header != null) await importHtml("inc-header.html", header);
     if (footer != null) await importHtml("inc-footer.html", footer);
+
+
+    search.onKeyUp.listen((KeyboardEvent e)
+    {
+      if (e.keyCode == KeyCode.ENTER || e.keyCode == KeyCode.MAC_ENTER)
+      {
+        window.location.href = "search.html?keywords=" + search.value;
+      }
+    });
+
   }
 
   static void show()
@@ -66,6 +76,7 @@ class Page
   static final DivElement panelRight = querySelector("#panel-right");
   static final DivElement panelRightSmall = querySelector("#panel-right-small");
   static final DivElement footer = querySelector("#footer");
+  static final TextInputElement search = querySelector("#search");
 }
 
 class UriPolicyExternal implements UriPolicy

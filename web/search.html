@@ -10,11 +10,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hibis - fellows &amp;amp; facilitators</title>
+    <title>Hibis - search</title>
     <link rel="icon" type="image/png" href="gfx/favicon.png">
     <link rel="stylesheet" href="styles/foundation/foundation.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script defer src="fellows_and_facilitators.dart" type="application/dart"></script>
+    <link rel="stylesheet" href="styles/events.css">
+    <link rel="stylesheet" href="styles/publications.css">
+    <script defer src="search.dart" type="application/dart"></script>
     <script defer src="packages/browser/dart.js"></script>
 </head>
 
@@ -23,21 +25,27 @@
 <div id="content" class="row padding-top-2 gray-white-gradient">
     <div class= "overflow-visible background-white box-shadow large-10 large-offset-1 columns">
         <div class="row no-margin">
-            <h2 class="columns color-white background-color-2 bolder lang-exp" data-exp="fellows_and_facilitators_header">Fellows and Facilitators</h2>
+            <h2 class="columns color-white background-color-2 bolder lang-exp" data-exp="search_header">Search</h2>
         </div>
         <div class="row no-margin">
             <div class="large-9 medium-8 columns">
-                <div class="row collapse">
-                    <div class="columns">
-                        <p class="no-margin lang-exp" data-exp="fellows_and_facilitators_first_paragraph">
-                            We work with like-minded, motivated, passionate people who all have experience in the field
-                            and still want to make a change. Here are some of our fellows and facilitators.
-                        </p>
+                <div class="row">
+                    <div class="columns" id="events-container">
+                        <h3 class="lang-exp" data-exp="events">Events</h3>
                     </div>
                 </div>
-                <div class="row collapse"><div class="columns" id="fellows-container"></div></div>
+                <div class="row">
+                    <div class="columns" id="books-container">
+                        <h3 class="lang-exp" data-exp="books">Books</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="columns" id="publications-container">
+                        <h3 class="lang-exp" data-exp="publications">Publications</h3>
+                    </div>
+                </div>
             </div>
-            <div class="large-3 medium-4 columns" id="panel-right"></div>
+            <div class="large-3 medium-4 columns" id="panel-right-small"></div>
         </div>
     </div>
 </div>
