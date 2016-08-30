@@ -45,15 +45,23 @@ video {
   color: #6D6E72;
   display: block;
   padding-bottom: 0.3em; }
-#content #search_box {
+#content div#search_box {
   background: #98D9EB;
   position: relative;
   margin-top: -3em;
-  padding: 1.5em; }
-  #content #search_box input {
-    height: 2em;
+  padding: 1.5rem; }
+  #content div#search_box input {
+    height: 2rem;
     margin-bottom: 0;
-    color: #1E3362; }
+    color: #1E3362;
+    padding-right: 2rem; }
+#content #search_icon {
+  top: 1.9rem;
+  right: 1.9rem;
+  position: absolute;
+  font-size: 1.2rem;
+  color: #1E3362;
+  cursor: pointer; }
 
 #footer {
   margin-top: -2em;
@@ -110,6 +118,9 @@ p {
   color: #98D9EB;
   border: solid 1px #98D9EB;
   font-weight: bolder; }
+
+a.highlighted {
+  text-decoration: underline; }
 
 .pdf_download_button {
   overflow: visible;

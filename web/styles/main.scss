@@ -78,18 +78,28 @@ video
     display: block;
     padding-bottom: 0.3em;  }
 
-  #search_box
+  div#search_box
   {
     background: $color_1_light;
     position: relative;
     margin-top: -3em;
-    padding: 1.5em;
+    padding: 1.5rem;
     input
     {
-      height: 2em;
+      height: 2rem;
       margin-bottom: 0;
       color: $color_2;
+      padding-right: 2rem;
     }
+  }
+  #search_icon
+  {
+    top: 1.9rem;
+    right: 1.9rem;
+    position:absolute;
+    font-size:1.2rem;
+    color: $color_2;
+    cursor: pointer;
   }
 }
 
@@ -187,7 +197,10 @@ p
 
 }
 
-
+a.highlighted
+{
+  text-decoration: underline;
+}
 
 .pdf_download_button
 {

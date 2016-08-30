@@ -10,6 +10,7 @@ import 'lib/page.dart';
 Future main() async
 {
   await Page.init();
+  Page.highlightNavigationLink(querySelector("#nav_fellows_and_facilitators"));
 
   final DivElement fellowsContainer = querySelector("#fellows-container");
   Response response = await Messenger.post(new Request("get_rows", "fellows", {"order_by":"lastname ASC, firstname ASC"}));

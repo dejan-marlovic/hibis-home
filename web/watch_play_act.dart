@@ -8,5 +8,6 @@ import 'lib/page.dart';
 Future main() async
 {
   await Page.init();
+  Page.highlightNavigationLink(querySelector("#nav_watch_play_act"));
   Page.show();
 }

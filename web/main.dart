@@ -14,8 +14,7 @@ final DivElement upcomingEventsContainer = querySelector("#upcoming-events-conta
 Future main() async
 {
   await Page.init();
-
-
+  Page.highlightNavigationLink(querySelector("#nav_home"));
   String now = Utility.dfMySql.format(new DateTime.now());
   Response response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start > '$now'", "limit":"3", "order_by":"id DESC"}));
   Map<String, String> row = response.getNextRow();

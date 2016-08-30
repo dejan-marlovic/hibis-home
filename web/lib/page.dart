@@ -52,8 +52,21 @@ class Page
       }
     });
 
+    searchButton.onClick.listen((MouseEvent e)
+    {
+      if (e.button == 0)
+      {
+        window.location.href = "search.html?keywords=" + search.value;
+      }
+    });
+
   }
 
+  static void highlightNavigationLink(AnchorElement e)
+  {
+    e.classes.add("highlighted");
+
+  }
   static void show()
   {
     document.body.style.opacity = "1";
@@ -70,13 +83,16 @@ class Page
   ..allowElement('a', attributes: ['data-exp', 'data-tweet-limit', 'data-chrome', 'data-link-color', 'href'])
   ..allowElement('span', attributes: ['data-exp'])
   ..allowElement('h4', attributes: ['data-exp'])
+  ..allowElement('i', attributes: ['aria-hidden'])
   ..allowNavigation(new UriPolicyExternal());
+
 
   static final DivElement header = querySelector("#header");
   static final DivElement panelRight = querySelector("#panel-right");
   static final DivElement panelRightSmall = querySelector("#panel-right-small");
   static final DivElement footer = querySelector("#footer");
   static final TextInputElement search = querySelector("#search");
+  static final Element searchButton = querySelector("#search_icon");
 }
 
 class UriPolicyExternal implements UriPolicy

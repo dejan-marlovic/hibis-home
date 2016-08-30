@@ -11,6 +11,7 @@ import 'lib/utility.dart';
 Future main() async
 {
   await Page.init();
+  Page.highlightNavigationLink(querySelector("#nav_events_and_training"));
 
   DivElement coursesContainer = querySelector("#flagship-courses");
   Response response = await Messenger.post(new Request("get_rows", "courses", {"order_by":"id ASC", "limit":"3"}));

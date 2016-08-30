@@ -19,6 +19,7 @@ List<Element> invalidInputs = new List();
 Future main() async
 {
   await Page.init();
+  Page.highlightNavigationLink(querySelector("#nav_contact"));
 
   Element form = querySelector(".form");
   formInputs = form.querySelectorAll("input").toList(growable: false);

@@ -10,7 +10,7 @@ import 'lib/messenger.dart';
 Future main() async
 {
   await Page.init();
-
+  Page.highlightNavigationLink(querySelector("#nav_publications"));
 
   /// List all books
   final DivElement booksContainer = querySelector("#books-container");
