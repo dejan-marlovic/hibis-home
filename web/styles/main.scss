@@ -19,12 +19,17 @@ video
 {
   nav
   {
-    li
+    ul
     {
-      display: inline-block;
-      :after {
-        content: " ";
-        margin: 0.3em;
+      margin:0;
+      li
+      {
+        display: inline-block;
+        margin-left: 0.22em;
+        a
+        {
+          font-size: 0.94em;
+        }
       }
     }
   }
@@ -144,13 +149,16 @@ h2
   font-size: 1.8em;
   span
   {
-    font-size: 0.6em;  } }
+    font-size: 0.6em;  }
+}
 h3
 {
-  font-size: 1.5em;  }
+  font-size: 1.5em;
+}
 h4
 {
-  font-size: 1em;  }
+  font-size: 1em;
+}
 
 p
 {
@@ -220,39 +228,50 @@ a.highlighted
 //color and gradient selectors
 .color-white
 {
-  color: white;  }
+  color: white;
+}
 .color-1
 {
-  color: $color_1;  }
+  color: $color_1;
+}
 .color-1-light
 {
-  color: $color_1_light;  }
+  color: $color_1_light;
+}
 .color-2
 {
-  color: $color_2;  }
+  color: $color_2;
+}
 .color-3
 {
-  color: $color_3;  }
+  color: $color_3;
+}
 .color-3-dark
 {
-  color: $color_3_darker;  }
+  color: $color_3_darker;
+}
 
 .background-white
 {
-  background: white;  }
+  background: white;
+}
 .background-color-2
 {
-  background-color: $color_2;  }
+  background-color: $color_2;
+}
 .background-color-3
 {
-  background: $color_3;  }
+  background: $color_3;
+}
 .background-color-3-light
 {
-  background: $color_3_light;  }
+  background: $color_3_light;
+}
 
 .background-color-1-light
 {
-  background: $color_1_light;  }
+  background: $color_1_light;
+}
 .white-gray-gradient
 { @include linear-gradient($color_4_light, $color_4, $color_3_light, $color_3_header);
 }
@@ -274,7 +293,6 @@ a.highlighted
 {
   background-color: $color-error !important;
 }
-
 //font-weight
 .bold
 {
@@ -293,7 +311,8 @@ a.highlighted
 //margin padding and positioning
 .padding-top-2
 {
-  padding-top: 2em;  }
+  padding-top: 2em;
+}
 .padding-top-1
 {
   padding-top: 1em;
@@ -304,7 +323,8 @@ a.highlighted
 }
 .padding-top-1-5
 {
-  padding-top: 1.5em;  }
+  padding-top: 1.5em;
+}
 .padding-1-5
 {
   padding-top:1.5em;
@@ -318,18 +338,41 @@ a.highlighted
 .no-margin
 {
   margin-bottom: 0 !important;
-  margin-top: 0 !important;  }
+  margin-top: 0 !important;
+}
+.no-margin-bottom
+{
+  margin-bottom: 0 !important;
+}
 .large-margin-left-1
 {
+  margin-left: 1em
+}
 
-  margin-left: 1em }
 .margin-bottom-2
 {
   margin-bottom: 2em;
 }
+
+.margin-bottom-1
+{
+  margin-bottom: 1em;
+}
 .margin-top-4
 {
   margin-top: 4em !important;
+}
+.margin-top-2
+{
+  margin-top: 2em !important;
+}
+.margin-top-4-9
+{
+  margin-top: 4.9em;
+}
+.margin-top-0-5
+{
+  margin-top: 0.5em;
 }
 .margin-top-1
 {

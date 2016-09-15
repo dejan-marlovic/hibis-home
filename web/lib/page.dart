@@ -30,6 +30,19 @@ class Page
         container.append(DynamicHtml.generateArticleRow(row));
         row = response.getNextRow();
       }
+      //Adding link more dynamically;
+      SpanElement more = new SpanElement();
+      more.setInnerHtml("&lt;more&gt;");
+      AnchorElement link = new AnchorElement();
+      link.href = "publications.html";
+      DivElement rowMore = new DivElement();
+      rowMore.className = "row collapse";
+      DivElement column = new DivElement();
+      column.className = "small-11 small-offset-1 columns";
+      link.append(more);
+      column.append(link);
+      rowMore.append(column);
+      container.append(rowMore);
     }
     else if (panelRightSmall != null)
     {
