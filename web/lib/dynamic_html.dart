@@ -181,7 +181,6 @@ class DynamicHtml
 
     if (dateEnd.difference(dateStart).inDays > 0)
     {
-
       if (dateStart.month == dateEnd.month)
       {
         /// Start/end date are in same month
@@ -195,8 +194,7 @@ class DynamicHtml
         dateString = "$day $monthStart - $day_end $monthYearEnd";
       }
     }
-    else
-      dateString = "$day $monthYear";
+    else dateString = "$day $monthYear";
 
     name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}");
     where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
