@@ -27,6 +27,7 @@ Future main() async
   DivElement upcomingEventsContainer = querySelector("#upcoming-events");
   response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start > '$strNow'", "order_by":"date_start DESC", "limit":"3"}));
   row = response.getNextRow();
+
   while (row != null)
   {
     upcomingEventsContainer.append(DynamicHtml.generateEventRow(row, true));
@@ -34,13 +35,34 @@ Future main() async
   }
 
   DivElement pastEventsContainer = querySelector("#past-events");
+  ParagraphElement toggle = querySelector("#past_events_show");
   response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start < '$strNow'", "order_by":"date_start DESC"}));
   row = response.getNextRow();
+  pastEventsContainer.className = "is-hidden";
+  toggle.setInnerHtml("&lt;show past events archive&gt;");
   while (row != null)
   {
     pastEventsContainer.append(DynamicHtml.generateEventRow(row));
     row = response.getNextRow();
   }
+
+
+  toggle.onClick.listen((MouseEvent e)
+  {
+    if (e.button == 0)
+    {
+      if (pastEventsContainer.classes.contains("is-hidden"))
+      {
+        pastEventsContainer.classes.remove("is-hidden");
+        toggle.setInnerHtml("&lt;hide past events archive&gt;");
+      }
+      else
+      {
+        pastEventsContainer.classes.add("is-hidden");
+        toggle.setInnerHtml("&lt;show past events archive&gt;");
+      }
+    }
+  });
 
   Page.show();
 }
