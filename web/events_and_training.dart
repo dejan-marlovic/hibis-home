@@ -39,7 +39,6 @@ Future main() async
   response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start < '$strNow'", "order_by":"date_start DESC"}));
   row = response.getNextRow();
   pastEventsContainer.className = "is-hidden";
-  toggle.setInnerHtml("&lt;show past events archive&gt;");
   while (row != null)
   {
     pastEventsContainer.append(DynamicHtml.generateEventRow(row));
@@ -54,12 +53,12 @@ Future main() async
       if (pastEventsContainer.classes.contains("is-hidden"))
       {
         pastEventsContainer.classes.remove("is-hidden");
-        toggle.setInnerHtml("&lt;hide past events archive&gt;");
+        toggle.setInnerHtml("&lt;less&gt;");
       }
       else
       {
         pastEventsContainer.classes.add("is-hidden");
-        toggle.setInnerHtml("&lt;show past events archive&gt;");
+        toggle.setInnerHtml("&lt;more&gt;");
       }
     }
   });
