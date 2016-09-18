@@ -168,35 +168,30 @@ class DynamicHtml
     DateTime dateEnd = DateTime.parse(data["date_end"]);
 
     String dateString;
+    String day = Utility.dfDay.format(dateStart);
+    day += Utility.getDayOfMonthSuffix(int.parse(day));
+    String day_end = Utility.dfDay.format(dateEnd);
+    day_end += Utility.getDayOfMonthSuffix(int.parse(day_end));
+    String monthYear = Utility.dfMonthYear.format(dateStart);
 
-    if (dateStart.difference(dateEnd).inDays < 1)
+    if (dateEnd.difference(dateStart).inDays > 0)
     {
-      String day = Utility.dfDay.format(dateStart);
-      day += Utility.getDayOfMonthSuffix(int.parse(day));
-      String monthYear = Utility.dfMonthYear.format(dateStart);
-      dateString = "$day $monthYear";
-    }
-    else if (dateStart.month == dateEnd.month)
-    {
-      /// Start/end date are in same month
-      String dayStart = Utility.dfDay.format(dateStart);
-      String dayEnd = Utility.dfDay.format(dateEnd);
-      String monthYear = Utility.dfMonthYear.format(dateStart);
-      dayStart += Utility.getDayOfMonthSuffix(int.parse(dayStart));
-      dayEnd += Utility.getDayOfMonthSuffix(int.parse(dayEnd));
-      dateString = "$dayStart - $dayEnd $monthYear";
+
+      if (dateStart.month == dateEnd.month)
+      {
+        /// Start/end date are in same month
+        dateString = "$day - $day_end  of $monthYear";
+      }
+      else
+      {
+        /// Course start/end are on different months
+        String monthStart = Utility.dfMonth.format(dateStart);
+        String monthYearEnd = Utility.dfMonthYear.format(dateEnd);
+        dateString = "$day $monthStart - $day_end $monthYearEnd";
+      }
     }
     else
-    {
-      /// Course start/end are on different months
-      String dayStart = Utility.dfDay.format(dateStart);
-      String dayEnd = Utility.dfDay.format(dateEnd);
-      dayStart += Utility.getDayOfMonthSuffix(int.parse(dayStart));
-      dayEnd += Utility.getDayOfMonthSuffix(int.parse(dayEnd));
-      String monthStart = Utility.dfMonth.format(dateStart);
-      String monthYearEnd = Utility.dfMonthYear.format(dateEnd);
-      dateString = "$dateStart $monthStart - $dayEnd $monthYearEnd";
-    }
+      dateString = "$day $monthYear";
 
     name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}");
     where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
@@ -215,7 +210,7 @@ class DynamicHtml
       ButtonElement signUp = new ButtonElement();
       column.append(signUp);
       signUp.className = "large-margin-left-1";
-      signUp.setInnerHtml("Sign up");
+      signUp.setInnerHtml("Register");
 
       signUp.onClick.listen((MouseEvent e)
       {

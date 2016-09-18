@@ -18,6 +18,9 @@ video {
     #header nav ul li a {
       font-size: 0.94em; }
 
+#content div#flagship-courses img {
+  width: 3em;
+  height: 3em; }
 #content .row {
   margin-bottom: 1rem;
   margin-top: 1rem; }
