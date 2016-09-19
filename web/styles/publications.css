@@ -22,5 +22,8 @@ div.article-column {
   padding-top: 0.5em;
   margin-bottom: 2em;
   background-color: #F0F0F0; }
+  div.article-column img.icon {
+    width: 3em;
+    height: 3em; }
 
 /*# sourceMappingURL=publications.css.map */
