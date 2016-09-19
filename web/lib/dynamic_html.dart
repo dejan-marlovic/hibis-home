@@ -18,6 +18,9 @@ class DynamicHtml
     column.append(link);
     if (data.containsKey("url_icon") && data["url_icon"] != null)
     {
+      ImageElement icon = new ImageElement();
+      icon.src = data["url_icon"];
+      icon.className = "icon";
       column.append(new ImageElement(src: data["url_icon"]));
     }
     link.append(viewPdfContainer);
@@ -34,6 +37,7 @@ class DynamicHtml
     DateTime dt = DateTime.parse(data["date"]);
     date.setInnerHtml(Utility.dfMonthYear.format(dt));
     /// TODO phrase
+    ///
     viewPdfLabel.setInnerHtml(" view PDF");
 
 
