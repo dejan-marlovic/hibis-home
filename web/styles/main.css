@@ -45,6 +45,8 @@ iframe {
       width: 2.5em;
       transform: rotate(90deg);
       margin-left: -0.5em; }
+#content a.phone {
+  font-size: 1em; }
 #content button {
   color: #1E3362;
   background: #F0F0F0;

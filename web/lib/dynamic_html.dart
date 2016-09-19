@@ -16,22 +16,31 @@ class DynamicHtml
     column.append(name);
     column.append(date);
     column.append(link);
+
+    link.append(viewPdfContainer);
+    viewPdfContainer.append(viewPdfIcon);
+    viewPdfContainer.append(viewPdfLabel);
     if (data.containsKey("url_icon") && data["url_icon"] != null)
     {
       ImageElement icon = new ImageElement();
       icon.src = data["url_icon"];
+      if (data.containsKey("publisher_url") && data["publisher_url"] != null)
+      {
+        icon.onClick.listen((e)
+        {
+          window.location.href = data["publisher_url"];
+        });
+      }
       icon.className = "icon";
-      column.append(new ImageElement(src: data["url_icon"]));
+      column.append(icon);
     }
-    link.append(viewPdfContainer);
-    viewPdfContainer.append(viewPdfIcon);
-    viewPdfContainer.append(viewPdfLabel);
 
     column.className = "large-6 columns article-column";
     name.className = "color-2 bold no-margin";
     date.className = "link_description normal no-margin";
     viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
     viewPdfLabel.className = "normal";
+
 
     name.setInnerHtml(data["name"]);
     DateTime dt = DateTime.parse(data["date"]);
@@ -259,7 +268,7 @@ class DynamicHtml
     row1.append(row1Col);
     row1Col.append(name);
     row1Col.append(shortDescription);
-    row1Col.append(toggle);
+
 
     row1.className = "row";
     row1Col.className = "columns";
@@ -286,13 +295,15 @@ class DynamicHtml
         }
       }
     });
-
+    row1Col.append(toggle);
 
     /// Row 2 (long description)
     DivElement row2Col = new DivElement();
     ParagraphElement longDescription = new ParagraphElement();
     row2.append(row2Col);
     row2Col.append(longDescription);
+    ImageElement  portrait_image = new ImageElement();
+    portrait_image.src = data["profile_image"];
 
     row2.className = "row";
     row2Col.className = "columns";
@@ -302,9 +313,11 @@ class DynamicHtml
     DivElement row3Col1 = new DivElement();
     DivElement row3Col2 = new DivElement();
     DivElement portrait = new DivElement();
+    portrait.append(portrait_image);
     HeadingElement contactHeader = new HeadingElement.h5();
     AnchorElement email = new AnchorElement(href:"mailto:" + data["email"]);
     ParagraphElement phone = new ParagraphElement();
+
 
     row3.append(row3Col1);
     row3Col1.append(portrait);
@@ -316,8 +329,6 @@ class DynamicHtml
     row3.className = "row";
     row3Col1.className = "large-2 medium-3 small-4 columns";
     row3Col2.className = "large-10 medium-9 small-8 columns";
-    portrait.className = "background-color-1-light";
-    portrait.style.height = "6.7em";
     contactHeader.className = "bold";
 
     contactHeader.setInnerHtml("Contact");

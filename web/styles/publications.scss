@@ -26,10 +26,11 @@ div.book-column
 
 div.article-column
 {
-  img.icon
+  .icon
   {
+    cursor: pointer;
     width:3em;
-    height:3em;
+    margin-left:0.3em;
   }
   min-height: 9em;
   padding-top: 0.5em;
