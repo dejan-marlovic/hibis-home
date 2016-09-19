@@ -13,10 +13,13 @@ class DynamicHtml
     DivElement viewPdfContainer = new DivElement();
     ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
     SpanElement viewPdfLabel = new SpanElement();
-
     column.append(name);
     column.append(date);
     column.append(link);
+    if (data.containsKey("url_icon") && data["url_icon"] != null)
+    {
+      column.append(new ImageElement(src: data["url_icon"]));
+    }
     link.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
@@ -53,9 +56,11 @@ class DynamicHtml
     col2.append(name);
     col2.append(date);
     col2.append(link);
+    print(data["url_icon"]);
     link.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
+
 
     row.className = "bold row collapse";
     col1.className = "small-1 columns";

@@ -10,6 +10,9 @@ body {
 video {
   width: 100%; }
 
+iframe {
+  width: 100%; }
+
 #header nav ul {
   margin: 0; }
   #header nav ul li {
@@ -222,6 +225,9 @@ a.highlighted {
 
 .padding-top-1-5 {
   padding-top: 1.5em; }
+
+.padding-top-6 {
+  padding-top: 6em; }
 
 .padding-1-5 {
   padding-top: 1.5em;
