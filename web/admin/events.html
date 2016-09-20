@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2016, Hibis. All rights reserved. Use of this source code
+  is governed by a BSD-style license that can be found in the LICENSE file.
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibis - admin</title>
+    <link rel="icon" type="image/png" href="../gfx/favicon.png">
+    <link rel="stylesheet" href="../styles/foundation/foundation.min.css">
+    <link rel="stylesheet" href="../styles/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <script defer src="events.dart" type="application/dart"></script>
+    <script defer src="packages/browser/dart.js"></script>
+</head>
+
+<body class="opacity-0">
+<div id="header" class="row"></div>
+<div class="row full-width">
+    <div class="columns">
+        <div class="row">
+            <div class="columns">
+                <h2 class="lang-exp" data-exp="events">Events</h2>
+            </div>
+        </div>
+        <div class="row"><div class="columns" id="table_container"></div></div>
+    </div>
+</div>
+<div class="row full-width" id="add-container">
+    <div class="columns">
+        <h3 class="lang-exp" data-exp="Add">Add</h3>
+    </div>
+    <div class="medium-4 columns">
+        <label for="name" class="lang-exp required" data-exp="name">Name</label>
+        <input type="text" id="name" maxlength="256" required />
+    </div>
+    <div class="medium-4 columns">
+        <label for="description" class="lang-exp required" data-exp="description">Description</label>
+        <input type="text" id="description" maxlength="1024" />
+    </div>
+    <div class="medium-6 columns">
+        <label for="url_description" class="lang-exp" data-exp="url_description">Description URL</label>
+        <input type="url" id="url_description" maxlength="256" />
+    </div>
+    <div class="columns">
+        <label for="url_pdf" class="lang-exp" data-exp="pdf">PDF</label>
+        <input type="file" id="url_pdf" accept=".pdf" maxlength="256" />
+    </div>
+    <div class="medium-6 columns">
+        <label for="url_signup" class="lang-exp" data-exp="url_signup">Signup URL</label>
+        <input type="url" id="url_signup" maxlength="256" />
+    </div>
+    <div class="medium-4 columns">
+        <label for="date_start" class="lang-exp" data-exp="date_start">Date Start</label>
+        <input type="date" id="date_start" required />
+    </div>
+    <div class="medium-4 columns">
+        <label for="date_end" class="lang-exp required" data-exp="date_end">Date End</label>
+        <input type="date" id="date_end" required />
+    </div>
+    <div class="medium-4 columns">
+        <label for="street" class="lang-exp required" data-exp="street">Street</label>
+        <input type="text" id="street" maxlength="128"/>
+    </div>
+    <div class="medium-4 columns">
+        <label for="city" class="lang-exp required" data-exp="city">City</label>
+        <input type="text" id="city" maxlength="128" required />
+    </div>
+    <div class="medium-4 columns">
+        <label for="country" class="lang-exp required" data-exp="country">Country</label>
+        <input type="text" id="country" maxlength="256" required />
+    </div>
+    <div class="medium-4 columns">
+        <label for="lang" class="lang-exp required" data-exp="lang">Lang</label>
+        <input type="text" id="lang" maxlength="128" required />
+    </div>
+    <div class="medium-2 medium-offset-10 columns"><button class="button expanded lang-exp" data-exp="add" id="add">Add</button></div>
+</div>
+<div id="footer" class="row"></div>
+</body>
+</html>

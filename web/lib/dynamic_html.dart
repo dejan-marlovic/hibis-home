@@ -250,13 +250,15 @@ class DynamicHtml
     DivElement hidden = new DivElement();
     DivElement row2 = new DivElement();
     DivElement row3 = new DivElement();
+    DivElement row4 = new DivElement();
+    DivElement row4Column = new DivElement();
     row.append(column);
     column.append(row1);
     column.append(hidden);
     hidden.append(row2);
     hidden.append(row3);
+    column.append(row4);
     row.className = "row collapse";
-    column.className = "columns top-blue-border";
     hidden.className = "is-hidden";
 
     /// Row 1 (name + short desc + toggle)
@@ -287,13 +289,11 @@ class DynamicHtml
         {
           hidden.classes.remove("is-hidden");
           toggle.setInnerHtml("&lt;Show less&gt;");
-          hidden.append(toggle);
         }
         else
         {
           hidden.classes.add("is-hidden");
           toggle.setInnerHtml("&lt;Read more&gt;");
-          row1Col.append(toggle);
         }
       }
     });
@@ -327,16 +327,19 @@ class DynamicHtml
     row3Col2.append(contactHeader);
     row3Col2.append(email);
     row3Col2.append(phone);
+    row4.append(row4Column);
+    row4Column.append(toggle);
 
     row3.className = "row";
     row3Col1.className = "large-2 medium-3 small-4 columns";
     row3Col2.className = "large-10 medium-9 small-8 columns";
     contactHeader.className = "bold";
-
+    row4.className = "row";
+    row4Column.className = "columns";
     contactHeader.setInnerHtml("Contact");
     email.setInnerHtml(data["email"]);
     phone.setInnerHtml("${data["phone"]} <br />${data["phone_2"]}");
-    row1Col.append(toggle);
+
 
     return row;
   }
