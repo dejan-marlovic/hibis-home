@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="3.10">
+<innhold_a>
+<header XLIFF="12010319215193752" left="50" top="92" width="386">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</header>
+<medialist transition="1" transitionDuration="1" transitionEasing="0" transitionOut="0">
+<media height="327.05" id="120103189202812" left="-70" top="61" width="410.9">
+<url>../images/57924.swf</url>
+<originalfilename>stickman.swf</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+<mediabackground>
+</mediabackground>
+</media>
+</medialist>
+<pictext XLIFF="12010319215195353" left="50" top="475" width="336">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</pictext>
+<textbackground>
+</textbackground>
+<textgroup groupTextItemsInBox="false" left="1019" top="13" width="400">
+<text XLIFF="12010231155589942" id="0" left="442" top="54" width="400.4">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Verdana" SIZE="32" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Fraud and Corruption&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>1201023115513611/sound/</soundurl>
+<mediacontrol>
+<action media_id="120103189202812" type="display"/>
+</mediacontrol>
+<stop>0</stop>
+<pause>2</pause>
+<speaktext/>
+<plaintext>Fraud and Corruption
+</plaintext>
+<textbackground>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+<text XLIFF="12010312210843363" id="1" left="454" top="113" width="396.3">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Arial" SIZE="24" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;I&gt;Forgiveness and Compassion?&lt;/I&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>1201023115513611/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<stop>0</stop>
+<pause>3</pause>
+<speaktext/>
+<plaintext>Forgiveness and Compassion?
+</plaintext>
+<textbackground>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+<text XLIFF="120103122055109279" id="2" left="505" top="164.95" width="301">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;The short film you are about to see is based on real events....&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>1201023115513611/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<stop>0</stop>
+<pause>3</pause>
+<speaktext/>
+<plaintext>The short film you are about to see is based on real events....
+</plaintext>
+<textbackground>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+<text XLIFF="120103122055125280" id="3" left="457" top="223.95" width="428.8">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Fraud and Corruption is as old as mankind, yet we are only beginning to understand how commonplace it is. Is it right to pursue to the bitter end the people we catch? Or should we consider that some of the accusing fingers pointing at the culprits may have also been in the cookie jar? &lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>1201023115513611/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<stop>0</stop>
+<pause>5</pause>
+<speaktext/>
+<plaintext>Fraud and Corruption is as old as mankind, yet we are only beginning to understand how commonplace it is. Is it right to pursue to the bitter end the people we catch? Or should we consider that some of the accusing fingers pointing at the culprits may have also been in the cookie jar? 
+</plaintext>
+<textbackground>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+<text XLIFF="120103122055171281" id="4" left="481" top="337.95" width="377.8">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;This interactive video is designed to allow you to comment on the behaviour of the characters and form your own opinion. Which of the opposing views would you support?&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>1201023115513611/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<stop>0</stop>
+<pause>4</pause>
+<speaktext/>
+<plaintext>This interactive video is designed to allow you to comment on the behaviour of the characters and form your own opinion. Which of the opposing views would you support?
+</plaintext>
+<textbackground>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+</textgroup>
+<components>
+</components>
+</innhold_a>
+</page>

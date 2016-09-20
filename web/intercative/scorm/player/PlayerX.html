@@ -1,0 +1,49 @@
+<SCRIPT LANGUAGE = "JavaScript"> 
+<!--
+
+function include(script_filename,param) 
+{
+    document.write('<' + 'script');
+    document.write(' language="javascript"');
+    document.write(' type="text/javascript"');
+    document.write(' src="' + script_filename+'?'+param+ '">');
+    document.write('</' + 'script' + '>');
+}
+
+function getParameter(pname,defval)
+{
+	var ret="";
+	var searchStr=unescape(location.search.toUpperCase());
+	var idx=searchStr.indexOf("?"+pname.toUpperCase()+"=");
+	if (idx==-1) idx=searchStr.indexOf("&"+pname.toUpperCase()+"=");
+	if (idx!=-1)
+	{
+		var tmp=unescape(location.search).substr(idx+pname.length+2);
+		idx=tmp.indexOf("&");
+		if (idx!=-1)
+			tmp=tmp.substr(0,idx);
+		
+		ret=unescape(tmp);
+	}
+        else
+        {
+	   ret=defval;
+        }
+	return ret;
+}
+
+var acclang=getParameter("langrec",null);
+
+document.write("<HTML"+(acclang!=null?(" lang=\""+acclang+"\""):"")+">");
+document.write("<HEAD>");
+document.write("<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html;  charset=UTF-8;\">");
+document.write("<TITLE>This Course is powered by CourseBuilder</TITLE>");
+document.write("</HEAD>");
+
+include("build.js",""+(new Date().getTime()));
+include("player.js",""+(new Date().getTime()));
+
+document.write("</HTML>");
+
+//-->
+</SCRIPT>

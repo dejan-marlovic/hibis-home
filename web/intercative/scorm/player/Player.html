@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;  charset=UTF-8;">
+<TITLE>This Course is powered by CourseBuilder</TITLE>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+var langrec=getParameter("langrec",null);
+if (langrec==null && bighorn_masterlanguage)
+{
+	if (window.navigator.systemLanguage)
+		langrec=window.navigator.systemLanguage;
+	else if (window.navigator.language)
+		langrec=window.navigator.language;
+	else
+		langrec=bighorn_masterlanguage;
+
+	if (!langExists(langrec))
+	{
+		langrec=langrec.substring(0,2);
+		if (!langExists(langrec))
+		{
+			langrec=bighorn_masterlanguage;	
+		}
+	}
+}
+
+function langExists(testlang)
+{
+	var list=bighorn_langlist.split(",");
+	for (i=0;i<list.length;i++)
+	{
+		if (list[i]==testlang)
+		{
+			return true;	
+	    }
+	}	
+	return false;
+}
+
+var detect = window.navigator.userAgent.toLowerCase();
+
+var OS,browser,total,thestring;
+var version = 0;
+
+if (checkIt('konqueror'))
+{
+	browser = "Konqueror";
+	OS = "Linux";
+}
+else if (checkIt('safari')) browser = "Safari"
+else if (checkIt('omniweb')) browser = "OmniWeb"
+else if (checkIt('opera')) browser = "Opera"
+else if (checkIt('webtv')) browser = "WebTV";
+else if (checkIt('icab')) browser = "iCab"
+else if (checkIt('msie')) browser = "Internet Explorer"
+else if (checkIt('firefox')) browser = "Firefox"
+else if (checkIt('netscape')) browser = "Netscape"
+else if (!checkIt('compatible'))
+{
+	browser = "Netscape Navigator"
+	version = detect.charAt(8);
+}
+else browser = "An unknown browser";
+
+if (!version) version = detect.substring(place + thestring.length,place + thestring.length+3);
+
+if (!OS)
+{
+	if (checkIt('linux')) OS = "Linux";
+	else if (checkIt('x11')) OS = "Unix";
+	else if (checkIt('mac')) OS = "Mac"
+	else if (checkIt('win')) OS = "Windows"
+	else OS = "an unknown operating system";
+}
+
+function checkIt(string)
+{
+	place = detect.indexOf(string) + 1;
+	thestring = string;
+	return place;
+}
+
+var useFSCommand=false;
+
+if (OS=="Windows" && (browser=="Internet Explorer" || browser=="Firefox" || browser=="Netscape"))
+{
+	useFSCommand=true;
+}	
+
+function loadPlayer(flashVersion)
+{
+	location.href="PlayerX.html"+location.search+"&flashver="+flashVersion+"&useFS="+(useFSCommand?"true":"false")+(langrec!=null?("&langrec="+langrec+"&langmaster="+bighorn_masterlanguage):"")+"&"+(new Date().getTime());
+}
+
+function getParameter(pname,defval)
+{
+	var ret="";
+	var searchStr=unescape(location.search.toUpperCase());
+	var idx=searchStr.indexOf("?"+pname.toUpperCase()+"=");
+	if (idx==-1) idx=searchStr.indexOf("&"+pname.toUpperCase()+"=");
+	if (idx!=-1)
+	{
+		var tmp=unescape(location.search).substr(idx+pname.length+2);
+		idx=tmp.indexOf("&");
+		if (idx!=-1)
+			tmp=tmp.substr(0,idx);
+		
+		ret=unescape(tmp);
+	}
+        else
+        {
+	   ret=defval;
+        }
+	return ret;
+}
+	
+//-->
+</SCRIPT>
+</HEAD>
+<BODY style="margin: 0px; padding: 0px; background-color: #FFFFFF;">
+<noscript>This CourseBuilder Module needs JavaScript to be enabled.</noscript>
+<div id="flashversion">
+</div>
+<script type="text/javascript">
+// <![CDATA[
+
+	var protocol="http";
+	if (location.href.indexOf(":")!=-1) protocol=location.href.substring(0,location.href.indexOf(":"));
+
+	var version = deconcept.SWFObjectUtil.getPlayerVersion();
+	if (version["major"] > 6) 
+	{
+		loadPlayer(version["major"]);	
+	}
+	else
+	{
+		document.getElementById('flashversion').innerHTML = "<p>You need to install Adobe Flash Player version 7 or later to view this CourseBuilder Module.</p><p><a href=\""+protocol+"://www.adobe.com/go/EN_US-H-GET-FLASH\">Download Flash Player</a>.</p>";
+	}
+// ]]>
+</script>
+</BODY>
+</HTML>

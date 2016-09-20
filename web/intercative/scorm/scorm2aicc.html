@@ -1,0 +1,197 @@
+<!--
+
+SCORM 2 AICC API v1.1
+
+Copyright (c) 2002-2004 Boxer Technologies AS. All rights reserved.
+
+
+THE "SCORM 2 AICC API" IS PROTECTED BY COPYRIGHT. NO PORTION OF THE INFORMATION AND CODE MAY BE
+REPRODUCED IN ANY FORM, OR BY ANY MEANS, WITHOUT PRIOR WRITTEN PERMISSION FROM BOXER TECHNOLOGIES. 
+YOU ARE NOT PERMITTED TO MODIFY, DECOMPILE, REVERSE ENGINEER, DISTRIBUTE, PUBLISH, TRANSMIT OR
+CREATE DERIVATIVE WORKS OF ANY MATERIAL CONTAINED IN THE "SCORM 2 AICC API" FOR ANY PUBLIC OR 
+COMMERCIAL PURPOSES. 
+
+-->
+
+<HTML>
+<HEAD>
+<meta http-equiv="pragma" content="no-cache">
+<TITLE>scorm2aicc</TITLE>
+<meta name="Author" content="Boxer Technologies AS">
+<meta name="Copyright" content="Copyright (c) 2002-2004 Boxer Technologies AS. All rights reserved.">
+<meta name="Version" content="1.1">
+
+<script language="JavaScript">
+
+// Global variables
+// ****************
+
+annoy=false
+fullscreen=false
+newwindow=true
+supplyAPI=true
+
+// referece to SCORM RunTime API
+if (supplyAPI)
+	eval("var API = 0");
+	
+baseURL=""
+contentURL=""
+timerID=0
+crsWnd=0
+
+AICC_URL=""
+AICC_SID=""
+
+
+
+function Init()
+{
+	// Find Base Document URL
+	idx=location.pathname.lastIndexOf("/");
+	if (idx!=-1)
+	{
+		baseURL=location.protocol+"//"+location.host+location.pathname.substr(0,idx);
+	}
+
+	// Find AICC parameters
+	searchStr=location.search.toUpperCase();
+
+	sidx_aicc_url=searchStr.indexOf("AICC_URL=");
+	sidx_aicc_sid=searchStr.indexOf("AICC_SID=");
+	sidx_s2a_url=searchStr.indexOf("S2A_URL=");
+
+	if (sidx_aicc_url!=-1)
+	{
+		AICC_URL=location.search.substr(sidx_aicc_url+9);
+		idx=AICC_URL.indexOf("&");
+		if (idx!=-1)
+			AICC_URL=AICC_URL.substr(0,idx);
+		AICC_URL=unescape(AICC_URL);
+
+	}
+
+	if (sidx_aicc_sid!=-1)
+	{
+		AICC_SID=location.search.substr(sidx_aicc_sid+9);
+		idx=AICC_SID.indexOf("&");
+		if (idx!=-1)
+			AICC_SID=AICC_SID.substr(0,idx);
+	}
+
+	if (sidx_s2a_url!=-1)
+	{
+		contentURL=location.search.substr(sidx_s2a_url+8);
+		idx=contentURL.indexOf("&");
+		if (idx!=-1)
+			contentURL=contentURL.substr(0,idx);
+	}
+}
+
+function CloseSCO()
+{
+        if (crsWnd!=null)
+        {
+            if (crsWnd!=0)
+            {
+                if (!crsWnd.closed)
+                   crsWnd.close()
+                crsWnd=0
+            }
+        }
+}
+
+function openContent()
+{
+	if (annoy==true)
+	{
+		window.frames.contentFrame.document.clear();
+		window.frames.contentFrame.document.write('<TABLE WIDTH=100% HEIGHT=100%><TR><TD WIDTH=100% VALIGN=MIDDLE ALIGN=CENTER>');
+		window.frames.contentFrame.document.write('<TABLE CELLPADDING=20 BORDER=1 BGCOLOR=#EEEEEE><TR><TD>');
+		window.frames.contentFrame.document.write('<FONT SIZE=3 COLOR=#000000>');
+		window.frames.contentFrame.document.write('<B>SCORM 2 AICC API v1.1</B><BR><BR>');
+		window.frames.contentFrame.document.write('Copyright &copy; 2002-2004 Boxer Technologies AS. All rights reserved.<BR>');
+		window.frames.contentFrame.document.write('</FONT>');
+		window.frames.contentFrame.document.write('</TD></TR></TABLE>');
+		window.frames.contentFrame.document.write('</TD></TR></TABLE>');
+		window.frames.contentFrame.document.write('<BR>');
+		window.setTimeout("LaunchSCO()",1500);
+	}
+	else
+	{
+		LaunchSCO();
+	}
+}
+
+function LaunchSCO()
+{
+	if (supplyAPI)
+	{
+		API.setAiccUrl(AICC_URL);
+		API.setAiccSid(AICC_SID);
+	}
+
+    if (!fullscreen)
+    {
+	    if (newwindow)
+	    {
+		    width="990";
+		    height="560";
+		    // Find parameters
+			searchStr=unescape(contentURL).toUpperCase();
+			swidth=searchStr.indexOf("WIDTH=");
+			sheight=searchStr.indexOf("HEIGHT=");
+
+			if (swidth!=-1)
+			{
+				width=unescape(contentURL).substr(swidth+6);
+				idx=width.indexOf("&");
+				if (idx!=-1)
+					width=width.substr(0,idx);
+			}
+			
+			if (sheight!=-1)
+			{
+				height=unescape(contentURL).substr(sheight+7);
+				idx=height.indexOf("&");
+				if (idx!=-1)
+					height=height.substr(0,idx);
+			}
+			
+			nLeft=Math.round((window.screen.width/2)-(width/2));
+    		nTop=Math.round((window.screen.height/2)-(height/2));
+    		
+    		crsWnd=window.open(baseURL+"/"+unescape(contentURL),"scorm2aicc","top="+nTop+", left="+nLeft+", width="+width+", height="+height+", resizable=yes")
+    		crsWnd.focus()
+		}
+	    else
+	    {
+        	window.frames.contentFrame.location.href=baseURL+"/"+unescape(contentURL)
+    	}
+    }
+    else
+    {
+        crsWnd=window.open(baseURL+"/"+unescape(contentURL),"scorm2aicc","fullscreen")
+    }
+
+	window.status="SCORM 2 AICC API v1.1 (c) 2002-2004 Boxer Technologies AS. All rights reserved.";
+}
+
+Init()
+
+</script>
+</HEAD>
+
+<SCRIPT language="JavaScript">
+	document.write("<FRAMESET ROWS=\"0, 100%\" BORDER=0 FRAMEBORDER=0 FRAMESPACING=0 onBeforeUnload=\"window.status=''\">");
+	document.write("<FRAME NAME=\"converterFrame\" SRC=\""+(supplyAPI?"converter.html":"javascript:''")+"\" NORESIZE SCROLLING=NO marginwidth=0>");
+	document.write("<FRAME NAME=\"contentFrame\" SRC=\"javascript:''\" NORESIZE>");
+	document.write("</FRAMESET>");
+	
+	if (!supplyAPI)
+	{
+		openContent();
+	}
+</SCRIPT>
+
+</HTML>

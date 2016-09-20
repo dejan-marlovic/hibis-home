@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<meta http-equiv=Content-Type content="text/html;  charset=">
+<TITLE>This Course is powered by CourseBuilder</TITLE>
+<SCRIPT language="JavaScript">
+var popWnd=null;
+function popWindow(link,name,width,height)
+{
+    nLeft=Math.round((window.screen.width/2)-(width/2));
+    nTop=Math.round((window.screen.height/2)-(height/2));
+    popWnd=window.open(link,name,"top="+nTop+", left="+nLeft+", width="+width+", height="+height+", resizable=yes")
+    if (popWnd!=null)
+	popWnd.focus()
+}
+
+function setfocus()
+{
+	if (popWnd!=null && !popWnd.closed)
+		popWnd.focus();
+	else
+		showClosedInfo();
+}
+
+// Find parameters
+searchStr=unescape(location.search.toUpperCase());
+
+swidth=searchStr.indexOf("WIDTH=");
+sheight=searchStr.indexOf("HEIGHT=");
+
+if (swidth!=-1)
+{
+	width=unescape(location.search).substr(swidth+6);
+	idx=width.indexOf("&");
+	if (idx!=-1)
+		width=width.substr(0,idx);
+}
+else
+{
+	width="990";
+}
+
+if (sheight!=-1)
+{
+	height=unescape(location.search).substr(sheight+7);
+	idx=height.indexOf("&");
+	if (idx!=-1)
+		height=height.substr(0,idx);
+}
+else
+{
+	height="560";
+}
+
+function openContent()
+{
+	popWindow("Player.html?"+location.search,"coursebuilder",width,height)
+	if (popWnd==null)
+	{
+		document.getElementById('popupblocker').style.display = 'block';
+		document.getElementById('openinfo').style.display = 'none';
+	}
+}
+
+function showClosedInfo()
+{
+	document.getElementById('openinfo').style.display = 'none';
+	document.getElementById('closedinfo').style.display = 'block';
+}
+
+function showBlockedInfo()
+{
+	document.getElementById('popupblocker').style.display = 'none';
+	document.getElementById('openinfo').style.display = 'block';
+}
+
+function unloadPage()
+{
+	if (popWnd!=null && !popWnd.closed)
+		popWnd.close();
+}
+
+</SCRIPT>
+</HEAD>
+<BODY onUnload="unloadPage()" style="font-family: Verdana, Arial, sans-serif; margin: 50px;">
+
+<CENTER>
+<div id="openinfo" style="display: block; padding: 20px;">
+<p style="font-size: 9pt;">This course module has opened in a new window, <a href="javascript:setfocus()" style="font-size: 9pt; color: #000000; text-decoration:underline;">click here</a> to display the window.<p>
+</div>
+
+<div id="closedinfo" style="display: none; padding: 20px; background-color: #FFFFDD; border: 3px outset #FFFFCC;">
+<p style="font-size: 9pt;">This course module has closed.<p>
+</div>
+
+<div id="popupblocker" style="display: none; padding: 20px; background-color: #FFFFDD; border: 3px outset #FFFFCC;">
+<p style="font-size: 9pt;">A popup blocker prevented the course module to open a new window.<p>
+<p style="font-size: 9pt;">Please configure your popup blocker to allow popups from this site and <a href="javascript:openContent()" style="font-size: 9pt; color: #000000; text-decoration:underline;">click here</a> to try again.<p>
+</div>
+
+</CENTER>
+
+<SCRIPT language="JavaScript">
+openContent();
+</SCRIPT>
+
+</BODY>
+</HTML>

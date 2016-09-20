@@ -24,11 +24,11 @@ class DynamicHtml
     {
       ImageElement icon = new ImageElement();
       icon.src = data["url_icon"];
-      if (data.containsKey("publisher_url") && data["publisher_url"] != null)
+      if (data.containsKey("url_publisher") && data["url_publisher"] != null)
       {
         icon.onClick.listen((e)
         {
-          window.location.href = data["publisher_url"];
+          window.location.href = data["url_publisher"];
         });
       }
       icon.className = "icon";
@@ -287,15 +287,17 @@ class DynamicHtml
         {
           hidden.classes.remove("is-hidden");
           toggle.setInnerHtml("&lt;Show less&gt;");
+          hidden.append(toggle);
         }
         else
         {
           hidden.classes.add("is-hidden");
           toggle.setInnerHtml("&lt;Read more&gt;");
+          row1Col.append(toggle);
         }
       }
     });
-    row1Col.append(toggle);
+
 
     /// Row 2 (long description)
     DivElement row2Col = new DivElement();
@@ -334,6 +336,7 @@ class DynamicHtml
     contactHeader.setInnerHtml("Contact");
     email.setInnerHtml(data["email"]);
     phone.setInnerHtml("${data["phone"]} <br />${data["phone_2"]}");
+    row1Col.append(toggle);
 
     return row;
   }

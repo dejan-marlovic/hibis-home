@@ -1,0 +1,181 @@
+﻿
+/* ------------------- Styles for ChapterItem --------------------------------------------------- */
+.ChapterItem
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+}
+
+.ChapterItemCurrent
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+}
+
+.ChapterItemOver
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+}
+
+.ChapterItemCompleted
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #8A8D8E;
+	text-align: center;
+}
+
+
+
+
+
+/* ------------------- Styles for SubChapterItem ----------------------------------------------- */
+.SubChapterItem
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+}
+
+.SubChapterItemCurrent
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+}
+
+.SubChapterItemOver
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+}
+
+.SubChapterItemCompleted
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	color: #8A8D8E;
+	text-align: center;
+}
+
+
+
+
+/* ------------------- Styles for text buttons in skin (e.g. close, sound on/off ------------------ */
+.TextButtons
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+}
+.TextButtonsOver
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-align: center;
+	text-decoration: underline;
+}
+
+
+
+/* ------------------- Style for Tooltip --------------------------------------------------------- */
+.ToolTip
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #8A8D8E;
+	text-align: center;
+}
+
+
+
+/* ------------------- Style for InstructionalText ----------------------------------------------- */
+.InstructionalText
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #8A8D8E;
+	text-align: right;
+}
+
+
+
+/* ------------------- Style for ModuleTitle ----------------------------------------------------- */
+.ModuleTitle
+{
+	font-family: Arial;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: normal;
+	color: #666666;
+	text-align: right;
+}
+
+
+
+/* ------------------- Style for Pagina ---------------------------------------------------------- */
+.Pagina
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #666666;
+	text-align: center;
+}
+
+
+
+/* ------------------- Style for ExamTimerDisplay ------------------------------------------------- */
+.ExamTimerDisplay
+{
+	font-family: Arial;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #8A8D8E;
+	text-align: center;
+}
+
+
+
+
+

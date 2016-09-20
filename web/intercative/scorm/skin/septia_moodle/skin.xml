@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<skin version="5.3">
+  <skinname>Septia Moodle</skinname>
+  <xml>../skin/septia_moodle/skin.xml</xml>
+  <swf>../skin/septia_moodle/septia_moodle.swf</swf>
+  <jpg>../skin/septia_moodle/septia_moodle.jpg</jpg>
+  <pagepos>0,0</pagepos>
+  <moviesize>1000 x 480</moviesize>
+  <pagesize>1000,480</pagesize>
+  <textfield>1</textfield>
+  <styles>
+    <font color="0x000000" family="Arial,Verdana,Book Antiqua" size="8,9,10,12,14,16,18,20,22,24,26,28,32,36,48,72" />
+    <headertext left="40" size="22" top="120" width="531" />
+    <media left="360" top="65" />
+    <picturetext left="50" size="10" top="480" width="340" />
+    <textgroup left="40" size="14" top="159" width="518" />
+    <speaktext height="670" left="1011" size="10" top="0" width="250" color="0x000000" />
+    <texteditor backgroundColor="0xbcbcbc" transparent="true" />
+    <textbackground>
+      <subtype>0</subtype>
+      <margin>5</margin>
+      <lineThickness>1</lineThickness>
+      <lineColor>0xCCCCCC</lineColor>
+      <boxAlpha>100</boxAlpha>
+      <cornerRadius>10</cornerRadius>
+      <dropShadow>false</dropShadow>
+      <dropShadowAlpha>20</dropShadowAlpha>
+      <dropShadowX>5</dropShadowX>
+      <dropShadowY>5</dropShadowY>
+      <gradient>false</gradient>
+      <gradientDirection>Top to bottom</gradientDirection>
+      <gradientStartColor>0xFFFFFF</gradientStartColor>
+      <gradientEndColor>0xAABBCC</gradientEndColor>
+    </textbackground>
+  </styles>
+  <skintext>
+    <string key="exitModule" desc="text for exit course button">
+      <langstring lang="en" marked="0">Exit course</langstring>
+      <langstring lang="sv" marked="0">Stäng kursen</langstring>
+    </string>
+    <string key="soundOn" desc="text for the sound button to turn on sound">
+      <langstring lang="en" marked="0">Turn sound on</langstring>
+      <langstring lang="sv" marked="0">Sätt på ljud</langstring>
+    </string>
+    <string key="fwdover" desc="mouse over forward button">
+      <langstring lang="en" marked="0">Forward</langstring>
+      <langstring lang="sv" marked="0">Fortsätt</langstring>
+    </string>
+    <string key="backover" desc="mouse over back button">
+      <langstring lang="en" marked="0">Back</langstring>
+      <langstring lang="sv" marked="0">Tillbaka</langstring>
+    </string>
+    <string key="AudioEnabled" desc="Display or hide the sound button (0=hide)">
+      <langstring lang="en" marked="0">1</langstring>
+      <langstring lang="sv" marked="0">1</langstring>
+    </string>
+    <string key="pauseover" desc="mouse over pause button when not paused">
+      <langstring lang="en" marked="0">Pause</langstring>
+      <langstring lang="sv" marked="0">Pausa</langstring>
+    </string>
+    <string key="playover" desc="mouse over pause button when paused">
+      <langstring lang="en" marked="0">Play</langstring>
+      <langstring lang="sv" marked="0">Spela</langstring>
+    </string>
+    <string key="soundOff" desc="text for the sound button to turn off sound">
+      <langstring lang="en" marked="0">Turn sound off</langstring>
+      <langstring lang="sv" marked="0">Stäng av ljud</langstring>
+    </string>
+    <string key="logoImage" desc="Name of the logo image">
+      <langstring lang="en" marked="0">edglogo.png</langstring>
+    </string>
+    <string key="CloseEnabled" desc="Display or hide the close button (0=hide)">
+      <langstring lang="en" marked="0">1</langstring>
+      <langstring lang="sv" marked="0">1</langstring>
+    </string>
+  </skintext>
+</skin>

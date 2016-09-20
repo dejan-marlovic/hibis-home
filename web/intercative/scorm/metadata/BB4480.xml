@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1"
+    xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+    <general>
+        <language>en</language>
+        <catalogentry>
+            <catalog>CourseBuilderID</catalog>
+            <entry>
+                <langstring xml:lang="en">CBNO00001703_B4480</langstring>
+            </entry>
+        </catalogentry>
+        <title>
+            <langstring xml:lang="en">Fraud and Corruption - Forgiveness and Compassion</langstring>
+        </title>
+        <description>
+            <langstring xml:lang="en"/>
+        </description>
+    </general>
+    <lifecycle>
+        <version>
+            <langstring xml:lang="en">1.0</langstring>
+        </version>
+        <status>
+            <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">Final</langstring>
+            </value>
+        </status>
+        <contribute>
+            <role>
+                <source>
+                    <langstring xml:lang="x-none">LOMv1.0</langstring>
+                </source>
+                <value>
+                    <langstring xml:lang="x-none">Author</langstring>
+                </value>
+            </role>
+            <centity>
+                <vcard>BEGIN:vCard ORG:Edvantage Group AS END:vCard</vcard>
+            </centity>
+            <date>
+                <datetime>2010-04-20T15:48</datetime>
+            </date>
+        </contribute>
+    </lifecycle>
+    <metametadata>
+        <metadatascheme>ADL SCORM 1.2</metadatascheme>
+    </metametadata>
+    <technical>
+        <format><![CDATA[]]></format>
+        <location><![CDATA[]]></location>
+    </technical>
+    <rights>
+        <cost>
+            <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">yes</langstring>
+            </value>
+        </cost>
+        <copyrightandotherrestrictions>
+            <source>LOMv1.0</source>
+            <value>yes</value>
+        </copyrightandotherrestrictions>
+    </rights>
+    <classification>
+        <purpose>
+            <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">Educational Objective</langstring>
+            </value>
+        </purpose>
+        <description>
+            <langstring xml:lang="en"/>
+        </description>
+    </classification>
+</lom>

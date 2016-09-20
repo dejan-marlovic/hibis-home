@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="5.50">
+<innhold_r>
+<header XLIFF="12010319214479655" left="50" top="92" width="386">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</header>
+<medialist>
+<media height="310" id="1201031417381099" left="407" top="60" width="520">
+<url>../images/57944.swf</url>
+<originalfilename>videoFrame.swf</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+</media>
+<media height="368" id="12010314174432819" left="26" top="81" width="640">
+<url>../images/98812.swf</url>
+<originalfilename>Section2_wmv2_384K.flv</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+</media>
+<media height="350" id="120103157442239" left="1010" top="21" width="700">
+<url>../images/93051.swf</url>
+<originalfilename>Nervous-People_bg2.jpg</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+</media>
+<media id="0">
+<url>../images/97449.flv</url>
+</media>
+<media id="1">
+<url>../images/97450.flv</url>
+</media>
+<media id="2">
+<url>../images/97451.flv</url>
+</media>
+<media id="3">
+<url>../images/97452.flv</url>
+</media>
+<media id="4">
+<url>../images/98820.jpg</url>
+</media>
+</medialist>
+<pictext XLIFF="12010319214479656" left="50" top="475" width="336">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</pictext>
+<textgroup left="40" top="159" width="518">
+<text XLIFF="120103141430521154" id="0">
+<string/>
+<soundurl/>
+<mediacontrol>
+<action media_id="1201031417381099" type="display"/>
+<action media_id="12010314174432819" type="display"/>
+<action media_id="120103157442239" type="display"/>
+</mediacontrol>
+<stop>0</stop>
+<pause>0</pause>
+<speaktext/>
+<plaintext/>
+</text>
+</textgroup>
+<components>
+<component id="propBox_textbg_mc">
+<category id="fill" label="Fill">
+<property id="boxAlpha">
+<type>Number</type>
+<label>Box alpha</label>
+<value>100</value>
+<range/>
+</property>
+<property id="gradient">
+<type>Boolean</type>
+<label>Enable gradient</label>
+<value>true</value>
+<range/>
+</property>
+<property id="gradientDirection">
+<type>Combobox</type>
+<label>Direction</label>
+<value>Top to bottom</value>
+<range>Top to bottom,Left to right,Bottom to top,Right to left</range>
+</property>
+<property id="gradientStartColor">
+<type>Color</type>
+<label>Box/gradient start color</label>
+<value>0xFFFFFF</value>
+<range/>
+</property>
+<property id="gradientEndColor">
+<type>Color</type>
+<label>Gradient end color</label>
+<value>0xAABBCC</value>
+<range/>
+</property>
+</category>
+<category id="line" label="Line">
+<property id="lineThickness">
+<type>Number</type>
+<label>Thickness</label>
+<value>1</value>
+<range/>
+</property>
+<property id="lineColor">
+<type>Color</type>
+<label>Color</label>
+<value>0xCCCCCC</value>
+<range/>
+</property>
+<property id="cornerRadius">
+<type>Number</type>
+<label>Corner radius</label>
+<value>10</value>
+<range/>
+</property>
+</category>
+<category id="dropShadow" label="Drop shadow">
+<property id="dropShadow">
+<type>Boolean</type>
+<label>Enable</label>
+<value>false</value>
+<range/>
+</property>
+<property id="dropShadowAlpha">
+<type>Number</type>
+<label>Alpha</label>
+<value>20</value>
+<range/>
+</property>
+<property id="dropShadowX">
+<type>Number</type>
+<label>X-offset</label>
+<value>5</value>
+<range/>
+</property>
+<property id="dropShadowY">
+<type>Number</type>
+<label>Y-offset</label>
+<value>5</value>
+<range/>
+</property>
+</category>
+<category id="positionsize" label="Margin">
+<property id="x">
+<type>Number</type>
+<label>Margin</label>
+<value>5</value>
+<range/>
+</property>
+</category>
+<category id="boxtype" label="These will be hidden">
+<property XLIFF="12010319214479657" id="type">
+<type>String</type>
+<label>Boxtype</label>
+<value>null</value>
+<range/>
+</property>
+<property XLIFF="12010319214479658" id="subtype">
+<type>String</type>
+<label>Boxsubtype</label>
+<value>0</value>
+<range/>
+</property>
+</category>
+<category id="boxtweening" label="Tweening">
+<property id="tweenBackground">
+<type>Boolean</type>
+<label>Enable tweening</label>
+<value>true</value>
+<range/>
+</property>
+</category>
+</component>
+<component id="1201031417381099">
+</component>
+<component id="12010314174432819">
+<category id="editing" label="Editing">
+<property id="display_hud_controls">
+<type>Boolean</type>
+<label>Display HUD Controls</label>
+<value>true</value>
+<range/>
+</property>
+<property id="start_scene">
+<type>Combobox</type>
+<label>Start scene</label>
+<value>Scene #0</value>
+<range>Scene #0,</range>
+</property>
+</category>
+<category id="global_properties" label="Global Properties">
+<property id="video_playback_x_pos">
+<type>Number</type>
+<label>Video X-Pos</label>
+<value>401</value>
+<range/>
+</property>
+<property id="video_playback_y_pos">
+<type>Number</type>
+<label>Video Y-Pos</label>
+<value>30</value>
+<range/>
+</property>
+<property id="video_playback_width">
+<type>Number</type>
+<label>Video Width</label>
+<value>480</value>
+<range/>
+</property>
+<property id="video_playback_height">
+<type>Number</type>
+<label>Video Height</label>
+<value>270</value>
+<range/>
+</property>
+<property id="video_playback_center">
+<type>Boolean</type>
+<label>Center playback</label>
+<value>false</value>
+<range/>
+</property>
+<property id="layout">
+<type>Combobox</type>
+<label>Align Buttons</label>
+<value>Left</value>
+<range>Left,Right</range>
+</property>
+<property id="button_bg_color">
+<type>Color</type>
+<label>Button Background</label>
+<value>0xCCCCCC</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841678" id="button_snd_positive">
+<type>Sound</type>
+<label>Btn Sound Positive</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="1201031417579841679" id="button_snd_negative">
+<type>Sound</type>
+<label>Btn Sound Negative</label>
+<value/>
+<range/>
+</property>
+<property id="display_continue_button">
+<type>Boolean</type>
+<label>Display 'Continue' btn</label>
+<value>true</value>
+<range/>
+</property>
+<property id="show_wrong_buttons_on_right_answer">
+<type>Boolean</type>
+<label>Show wrong btns on right answer</label>
+<value>true</value>
+<range/>
+</property>
+<property id="show_FLVBackdrop">
+<type>Boolean</type>
+<label>Show video backdrop</label>
+<value>false</value>
+<range/>
+</property>
+</category>
+<category id="scene0" label="Scene #0 configuration">
+<property id="flv_path">
+<type>Media</type>
+<label>Video</label>
+<value>../images/97449.flv</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841680" id="scene_text">
+<type>String_HTML</type>
+<label>Scene Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;What does it look like Mr Paul Curtis has been up to? (you may select several options)&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841681" id="button_1_text">
+<type>String_HTML</type>
+<label>Btn #1 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Submitting false expense receipts.&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841682" id="button_2_text">
+<type>String_HTML</type>
+<label>Btn #2 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Filling a car which is NOT his company car.&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841683" id="button_3_text">
+<type>String_HTML</type>
+<label>Btn #3 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Bribing customers of the company.&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841684" id="button_4_text">
+<type>String_HTML</type>
+<label>Btn #4 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Bringing the company’s reputation into disrepute?&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841685" id="button_1_response_text">
+<type>String_HTML</type>
+<label>Btn #1 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;It seems so although there could be logical explanations&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841686" id="button_2_response_text">
+<type>String_HTML</type>
+<label>Btn #2 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Yes, it looks like it but then he could be using the car for business purposes too&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841687" id="button_3_response_text">
+<type>String_HTML</type>
+<label>Btn #3 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Yes -the entertainment could constitute a bribe&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841688" id="button_4_response_text">
+<type>String_HTML</type>
+<label>Btn #4 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Possibly – it depends how commonplace this is&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property id="button_1_response_flv_path">
+<type>Media</type>
+<label>Btn #1 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_2_response_flv_path">
+<type>Media</type>
+<label>Btn #2 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_3_response_flv_path">
+<type>Media</type>
+<label>Btn #3 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_4_response_flv_path">
+<type>Media</type>
+<label>Btn #4 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_1_is_correct">
+<type>Boolean</type>
+<label>Btn #1 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_2_is_correct">
+<type>Boolean</type>
+<label>Btn #2 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_3_is_correct">
+<type>Boolean</type>
+<label>Btn #3 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_4_is_correct">
+<type>Boolean</type>
+<label>Btn #4 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+</category>
+<category id="scene1" label="Scene #1 configuration">
+<property id="flv_path">
+<type>Media</type>
+<label>Video</label>
+<value>../images/97450.flv</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841689" id="scene_text">
+<type>String_HTML</type>
+<label>Scene Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Clive is recommending that the company turn the matter over to the police and also pursuing Paul Curtis through the civil courts.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Based on what you have heard so far, which answer is closest to how do you feel about Clive’s suggestion?  &lt;FONT COLOR="#000000"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841690" id="button_1_text">
+<type>String_HTML</type>
+<label>Btn #1 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="10" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Clive is right – we should make an example of Paul Curtis.&lt;FONT SIZE="12"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841691" id="button_2_text">
+<type>String_HTML</type>
+<label>Btn #2 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="10" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;I’m not sure.  We need to examine if this sort of behaviour is  common in the company before we decide on what action to take.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841692" id="button_3_text">
+<type>String_HTML</type>
+<label>Btn #3 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="10" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;It seems pretty clear cut as Clive says but we need to consider other options.&lt;FONT SIZE="12"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841693" id="button_4_text">
+<type>String_HTML</type>
+<label>Btn #4 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="10" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;This is trivial and happens all the time in big companies.  It would be a shame to lose Paul Curtis over this.  Maybe someone should have a quiet word with him.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841694" id="button_1_response_text">
+<type>String_HTML</type>
+<label>Btn #1 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;That&amp;apos;s quite a hard line approach but definitely one that has been used in the past.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841695" id="button_2_response_text">
+<type>String_HTML</type>
+<label>Btn #2 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Yes its not easy.  People in that room look rather tense.... &lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841696" id="button_3_response_text">
+<type>String_HTML</type>
+<label>Btn #3 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Lets see what the other options could be....&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841697" id="button_4_response_text">
+<type>String_HTML</type>
+<label>Btn #4 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Maybe it is trivial compared to other things but still, it&amp;apos;s not right.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property id="button_1_response_flv_path">
+<type>Media</type>
+<label>Btn #1 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_2_response_flv_path">
+<type>Media</type>
+<label>Btn #2 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_3_response_flv_path">
+<type>Media</type>
+<label>Btn #3 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_4_response_flv_path">
+<type>Media</type>
+<label>Btn #4 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_1_is_correct">
+<type>Boolean</type>
+<label>Btn #1 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_2_is_correct">
+<type>Boolean</type>
+<label>Btn #2 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_3_is_correct">
+<type>Boolean</type>
+<label>Btn #3 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_4_is_correct">
+<type>Boolean</type>
+<label>Btn #4 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+</category>
+<category id="scene2" label="Scene #2 configuration">
+<property id="flv_path">
+<type>Media</type>
+<label>Video</label>
+<value>../images/97451.flv</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841698" id="scene_text">
+<type>String_HTML</type>
+<label>Scene Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;What do you think is going on in the room?&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;(Select one or more answers)&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841699" id="button_1_text">
+<type>String_HTML</type>
+<label>Btn #1 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Clive, the Financial Director is angry that he is being challenged and accused of incompetence by his boss.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841700" id="button_2_text">
+<type>String_HTML</type>
+<label>Btn #2 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Andrew, the chief executive, feels that this may not be isolated incident...it could be indicative of a culture.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841701" id="button_3_text">
+<type>String_HTML</type>
+<label>Btn #3 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;People in the room are getting nervous because they too may be looked at... investigated.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841702" id="button_4_text">
+<type>String_HTML</type>
+<label>Btn #4 Text</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="1201031417579841703" id="button_1_response_text">
+<type>String_HTML</type>
+<label>Btn #1 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Probably ALL of them!...click on &amp;quot;Continue&amp;quot; to proceed&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841704" id="button_2_response_text">
+<type>String_HTML</type>
+<label>Btn #2 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Probably ALL of them!...click on &amp;quot;Continue&amp;quot; to proceed&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841705" id="button_3_response_text">
+<type>String_HTML</type>
+<label>Btn #3 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;Probably ALL of them!...click on &amp;quot;Continue&amp;quot; to proceed&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841706" id="button_4_response_text">
+<type>String_HTML</type>
+<label>Btn #4 Response Text</label>
+<value/>
+<range/>
+</property>
+<property id="button_1_response_flv_path">
+<type>Media</type>
+<label>Btn #1 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_2_response_flv_path">
+<type>Media</type>
+<label>Btn #2 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_3_response_flv_path">
+<type>Media</type>
+<label>Btn #3 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_4_response_flv_path">
+<type>Media</type>
+<label>Btn #4 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_1_is_correct">
+<type>Boolean</type>
+<label>Btn #1 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_2_is_correct">
+<type>Boolean</type>
+<label>Btn #2 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_3_is_correct">
+<type>Boolean</type>
+<label>Btn #3 is Correct</label>
+<value>true</value>
+<range/>
+</property>
+<property id="button_4_is_correct">
+<type>Boolean</type>
+<label>Btn #4 is Correct</label>
+<value>false</value>
+<range/>
+</property>
+</category>
+<category id="scene3" label="Scene #3 configuration">
+<property id="flv_path">
+<type>Media</type>
+<label>Video</label>
+<value>../images/97452.flv</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841707" id="scene_text">
+<type>String_HTML</type>
+<label>Scene Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;What would you DO? Which way would your vote Swing?&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841708" id="button_1_text">
+<type>String_HTML</type>
+<label>Btn #1 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Andrew&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841709" id="button_2_text">
+<type>String_HTML</type>
+<label>Btn #2 Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Clive&lt;/B&gt;&lt;FONT COLOR="#000000"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841710" id="button_3_text">
+<type>String_HTML</type>
+<label>Btn #3 Text</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="1201031417579841711" id="button_4_text">
+<type>String_HTML</type>
+<label>Btn #4 Text</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="1201031417579841712" id="button_1_response_text">
+<type>String_HTML</type>
+<label>Btn #1 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;It&amp;apos;s not as easy as it seems....click on &amp;quot;Continue&amp;quot; and get some feedback&lt;/B&gt;&lt;FONT FACE="Verdana" SIZE="12"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841713" id="button_2_response_text">
+<type>String_HTML</type>
+<label>Btn #2 Response Text</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;It&amp;apos;s not as easy as it seems....click on &amp;quot;Continue&amp;quot; and get some feedback&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="1201031417579841714" id="button_3_response_text">
+<type>String_HTML</type>
+<label>Btn #3 Response Text</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="1201031417579841715" id="button_4_response_text">
+<type>String_HTML</type>
+<label>Btn #4 Response Text</label>
+<value/>
+<range/>
+</property>
+<property id="button_1_response_flv_path">
+<type>Media</type>
+<label>Btn #1 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_2_response_flv_path">
+<type>Media</type>
+<label>Btn #2 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_3_response_flv_path">
+<type>Media</type>
+<label>Btn #3 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_4_response_flv_path">
+<type>Media</type>
+<label>Btn #4 Response Video</label>
+<value/>
+<range/>
+</property>
+<property id="button_1_is_correct">
+<type>Boolean</type>
+<label>Btn #1 is Correct</label>
+<value>false</value>
+<range/>
+</property>
+<property id="button_2_is_correct">
+<type>Boolean</type>
+<label>Btn #2 is Correct</label>
+<value>false</value>
+<range/>
+</property>
+<property id="button_3_is_correct">
+<type>Boolean</type>
+<label>Btn #3 is Correct</label>
+<value>false</value>
+<range/>
+</property>
+<property id="button_4_is_correct">
+<type>Boolean</type>
+<label>Btn #4 is Correct</label>
+<value>false</value>
+<range/>
+</property>
+</category>
+</component>
+<component id="120103157442239">
+<category id="GeneralSettings" label="General settings">
+<property id="layerOption">
+<type>Combobox</type>
+<label>Layer option:</label>
+<value>Behind page</value>
+<range>Behind page,Above page,Above skin</range>
+</property>
+</category>
+<category id="BackgroundImage0" label="Background image 1">
+<property id="media">
+<type>Media</type>
+<label>Media:</label>
+<value>../images/98820.jpg</value>
+<range/>
+</property>
+<property id="yPos">
+<type>Number</type>
+<label>y-position:</label>
+<value>0</value>
+<range/>
+</property>
+<property id="xPos">
+<type>Number</type>
+<label>x-position:</label>
+<value>0</value>
+<range/>
+</property>
+<property id="rotation">
+<type>Number</type>
+<label>Rotation:</label>
+<value>0</value>
+<range/>
+</property>
+</category>
+</component>
+</components>
+</innhold_r>
+</page>

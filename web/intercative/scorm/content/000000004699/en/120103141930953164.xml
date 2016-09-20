@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="5.50">
+<innhold_r>
+<header XLIFF="12010319214615676" left="50" top="92" width="386">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</header>
+<medialist>
+<media height="636.1" id="1201031420305845" left="1" top="15" width="1000">
+<url>../images/98813.swf</url>
+<originalfilename>Pendulum Component</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+</media>
+<media height="69.4" id="1201031421196855" left="193" top="147" width="98">
+<url>../images/98684.jpg</url>
+<originalfilename>AndrewStill.jpg</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+</media>
+<media height="69.25" id="12010314211942876" left="521" top="147" width="107">
+<url>../images/98679.jpg</url>
+<originalfilename>Clivestill.jpg</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+</media>
+</medialist>
+<pictext XLIFF="12010319214615677" left="50" top="475" width="336">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</pictext>
+<textgroup left="40" top="159" width="518">
+<text XLIFF="120103142042381290" id="0">
+<string/>
+<soundurl/>
+<mediacontrol>
+<action media_id="1201031420305845" type="display"/>
+<action media_id="1201031421196855" type="display"/>
+<action media_id="12010314211942876" type="display"/>
+</mediacontrol>
+<stop>0</stop>
+<pause>0</pause>
+<speaktext/>
+<plaintext/>
+</text>
+</textgroup>
+<components>
+<component id="propBox_textbg_mc">
+<category id="fill" label="Fill">
+<property id="boxAlpha">
+<type>Number</type>
+<label>Box alpha</label>
+<value>100</value>
+<range/>
+</property>
+<property id="gradient">
+<type>Boolean</type>
+<label>Enable gradient</label>
+<value>true</value>
+<range/>
+</property>
+<property id="gradientDirection">
+<type>Combobox</type>
+<label>Direction</label>
+<value>Top to bottom</value>
+<range>Top to bottom,Left to right,Bottom to top,Right to left</range>
+</property>
+<property id="gradientStartColor">
+<type>Color</type>
+<label>Box/gradient start color</label>
+<value>0xFFFFFF</value>
+<range/>
+</property>
+<property id="gradientEndColor">
+<type>Color</type>
+<label>Gradient end color</label>
+<value>0xAABBCC</value>
+<range/>
+</property>
+</category>
+<category id="line" label="Line">
+<property id="lineThickness">
+<type>Number</type>
+<label>Thickness</label>
+<value>1</value>
+<range/>
+</property>
+<property id="lineColor">
+<type>Color</type>
+<label>Color</label>
+<value>0xCCCCCC</value>
+<range/>
+</property>
+<property id="cornerRadius">
+<type>Number</type>
+<label>Corner radius</label>
+<value>10</value>
+<range/>
+</property>
+</category>
+<category id="dropShadow" label="Drop shadow">
+<property id="dropShadow">
+<type>Boolean</type>
+<label>Enable</label>
+<value>false</value>
+<range/>
+</property>
+<property id="dropShadowAlpha">
+<type>Number</type>
+<label>Alpha</label>
+<value>20</value>
+<range/>
+</property>
+<property id="dropShadowX">
+<type>Number</type>
+<label>X-offset</label>
+<value>5</value>
+<range/>
+</property>
+<property id="dropShadowY">
+<type>Number</type>
+<label>Y-offset</label>
+<value>5</value>
+<range/>
+</property>
+</category>
+<category id="positionsize" label="Margin">
+<property id="x">
+<type>Number</type>
+<label>Margin</label>
+<value>5</value>
+<range/>
+</property>
+</category>
+<category id="boxtype" label="These will be hidden">
+<property XLIFF="12010319214615678" id="type">
+<type>String</type>
+<label>Boxtype</label>
+<value>null</value>
+<range/>
+</property>
+<property XLIFF="12010319214615679" id="subtype">
+<type>String</type>
+<label>Boxsubtype</label>
+<value>0</value>
+<range/>
+</property>
+</category>
+<category id="boxtweening" label="Tweening">
+<property id="tweenBackground">
+<type>Boolean</type>
+<label>Enable tweening</label>
+<value>true</value>
+<range/>
+</property>
+</category>
+</component>
+<component id="1201031420305845">
+<category id="Pendelum" label="Pendelum">
+<property XLIFF="[object Object]" id="question">
+<type>String_HTML</type>
+<label>Question:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Which way would your vote &lt;FONT SIZE="24"&gt;&lt;B&gt;&lt;I&gt;swing?&lt;/I&gt;&lt;/B&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="_level0.template_mc.picholder1201031420305845.holder.holder_child.mcSpeaker" id="questionSpeaker">
+<type>Sound</type>
+<label>Question speaker:</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="nofeedback">
+<type>String_HTML</type>
+<label>No feedback:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;It’s probably the simplest and easiest answer.  We can get the evidence of fraud so let’s follow it through.  However will this be enough of a deterrent, and if other people have done similar, or worse things, will they be likely to stop?&lt;FONT FACE="Arial" SIZE="12"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="_level0.template_mc.picholder1201031420305845.holder.holder_child.mcSpeaker" id="noSpeaker">
+<type>Sound</type>
+<label>Speaker:</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="indecisivefeedback">
+<type>String_HTML</type>
+<label>Indecisive feedback:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;It’s quite hard to choose isn’t it?&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="_level0.template_mc.picholder1201031420305845.holder.holder_child.mcSpeaker" id="indecisiveSpeaker">
+<type>Sound</type>
+<label>Speaker:</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="yesfeedback">
+<type>String_HTML</type>
+<label>Yes feedback:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;So it looks like you believe that before we come down hard on Paul Curtis we need to put things in perspective  and  see who else might have done similar things?&lt;FONT FACE="Arial" SIZE="12"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="_level0.template_mc.picholder1201031420305845.holder.holder_child.mcSpeaker" id="yesSpeaker">
+<type>Sound</type>
+<label>Speaker:</label>
+<value/>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="instructions">
+<type>String_HTML</type>
+<label>Instructions:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="12" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;You can drag the pendulum and drop it where you believe the most appropriate answer is&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="no">
+<type>String_HTML</type>
+<label>No:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="22" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Clive (CFO)&lt;/B&gt;&lt;FONT FACE="Arial"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="dontknow">
+<type>String_HTML</type>
+<label>Indecisive:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="CENTER"&gt;&lt;FONT FACE="Verdana" SIZE="26" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;?&lt;FONT SIZE="72"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="yes">
+<type>String_HTML</type>
+<label>Yes:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="22" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;B&gt;Andrew (CEO)&lt;/B&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property id="timerDelay">
+<type>Number</type>
+<label>Exercise delay (sec):</label>
+<value>0</value>
+<range/>
+</property>
+</category>
+</component>
+<component id="1201031421196855">
+</component>
+<component id="12010314211942876">
+</component>
+</components>
+</innhold_r>
+</page>

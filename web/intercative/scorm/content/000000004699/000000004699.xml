@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<course coursever="12010319225546290" highContrast="0" screenreader="0" tabEnabled="0" version="5.61">
+<coursename>
+<langstring lang="en" marked="0">Fraud and Corruption - Forgiveness and Compassion</langstring>
+</coursename>
+<skinswf>../skin/septia_moodle/septia_moodle.swf</skinswf>
+<skinname>Septia Moodle</skinname>
+<skinversion>5.3</skinversion>
+<skin_acc highContrast="0" screenreader="0" tabEnabled="0"/>
+<language>
+<lang code="en">English</lang>
+</language>
+<timer>NaN</timer>
+<screenheight>480</screenheight>
+<screenwidth>1000</screenwidth>
+<main_pos>100,100</main_pos>
+<menu_pos>100,100</menu_pos>
+<coursepath>../content/000000004699/</coursepath>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<keyword>
+<langstring lang="en" marked="0"/>
+</keyword>
+<scoversion/>
+<author/>
+<locked>0</locked>
+<password/>
+<fwdbutton>000</fwdbutton>
+<advnav>0</advnav>
+<preload>1</preload>
+<accnavbar>Bottom Right</accnavbar>
+<instructiontext>
+<string key="next">
+<langstring lang="en" marked="0">Please click the forward button to continue.</langstring>
+</string>
+<string key="mouse">
+<langstring lang="en" marked="0">Please click the mouse button to continue.</langstring>
+</string>
+<string key="answer">
+<langstring lang="en" marked="0">Complete the task and then click the Answer-button.</langstring>
+</string>
+<string key="hotspot">
+<langstring lang="en" marked="0">Please click on the hotspots to obtain more information.</langstring>
+</string>
+<string key="fasit">
+<langstring lang="en" marked="0">Click to exit, review answers or restart the test.</langstring>
+</string>
+<string key="restart_test">
+<langstring lang="en" marked="0">Please restart the test or click to exit.</langstring>
+</string>
+<string key="exit">
+<langstring lang="en" marked="0">Replay the episode click the "Home page"</langstring>
+</string>
+<string key="solve">
+<langstring lang="en" marked="0">Please complete the task.</langstring>
+</string>
+</instructiontext>
+<buttontext>
+<string key="answer">
+<langstring lang="en" marked="0">Answer</langstring>
+</string>
+<string key="correctanswer">
+<langstring lang="en" marked="0">Correct answer</langstring>
+</string>
+<string key="myanswer">
+<langstring lang="en" marked="0">My answer</langstring>
+</string>
+</buttontext>
+<examhandlertext>
+<string key="confirmation_header">
+<langstring lang="en" marked="0">Confirmation</langstring>
+</string>
+<string key="confirmation_question">
+<langstring lang="en" marked="0">Do you wish to start this part of the Exam?</langstring>
+</string>
+<string key="yes">
+<langstring lang="en" marked="0">Yes</langstring>
+</string>
+<string key="no">
+<langstring lang="en" marked="0">No</langstring>
+</string>
+<string key="starttest">
+<langstring lang="en" marked="0">Start this part of the test</langstring>
+</string>
+<string key="score">
+<langstring lang="en" marked="0">Score</langstring>
+</string>
+<string key="requirement">
+<langstring lang="en" marked="0">Requirement</langstring>
+</string>
+<string key="correctanswers">
+<langstring lang="en" marked="0">Show correct answers for this part of the test</langstring>
+</string>
+<string key="starttheory">
+<langstring lang="en" marked="0">Start theory-section for this part of the test</langstring>
+</string>
+</examhandlertext>
+<skintext>
+<string desc="text for exit course button" key="exitModule">
+<langstring lang="en" marked="0">Exit course</langstring>
+<langstring lang="sv" marked="0">Stäng kursen</langstring>
+</string>
+<string desc="text for the sound button to turn on sound" key="soundOn">
+<langstring lang="en" marked="0">Turn sound on</langstring>
+<langstring lang="sv" marked="0">Sätt på ljud</langstring>
+</string>
+<string desc="mouse over forward button" key="fwdover">
+<langstring lang="en" marked="0">Forward</langstring>
+<langstring lang="sv" marked="0">Fortsätt</langstring>
+</string>
+<string desc="mouse over back button" key="backover">
+<langstring lang="en" marked="0">Back</langstring>
+<langstring lang="sv" marked="0">Tillbaka</langstring>
+</string>
+<string desc="Display or hide the sound button (0=hide)" key="AudioEnabled">
+<langstring lang="en" marked="0">0</langstring>
+<langstring lang="sv" marked="0">1</langstring>
+</string>
+<string desc="mouse over pause button when not paused" key="pauseover">
+<langstring lang="en" marked="0">Pause</langstring>
+<langstring lang="sv" marked="0">Pausa</langstring>
+</string>
+<string desc="mouse over pause button when paused" key="playover">
+<langstring lang="en" marked="0">Play</langstring>
+<langstring lang="sv" marked="0">Spela</langstring>
+</string>
+<string desc="text for the sound button to turn off sound" key="soundOff">
+<langstring lang="en" marked="0">Turn sound off</langstring>
+<langstring lang="sv" marked="0">Stäng av ljud</langstring>
+</string>
+<string desc="Name of the logo image" key="logoImage">
+<langstring lang="en" marked="0">edglogo.png</langstring>
+</string>
+<string desc="Display or hide the close button (0=hide)" key="CloseEnabled">
+<langstring lang="en" marked="0">1</langstring>
+<langstring lang="sv" marked="0">1</langstring>
+</string>
+</skintext>
+<styles>
+<headertext><font>Arial</font>
+<size>20</size>
+<fontColor>0x000000</fontColor>
+<left>40</left>
+<top>120</top>
+<width>531</width>
+</headertext>
+<picturetext><font>Arial</font>
+<size>10</size>
+<fontColor>0x000000</fontColor>
+<left>50</left>
+<top>480</top>
+<width>340</width>
+</picturetext>
+<textgroup><font>Arial</font>
+<size>14</size>
+<fontColor>0x000000</fontColor>
+<left>40</left>
+<top>159</top>
+<width>518</width>
+<fontFamily>Arial,Verdana,Book Antiqua</fontFamily>
+<fontSizes>8,9,10,12,14,16,18,20,22,24,26,28,32,36,48,72</fontSizes>
+</textgroup>
+<speaktext><height>670</height>
+<left>1011</left>
+<size>10</size>
+<top>0</top>
+<width>250</width>
+</speaktext>
+<texteditor><backgroundColor>0xbcbcbc</backgroundColor>
+<transparent>false</transparent>
+</texteditor>
+<textbackground><subtype>0</subtype>
+<margin>5</margin>
+<lineThickness>1</lineThickness>
+<lineColor>0xCCCCCC</lineColor>
+<boxAlpha>100</boxAlpha>
+<cornerRadius>10</cornerRadius>
+<dropShadow>false</dropShadow>
+<dropShadowAlpha>20</dropShadowAlpha>
+<dropShadowX>5</dropShadowX>
+<dropShadowY>5</dropShadowY>
+<gradient>false</gradient>
+<gradientDirection>Top to bottom</gradientDirection>
+<gradientStartColor>0xFFFFFF</gradientStartColor>
+<gradientEndColor>0xAABBCC</gradientEndColor>
+<tweenBackgrounds>true</tweenBackgrounds>
+</textbackground>
+<optionBackground><type>box.rectangle</type>
+<subtype>0</subtype>
+<margin>2</margin>
+<lineThickness>1</lineThickness>
+<lineColor>0xAAAAAA</lineColor>
+<boxAlpha>90</boxAlpha>
+<cornerRadius>8</cornerRadius>
+<dropShadow>true</dropShadow>
+<dropShadowAlpha>10</dropShadowAlpha>
+<dropShadowX>2</dropShadowX>
+<dropShadowY>2</dropShadowY>
+<gradient>true</gradient>
+<gradientDirection>Top to bottom</gradientDirection>
+<gradientStartColor>0xFFFFFF</gradientStartColor>
+<gradientEndColor>0xB6DAEE</gradientEndColor>
+</optionBackground>
+<graphics><lineAlpha>100</lineAlpha>
+<lineThickness>1</lineThickness>
+<lineColor>0x000000</lineColor>
+<cornerRadius>0</cornerRadius>
+<dropShadow>true</dropShadow>
+<dropShadowColor>0x000000</dropShadowColor>
+<dropShadowAlpha>10</dropShadowAlpha>
+<dropShadowX>7</dropShadowX>
+<dropShadowY>7</dropShadowY>
+<transition>2</transition>
+<transitionOut>0</transitionOut>
+<transitionEasing>2</transitionEasing>
+<transitionDuration>2</transitionDuration>
+<margin>1</margin>
+<left>360</left>
+<top>65</top>
+</graphics>
+<hotspot><transparent>true</transparent>
+<initialColor>0xCCCCCC</initialColor>
+<initialAlpha>40</initialAlpha>
+<initialShape>1</initialShape>
+<selectedColor>0x999999</selectedColor>
+<selectedAlpha>40</selectedAlpha>
+<completedColor>0x00CC00</completedColor>
+<completedAlpha>40</completedAlpha>
+</hotspot>
+</styles>
+<accessibility>
+<pageDescription width="300" x="50" y="50"/>
+<templatetext>
+<category name="General settings">
+<string key="pageStart">
+<langstring lang="en" marked="0">Page start</langstring>
+</string>
+<string key="pageDescription">
+<langstring lang="en" marked="0">Title</langstring>
+</string>
+<string key="pageLink">
+<langstring lang="en" marked="0">Link</langstring>
+</string>
+</category>
+<category name="CourseBuilder startup page">
+<string key="courseTitle">
+<langstring lang="en" marked="0">Course title:</langstring>
+</string>
+<string key="selectLanguage">
+<langstring lang="en" marked="0">Please click to select the language for this course. Currently selected:</langstring>
+</string>
+<string key="selectLanguageAndVersion">
+<langstring lang="en" marked="0">Please click to select the language and your prefered version for this course. Currently selected:</langstring>
+</string>
+<string key="selectVersion">
+<langstring lang="en" marked="0">Please select the version of the course you wish to run.</langstring>
+</string>
+<string key="rememberLanguage">
+<langstring lang="en" marked="0">Remember my language settings.</langstring>
+</string>
+<string key="selectLanguageBtn">
+<langstring lang="en" marked="0">Choose:</langstring>
+</string>
+<string key="selectLanguageOK">
+<langstring lang="en" marked="0">Start the default version of the course.</langstring>
+</string>
+<string key="selectLanguageHighContrast">
+<langstring lang="en" marked="0">Start the high contrast version of the course.</langstring>
+</string>
+<string key="selectLanguageTabEnabled">
+<langstring lang="en" marked="0">Start the tab enabled version of the course.</langstring>
+</string>
+<string key="selectLanguageScreenreader">
+<langstring lang="en" marked="0">Start the screen reader version of the course.</langstring>
+</string>
+<string key="selectLanguageCombo">
+<langstring lang="en" marked="0">Choose your preferred language.</langstring>
+</string>
+</category>
+<category name="Connect Text to hotspot">
+<string key="connectTextConnected">
+<langstring lang="en" marked="0">Connected to</langstring>
+</string>
+<string key="connectTextNotConnected">
+<langstring lang="en" marked="0">Not connected</langstring>
+</string>
+<string key="connectTextToTextConnected">
+<langstring lang="en" marked="0">Connected to</langstring>
+</string>
+<string key="connectTextToTextNotConnected">
+<langstring lang="en" marked="0">Not connected</langstring>
+</string>
+</category>
+<category name="Connect Text to text">
+<string key="connected">
+<langstring lang="en" marked="0">Connected to</langstring>
+</string>
+<string key="notConnected">
+<langstring lang="en" marked="0">Not connected</langstring>
+</string>
+</category>
+<category name="Multiple Choice">
+<string key="selected">
+<langstring lang="en" marked="0">Selected</langstring>
+</string>
+<string key="notSelected">
+<langstring lang="en" marked="0">Not selected</langstring>
+</string>
+<string key="correctAnswerIs">
+<langstring lang="en" marked="0">Correct answer is:</langstring>
+</string>
+</category>
+<category name="Drag media to hotspot">
+<string key="dragMediaConnected">
+<langstring lang="en" marked="0">Connected to</langstring>
+</string>
+<string key="dragMediaNotConnected">
+<langstring lang="en" marked="0">Not connected</langstring>
+</string>
+</category>
+<category name="Drag Text to hotspot">
+<string key="dragTextConnected">
+<langstring lang="en" marked="0">Connected to</langstring>
+</string>
+<string key="dragTextNotConnected">
+<langstring lang="en" marked="0">Not connected</langstring>
+</string>
+</category>
+<category name="Exam Handler">
+<string key="startPartExam">
+<langstring lang="en" marked="0">Start part exam</langstring>
+</string>
+<string key="showCorrectPartExam">
+<langstring lang="en" marked="0">Show correct answers for part exam</langstring>
+</string>
+<string key="showTheoryPartExam">
+<langstring lang="en" marked="0">Show theory connected to part exam</langstring>
+</string>
+<string key="partExamPassed">
+<langstring lang="en" marked="0">Status Passed</langstring>
+</string>
+<string key="partExamNotPassed">
+<langstring lang="en" marked="0">Status Not passed</langstring>
+</string>
+<string key="partExamAllAttemptsUsed">
+<langstring lang="en" marked="0">All attempts used for this part exam</langstring>
+</string>
+</category>
+<category name="Identify Objects">
+<string key="selectedIdentify">
+<langstring lang="en" marked="0">Selected</langstring>
+</string>
+<string key="notSelectedIdentify">
+<langstring lang="en" marked="0">Not selected</langstring>
+</string>
+</category>
+<category name="Sorting Text">
+<string key="sortingDropAbove">
+<langstring lang="en" marked="0">Drop selected above</langstring>
+</string>
+<string key="sortingDropBellow">
+<langstring lang="en" marked="0">Drop selected below</langstring>
+</string>
+<string key="sortingSelected">
+<langstring lang="en" marked="0">Selected item</langstring>
+</string>
+</category>
+<category name="Tooltraining">
+<string key="inputTextInstruction">
+<langstring lang="en" marked="0">This is an input text field. Set your screenreader in Forms mode.</langstring>
+</string>
+<string key="newToolTrainingSlideReached">
+<langstring lang="en" marked="0">New tooltraining slide reached. The tab index has been automatically updated.</langstring>
+</string>
+<string key="gotoNextToolTrainingSlide">
+<langstring lang="en" marked="0">Click on this button to go to the next slide.</langstring>
+</string>
+<string key="myTypedText">
+<langstring lang="en" marked="0">You typed:</langstring>
+</string>
+<string key="correctTypedText">
+<langstring lang="en" marked="0">Correct answer is:</langstring>
+</string>
+</category>
+<category name="CourseBuilder default Accessibility skin">
+<string key="back">
+<langstring lang="en" marked="0">Back</langstring>
+</string>
+<string key="forward">
+<langstring lang="en" marked="0">Forward</langstring>
+</string>
+<string key="exit">
+<langstring lang="en" marked="0">Exit</langstring>
+</string>
+<string key="menu">
+<langstring lang="en" marked="0">Menu</langstring>
+</string>
+<string key="menuReturnBtn">
+<langstring lang="en" marked="0">Return to course</langstring>
+</string>
+<string key="chapterMainCurrent">
+<langstring lang="en" marked="0">Current main chapter</langstring>
+</string>
+<string key="chapterMainCompleted">
+<langstring lang="en" marked="0">Completed main chapter</langstring>
+</string>
+<string key="chapterSubCurrent">
+<langstring lang="en" marked="0">Current subchapter</langstring>
+</string>
+<string key="chapterSubCompleted">
+<langstring lang="en" marked="0">Completed subchapter</langstring>
+</string>
+</category>
+</templatetext>
+</accessibility>
+<chapter>
+<chaptername>
+<langstring lang="en" marked="0">Integrity - it's not so easy as it seems!</langstring>
+</chaptername>
+<handler>Chap1_mc</handler>
+<sequence>
+<seqid>1201023115502680</seqid>
+<sequencename>
+<langstring lang="en" marked="0">Episode 6</langstring>
+</sequencename>
+<mandatory>2</mandatory>
+<hidden>0</hidden>
+<handler>Seq1_mc</handler>
+<nextseq>normal</nextseq>
+<exam>0</exam>
+<page>
+<url>innhold_A.swf</url>
+<editor>edit_innhold_A.swf</editor>
+<type>educational</type>
+<typename>Media with Text</typename>
+<xmlid>1201023115513611.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page1_mc</handler>
+<icon>edu1_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>1</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>0</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+<page>
+<url>innhold_C.swf</url>
+<editor>edit_innhold_C.swf</editor>
+<type>educational</type>
+<typename>Hotspot</typename>
+<xmlid>1201031921481877.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page13_mc</handler>
+<icon>edu3_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>2</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>0</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+<page>
+<url>innhold_A.swf</url>
+<editor>edit_innhold_A.swf</editor>
+<type>educational</type>
+<typename>Media with Text</typename>
+<xmlid>12010312211915515.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page7_mc</handler>
+<icon>edu1_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>1</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>0</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+<page>
+<url>innhold_R.swf</url>
+<editor>edit_innhold_R.swf</editor>
+<type>performance</type>
+<typename>Media Component</typename>
+<xmlid>1201031814090.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page3_mc</handler>
+<icon>task13_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>20</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>1</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+<page>
+<url>innhold_R.swf</url>
+<editor>edit_innhold_R.swf</editor>
+<type>performance</type>
+<typename>Media Component</typename>
+<xmlid>120103141930953164.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page9_mc</handler>
+<icon>task13_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>20</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>1</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+<page>
+<url>innhold_A.swf</url>
+<editor>edit_innhold_A.swf</editor>
+<type>educational</type>
+<typename>Media with Text</typename>
+<xmlid>120103142043881302.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page11_mc</handler>
+<icon>edu1_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>1</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>0</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+<page>
+<url>innhold_A.swf</url>
+<editor>edit_innhold_A.swf</editor>
+<type>educational</type>
+<typename>Media with Text</typename>
+<xmlid>12010318246103314.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page4_mc</handler>
+<icon>edu1_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>1</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>0</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+</sequence>
+</chapter>
+<chapter>
+<chaptername>
+<langstring lang="en" marked="0">Hidden video</langstring>
+</chaptername>
+<handler>Chap2_mc</handler>
+<sequence>
+<seqid>120103192155109119</seqid>
+<sequencename>
+<langstring lang="en" marked="0">Video</langstring>
+</sequencename>
+<mandatory>0</mandatory>
+<hidden>1</hidden>
+<handler>Seq2_mc</handler>
+<nextseq>normal</nextseq>
+<exam>0</exam>
+<page>
+<url>innhold_A.swf</url>
+<editor>edit_innhold_A.swf</editor>
+<type>educational</type>
+<typename>Media with Text</typename>
+<xmlid>120103192156218120.xml</xmlid>
+<automatic>0</automatic>
+<exam>0</exam>
+<handler>Page14_mc</handler>
+<icon>edu1_pg</icon>
+<marked>
+<lang code="en">0</lang>
+</marked>
+<id>1</id>
+<pagename>
+<langstring lang="en" marked="0"/>
+</pagename>
+<description>
+<langstring lang="en" marked="0"/>
+</description>
+<turnOffPageFunctionality>0</turnOffPageFunctionality>
+<turnOffInstructionTextReading>1</turnOffInstructionTextReading>
+</page>
+</sequence>
+</chapter>
+</course>

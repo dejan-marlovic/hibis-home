@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coursebuilder version="4.5">
+    <folders>
+        <folder name="Fraud and Corruption - Forgiveness and Compassion">
+            <folder moduleref="4699" name="Fraud and Corruption - Forgiveness and Compassion"/>
+        </folder>
+    </folders>
+    <modules>
+        <module xmlid="000000004699.xml">
+            <masterlang>en</masterlang>
+            <name>
+                <langstring lang="en">Fraud and Corruption - Forgiveness and Compassion</langstring>
+            </name>
+            <description>
+                <langstring lang="en"/>
+            </description>
+            <width>1000</width>
+            <height>480</height>
+            <version/>
+            <keyword/>
+            <page xmlid="1201023115513611.xml">
+                <comments>
+                    <comment author="true" edit="true" id="103802"
+                        lang="en" pageid="1201023115513611"
+                        parentid="-1" status="5" visibility="1">
+                        <issue time="1271330841879"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[try to add the stickman without the words (if possible) else keep the text only]]></issue>
+                        <resolution time="1271582870692"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104045"
+                        lang="en" pageid="1201023115513611"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271415993174"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Change the title "The spiral of Fraud and Corruption" to "Integrity - it's not so easy as it seems!"]]></issue>
+                        <resolution time="1271688993515"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104231"
+                        lang="en" pageid="1201023115513611"
+                        parentid="104045" status="0" visibility="0">
+                        <issue time="1271618726948"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[The title hasn't been changed yet]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104264"
+                        lang="en" pageid="1201023115513611"
+                        parentid="104045" status="0" visibility="0">
+                        <issue time="1271664570714"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Richard wants to keep the title. Agree and decide.]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104353"
+                        lang="en" pageid="1201023115513611"
+                        parentid="104045" status="0" visibility="0">
+                        <issue time="1271668626114"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Sorry!!! Big misunderstanding! The comment below was for Richard: I told him not comment on our suggested title "Integrity - it's not so easy as it seems!"even if the English was not the best one! SO YES the title should be "Integrity - it's not so easy as it seems!]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104046"
+                        lang="en" pageid="1201023115513611"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271416021283"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[RICHARD: please do not change this title even though it may not seem perfect]]></issue>
+                        <resolution time="1271688996687"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104227"
+                        lang="en" pageid="1201023115513611"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271616871470"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[RM:  I would write the text:" Fraud and Corruption is as old as mankind, yet we are only beginning to understand how commonplace it is. Is it right to pursue to the bitter end the people we catch? Or should we consider that some of the accusing fingers pointing at the culprits may have also been in the cookie jar?
+
+This interactive video is designed to allow you to comment on the behaviour of the characters and form your own opinion. Which of the opposing views would you support?  
+]]></issue>
+                        <resolution time="1271689002937"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104230"
+                        lang="en" pageid="1201023115513611"
+                        parentid="104227" status="0" visibility="0">
+                        <issue time="1271618696543"
+                            user="Richard Minouge (richard.minogue)" userid="15831"><![CDATA[Ok to change the text as Richard suggests]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104266"
+                        lang="en" pageid="1201023115513611"
+                        parentid="104227" status="0" visibility="0">
+                        <issue time="1271664710492"
+                            user="Richard Minouge (richard.minogue)" userid="15831"><![CDATA[Fixed]]></issue>
+                        <resolution/>
+                    </comment>
+                </comments>
+            </page>
+            <page xmlid="1201031921481877.xml">
+                <comments>
+                    <comment author="true" edit="false" id="104803"
+                        lang="en" pageid="1201031921481877"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271765800846"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[How do you want to watch the episode? Replacing "Select your preferred way"]]></issue>
+                        <resolution time="1271766669368"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104804"
+                        lang="en" pageid="1201031921481877"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271765823705"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA["With interaction" and "Without interaction"]]></issue>
+                        <resolution time="1271766814082"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                </comments>
+            </page>
+            <page xmlid="12010312211915515.xml">
+                <comments>
+                    <comment author="true" edit="true" id="103804"
+                        lang="en" pageid="12010312211915515"
+                        parentid="-1" status="5" visibility="1">
+                        <issue time="1271330953111"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Here are the characters of this episode
+
+...have a look at them and click the forward button to get started]]></issue>
+                        <resolution time="1271583002048"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                </comments>
+            </page>
+            <page xmlid="1201031814090.xml">
+                <comments>
+                    <comment author="true" edit="false" id="104047"
+                        lang="en" pageid="1201031814090" parentid="-1"
+                        status="5" visibility="0">
+                        <issue time="1271417892636"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[When moving the mouse on the options the selected options becomes too dark. Is it possible to use a lighter grey so that the option is still readable? It applies all scenarios.]]></issue>
+                        <resolution time="1271583379162"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104048"
+                        lang="en" pageid="1201031814090" parentid="-1"
+                        status="5" visibility="0">
+                        <issue time="1271417926213"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Instead (or in addition to the letter of the option becoming green, is it possible to add a big tick mark (i.e "V")? It applies all scenarios]]></issue>
+                        <resolution time="1271664796474"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="true" id="104203"
+                        lang="en" pageid="1201031814090"
+                        parentid="104048" status="0" visibility="0">
+                        <issue time="1271583072921"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Not at present]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104233"
+                        lang="en" pageid="1201031814090"
+                        parentid="104048" status="0" visibility="0">
+                        <issue time="1271618842226"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[OK, then we keep it as it is]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104056"
+                        lang="en" pageid="1201031814090" parentid="-1"
+                        status="5" visibility="0">
+                        <issue time="1271417319762"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Feedback scenario 2:
+A:  That's quite a hard line approach but definitely one that has been used in the past 
+B:  Yes its not easy.  People in that room look rather tense....  
+C:  Lets see what the other options could be....
+D:  Maybe it is trivial compared to other things but still, it's not right]]></issue>
+                        <resolution time="1271690148700"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104061"
+                        lang="en" pageid="1201031814090"
+                        parentid="104056" status="0" visibility="0">
+                        <issue time="1271417102753"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[RICHARD to review the English]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104235"
+                        lang="en" pageid="1201031814090"
+                        parentid="104056" status="0" visibility="0">
+                        <issue time="1271619119812"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[The feedback hasn't been added yet]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104268"
+                        lang="en" pageid="1201031814090"
+                        parentid="104056" status="0" visibility="0">
+                        <issue time="1271664829051"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Awaiting Richards review]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104358"
+                        lang="en" pageid="1201031814090"
+                        parentid="104056" status="0" visibility="0">
+                        <issue time="1271668719315"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Richard went through everything. I talked to him. When he doesn't give any feedback it means that the text is good as it is]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104058"
+                        lang="en" pageid="1201031814090" parentid="-1"
+                        status="5" visibility="0">
+                        <issue time="1271417065129"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Option D should either be complete )i.e. add " should have a quiet word with him" or, if there is not enough space, we should simply DELETE the last sentence]]></issue>
+                        <resolution time="1271713070725"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104236"
+                        lang="en" pageid="1201031814090"
+                        parentid="104058" status="0" visibility="0">
+                        <issue time="1271619187951"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Option B and D don't show the full text until the mouse is on the text itself. I guess it is because of lack of space. Is it possible to decrease the size so that it fits the space?]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104641"
+                        lang="en" pageid="1201031814090"
+                        parentid="104058" status="0" visibility="0">
+                        <issue time="1271690508862"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Decreased the size]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104067"
+                        lang="en" pageid="1201031814090" parentid="-1"
+                        status="5" visibility="0">
+                        <issue time="1271417425181"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Feedback scenario 3:
+The answer should be: Probably ALL of them!...click on "Continue" to proceed]]></issue>
+                        <resolution time="1271690423786"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="true" id="104204"
+                        lang="en" pageid="1201031814090"
+                        parentid="104067" status="0" visibility="0">
+                        <issue time="1271583974926"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[fixed]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104088"
+                        lang="en" pageid="1201031814090" parentid="-1"
+                        status="0" visibility="0">
+                        <issue time="1271419002307"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[When the video finishes the face of Andrew should fade to black slower (if possibly). The text appearing in the black screen (i.e. "before we....") should be replaced by (BIG font): What would YOU do? Click "Continue". Take away the YES and NO option on the left ]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104205"
+                        lang="en" pageid="1201031814090"
+                        parentid="104088" status="0" visibility="0">
+                        <issue time="1271583983785"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[The fade is in the movie and cannot be changed by Edvantage group. To use this standard template you have to have an option here otherwise you will not get the "Continue" button. Suggest to leave as is.]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104240"
+                        lang="en" pageid="1201031814090"
+                        parentid="104088" status="0" visibility="0">
+                        <issue time="1271619556753"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[I understand that you can't do the fading. Can you however replace the text that is on the black screen with the one we suggest: What would YOU do? Click on "Continue" (and take away the YES and NO) or would it NOT work?]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104271"
+                        lang="en" pageid="1201031814090"
+                        parentid="104088" status="0" visibility="0">
+                        <issue time="1271664924095"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[No I'm sorry, the continue button would not appear if you do not click anything on the left hand side.]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104369"
+                        lang="en" pageid="1201031814090"
+                        parentid="104088" status="0" visibility="0">
+                        <issue time="1271669058789"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[I'm not sure I understand. Can't we simply close the page with a white text in the black screen and then the normal forwarding button which would bring to the next page?]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104667"
+                        lang="en" pageid="1201031814090"
+                        parentid="104088" status="0" visibility="0">
+                        <issue time="1271691547129"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Added the text and removed alternatives. Cannot hide at least option A and B but it is not as visible, so maybe OK.]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104713"
+                        lang="en" pageid="1201031814090"
+                        parentid="104088" status="0" visibility="0">
+                        <issue time="1271705552057"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[The problem would be when/if the user clicks on A or B and then gets a grey square on the left and a black screen on the right...maybe the best solution is to make some kind of redundancy between the end and the following page. We could have "What would you DO? Which way would your vote Swing?"appearing on the screen. Then on the left we get A: Andrew and B: Clive. On the black screen we then have "It's not as easy as it seems....click on "Continue" and get some feedback" (as answer for both alternatives). What do you think?]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104717"
+                        lang="en" pageid="1201031814090"
+                        parentid="104088" status="0" visibility="0">
+                        <issue time="1271713487979"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[OK, added this. Do you think it is better?]]></issue>
+                        <resolution/>
+                    </comment>
+                </comments>
+            </page>
+            <page xmlid="120103141930953164.xml">
+                <comments>
+                    <comment author="true" edit="false" id="104069"
+                        lang="en" pageid="120103141930953164"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271417591864"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Pendelum should be changed to pendulum]]></issue>
+                        <resolution time="1271665018155"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="true" id="104206"
+                        lang="en" pageid="120103141930953164"
+                        parentid="104069" status="0" visibility="0">
+                        <issue time="1271584046221"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[fixed]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="false" id="104228"
+                        lang="en" pageid="120103141930953164"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271617010904"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Grammatically, this is not a question.  Either take away the question mark, or change the text to pose a question]]></issue>
+                        <resolution time="1271665009405"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Removed ?-mark]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104712"
+                        lang="en" pageid="120103141930953164"
+                        parentid="-1" status="0" visibility="0">
+                        <issue time="1271704861375"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Which way would your vote Swing? (add the "?")]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104718"
+                        lang="en" pageid="120103141930953164"
+                        parentid="104712" status="0" visibility="0">
+                        <issue time="1271713527118"
+                            user="Veronica Morino (veronica.morino@septiagroup.com)" userid="16018"><![CDATA[Richard just commented to remove it ;) , but your the boss]]></issue>
+                        <resolution/>
+                    </comment>
+                </comments>
+            </page>
+            <page xmlid="120103142043881302.xml">
+                <comments>
+                    <comment author="true" edit="false" id="104229"
+                        lang="en" pageid="120103142043881302"
+                        parentid="-1" status="5" visibility="0">
+                        <issue time="1271617343394"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[It's worth investing up-front in the development of an anti-fraud culture by talking openly with employees about the risks, and with them detecting the warning signs early before too much damage is done. Prevention is ... ]]></issue>
+                        <resolution time="1271691567909"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                    <comment author="true" edit="false" id="104241"
+                        lang="en" pageid="120103142043881302"
+                        parentid="104229" status="0" visibility="0">
+                        <issue time="1271619613189"
+                            user="Richard Minouge (richard.minogue)" userid="15831"><![CDATA[Agree!]]></issue>
+                        <resolution/>
+                    </comment>
+                    <comment author="true" edit="true" id="104274"
+                        lang="en" pageid="120103142043881302"
+                        parentid="104229" status="0" visibility="0">
+                        <issue time="1271665080294"
+                            user="Richard Minouge (richard.minogue)" userid="15831"><![CDATA[Fixed]]></issue>
+                        <resolution/>
+                    </comment>
+                </comments>
+            </page>
+            <page xmlid="12010318246103314.xml">
+                <comments>
+                    <comment author="true" edit="true" id="103817"
+                        lang="en" pageid="12010318246103314"
+                        parentid="-1" status="5" visibility="1">
+                        <issue time="1271334106873"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[Add the two other companies and logos webadresser på loggan]]></issue>
+                        <resolution time="1271584578534"
+                            user="Stefan Sjö (stefan.sjo@edvantagegroup.com)" userid="15897"><![CDATA[]]></resolution>
+                    </comment>
+                </comments>
+            </page>
+            <page xmlid="120103192156218120.xml">
+                <comments/>
+            </page>
+        </module>
+    </modules>
+    <usedmedia>
+        <media ext="swf" id="92613">
+            <path>\Media components Sweden</path>
+            <url>images/92613.swf</url>
+            <filename>TextBox Component v1.1</filename>
+            <description>The TextBox Component enables you to add text items that are not connected to any specific page template in CourseBuilder.&lt;br&gt;For example additional text items for a HotSpot page.&lt;br&gt;You can configure settings for the background and shadow as well as enabling a close button.&lt;br&gt;You can also add a media element and place it at the right, left, top or bottom of the text.&lt;br&gt;</description>
+            <type>6</type>
+            <hash>7236721EB600971B523C1167913F277FCB74B4C3</hash>
+        </media>
+        <media ext="jpg" id="98683">
+            <path>\Video dilemmas</path>
+            <url>images/98683.jpg</url>
+            <filename>Peter.jpg</filename>
+            <description>peter</description>
+            <type>1</type>
+            <hash>3D1654191B0B7C46216F9FB2AFA22B713A9EC51C</hash>
+        </media>
+        <media ext="flv" id="97450">
+            <path>\Video dilemmas</path>
+            <url>images/97450.flv</url>
+            <filename>Section2_wmv2_384K.flv</filename>
+            <description>Septia</description>
+            <type>4</type>
+            <hash>4BF0EE1456A1B46DD673A7F315C4326C17AFE1E</hash>
+        </media>
+        <media ext="jpg" id="98680">
+            <path>\Video dilemmas</path>
+            <url>images/98680.jpg</url>
+            <filename>Evestill.jpg</filename>
+            <description>Eve</description>
+            <type>1</type>
+            <hash>427CF376B418CF215859D5EC8719020538008DB2</hash>
+        </media>
+        <media ext="swf" id="99007">
+            <path>\Integrity demo</path>
+            <url>images/99007.swf</url>
+            <filename>expert.gif</filename>
+            <description>expert lectures</description>
+            <type>2</type>
+            <hash>59E5E7445B02D1B1777AD89AA51EA878F0A41275</hash>
+        </media>
+        <media ext="jpg" id="98685">
+            <path>\Video dilemmas</path>
+            <url>images/98685.jpg</url>
+            <filename>BobStill.jpg</filename>
+            <description>bob</description>
+            <type>1</type>
+            <hash>305736448814689BCE062A359900F4B3939F9F24</hash>
+        </media>
+        <media ext="flv" id="97452">
+            <path>\Video dilemmas</path>
+            <url>images/97452.flv</url>
+            <filename>Section4_wmv2_384K.flv</filename>
+            <description>Septia</description>
+            <type>4</type>
+            <hash>992B9A25083F5857776630600CEC90CE2BE1745D</hash>
+        </media>
+        <media ext="jpg" id="98820">
+            <path/>
+            <url>images/98820.jpg</url>
+            <filename>Nervous-People_bg2.jpg</filename>
+            <description/>
+            <type>1</type>
+            <hash>D1C2CBDAEE9E164EA51EAABB95E5DE76DDC69698</hash>
+        </media>
+        <media ext="swf" id="51878">
+            <path>\Maria</path>
+            <url>images/51878.swf</url>
+            <filename>EDG_logo-transpNy.gif</filename>
+            <description/>
+            <type>2</type>
+            <hash>219A7304D93531D821EA6C40BE965F5BE7AA2DF7</hash>
+        </media>
+        <media ext="swf" id="57930">
+            <path>\Integrity demo</path>
+            <url>images/57930.swf</url>
+            <filename>logo_septia_intro.gif</filename>
+            <description/>
+            <type>2</type>
+            <hash>BA67E9305B0797D75EFD7AAF43070652586AA2B5</hash>
+        </media>
+        <media ext="swf" id="98813">
+            <path>\Septia components</path>
+            <url>images/98813.swf</url>
+            <filename>Pendulum Component</filename>
+            <description>Pendulum exercise for Septia.</description>
+            <type>6</type>
+            <hash>61525CF722F12B0A66E444B2415192D5BFBC3A9E</hash>
+        </media>
+        <media ext="flv" id="97449">
+            <path>\Video dilemmas</path>
+            <url>images/97449.flv</url>
+            <filename>Section1_wmv2_384K.flv</filename>
+            <description>Septia</description>
+            <type>4</type>
+            <hash>F3D84101AC4E543B0EE475DEFBF1F07B3F5D9A6A</hash>
+        </media>
+        <media ext="flv" id="99152">
+            <path>\Video dilemmas</path>
+            <url>images/99152.flv</url>
+            <filename>19350415_600.flv</filename>
+            <description>Forgiveness and compassion</description>
+            <type>4</type>
+            <hash>F4AC61ABC04FE180358D6732E8CBEF4F373F510B</hash>
+        </media>
+        <media ext="jpg" id="98679">
+            <path>\Video dilemmas</path>
+            <url>images/98679.jpg</url>
+            <filename>Clivestill.jpg</filename>
+            <description>Clive</description>
+            <type>1</type>
+            <hash>6DA0503FC73A0767A0DCDCCC2318C377876DE800</hash>
+        </media>
+        <media ext="jpg" id="98684">
+            <path>\Video dilemmas</path>
+            <url>images/98684.jpg</url>
+            <filename>AndrewStill.jpg</filename>
+            <description>andrew</description>
+            <type>1</type>
+            <hash>AB9D6CB11F7BE0D185B6739E98F6711867F239D8</hash>
+        </media>
+        <media ext="flv" id="97451">
+            <path>\Video dilemmas</path>
+            <url>images/97451.flv</url>
+            <filename>Section3_wmv2_384K.flv</filename>
+            <description>Septia</description>
+            <type>4</type>
+            <hash>24DBE701FC90BCCE11C8487572E33B15E9329354</hash>
+        </media>
+        <media ext="swf" id="57924">
+            <path>\Integrity demo</path>
+            <url>images/57924.swf</url>
+            <filename>stickman.swf</filename>
+            <description/>
+            <type>2</type>
+            <hash>61B3663DE9F80F687D477A57AC2992604729C87F</hash>
+        </media>
+        <media ext="swf" id="93051">
+            <path>\Media components Sweden</path>
+            <url>images/93051.swf</url>
+            <filename>Background Image Component</filename>
+            <description>The Background Image Component enables you to add a media file (image or Flash media) that is not affected by transitions in CourseBuilder.&lt;br&gt;&lt;br&gt;Add a media file, place and rotate it and choose at which depth you want the image to appear.&lt;br&gt;You can choose to display the media file behind your page, on top of your page or on top of the entire skin.&lt;br&gt;&lt;br&gt;&lt;b&gt;NOTE: This component is not compatible with the Tool training templates!&lt;/b&gt;</description>
+            <type>6</type>
+            <hash>9B2ACD1CF72961512E744798CD183FF180C9109B</hash>
+        </media>
+        <media ext="swf" id="98812">
+            <path>\EDGSE Components</path>
+            <url>images/98812.swf</url>
+            <filename>EDGDK Caseplayer EDGSE Test</filename>
+            <description>Create rich interactive video cases</description>
+            <type>6</type>
+            <hash>B150C3A9BB62D8D46FCDF4433E283FC23B26A147</hash>
+        </media>
+        <media ext="swf" id="57944">
+            <path>\Reusable pictures</path>
+            <url>images/57944.swf</url>
+            <filename>videoFrame.swf</filename>
+            <description/>
+            <type>2</type>
+            <hash>786A43591BEF720FD6022D01D7D6F0AA5EB2D931</hash>
+        </media>
+    </usedmedia>
+</coursebuilder>

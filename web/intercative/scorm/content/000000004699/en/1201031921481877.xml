@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="3.10">
+<innhold_c>
+<header XLIFF="120103201235646158" left="50" top="92" width="386.45">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</header>
+<medialist transition="0" transitionDuration="1" transitionEasing="0" transitionOut="0">
+<media height="225.3" id="120103192158437161" left="209" top="245" width="297.5">
+<url>../images/92613.swf</url>
+<originalfilename>TextBox Component v1.1</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+<mediabackground>
+</mediabackground>
+</media>
+<media height="225.3" id="12010319215962207" left="569" top="245" width="297.5">
+<url>../images/92613.swf</url>
+<originalfilename>TextBox Component v1.1</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+<mediabackground>
+</mediabackground>
+</media>
+</medialist>
+<pictext XLIFF="120103201235646159" left="51" top="475" width="336">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</pictext>
+<textbackground>
+</textbackground>
+<textgroup keepHotspotTexts="false" left="181" top="87" width="660.95">
+<assignment XLIFF="12010319215046840">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="32" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;How do you want to watch this episode?&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>1201031921481877/sound/</soundurl>
+<mediacontrol>
+<action media_id="120103192158437161" showMediaOnCompleted="false" type="display"/>
+<action media_id="12010319215962207" showMediaOnCompleted="false" type="display"/>
+</mediacontrol>
+<speaktext/>
+<plaintext>How do you want to watch this episode?
+</plaintext>
+<locknext>false</locknext>
+<hot_init_color>0x999999</hot_init_color>
+<hot_logged_color>0x00CC00</hot_logged_color>
+<hot_init_alpha>40</hot_init_alpha>
+<hot_logged_alpha>40</hot_logged_alpha>
+<exactmatch>undefined</exactmatch>
+<textbackground>
+<type>box.rounded</type>
+<subtype>0</subtype>
+<margin>5</margin>
+<h>44</h>
+<tweenBackground>true</tweenBackground>
+<lineThickness>1</lineThickness>
+<lineColor>0xCCCCCC</lineColor>
+<boxColor/>
+<boxAlpha>100</boxAlpha>
+<cornerRadius>15</cornerRadius>
+<dropShadow>false</dropShadow>
+<dropShadowAlpha>20</dropShadowAlpha>
+<dropShadowX>5</dropShadowX>
+<dropShadowY>5</dropShadowY>
+<gradient>false</gradient>
+<gradientDirection>Top to bottom</gradientDirection>
+<gradientStartColor>0xFFFFFF</gradientStartColor>
+<gradientEndColor>0xAABBCC</gradientEndColor>
+</textbackground>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+<repeatAssignmentSound>false</repeatAssignmentSound>
+</assignment>
+<hotspot XLIFF="12010319215048441" height="102" id="1" left="185" top="215" width="246">
+<string>&lt;HTML&gt;</string>
+<soundurl>1201031921481877/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<speaktext/>
+<plaintext/>
+<visible>0</visible>
+<op>3</op>
+<shape>2</shape>
+<text_x>-1</text_x>
+<text_y>-1</text_y>
+<text_width>276</text_width>
+<sequence/>
+<url/>
+<mouseEvent>singleclick</mouseEvent>
+<textbackground>
+</textbackground>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</hotspot>
+<hotspot XLIFF="120103192155984117" height="104" id="2" left="550" top="218" width="281">
+<string>&lt;HTML&gt;</string>
+<soundurl>1201031921481877/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<speaktext/>
+<plaintext/>
+<visible>0</visible>
+<op>1</op>
+<shape>2</shape>
+<text_x>-1</text_x>
+<text_y>-1</text_y>
+<text_width>276</text_width>
+<sequence>120103192155109119</sequence>
+<url/>
+<mouseEvent>singleclick</mouseEvent>
+<textbackground>
+</textbackground>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</hotspot>
+</textgroup>
+<components>
+<component id="120103192158437161">
+<category id="GeneralSettings" label="General settings">
+<property XLIFF="_level0.template_mc.picholder120103192158437161.holder.holder_child.mcTextbox" id="feedback">
+<type>String_HTML</type>
+<label>Text:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="24" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;With interaction&lt;FONT SIZE="14"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="_level0.template_mc.picholder120103192158437161.holder.holder_child.mcSpeaker" id="speaker">
+<type>Sound</type>
+<label>Speaker:</label>
+<value/>
+<range/>
+</property>
+<property id="isDisplayingClose">
+<type>Boolean</type>
+<label>Display close button:</label>
+<value>false</value>
+<range/>
+</property>
+<property id="minWidth">
+<type>Number</type>
+<label>MinWidth:</label>
+<value>30</value>
+<range/>
+</property>
+<property id="minHeight">
+<type>Number</type>
+<label>MinHeight:</label>
+<value>20</value>
+<range/>
+</property>
+<property id="maxWidth">
+<type>Number</type>
+<label>MaxWidth:</label>
+<value>300</value>
+<range/>
+</property>
+<property id="maxHeight">
+<type>Number</type>
+<label>MaxHeight:</label>
+<value>300</value>
+<range/>
+</property>
+<property id="margins">
+<type>Number</type>
+<label>Margins:</label>
+<value>5</value>
+<range/>
+</property>
+<property id="bgColor">
+<type>Color</type>
+<label>Background color:</label>
+<value>16777215</value>
+<range/>
+</property>
+<property id="bgColor2">
+<type>Color</type>
+<label>Background color 2:</label>
+<value>16777215</value>
+<range/>
+</property>
+<property id="bgAlpha">
+<type>Number</type>
+<label>Background alpha:</label>
+<value>100</value>
+<range/>
+</property>
+<property id="bgAlpha2">
+<type>Number</type>
+<label>Background alpha 2:</label>
+<value>100</value>
+<range/>
+</property>
+<property id="brdColor">
+<type>Color</type>
+<label>Border color:</label>
+<value>0</value>
+<range/>
+</property>
+<property id="brdSize">
+<type>Number</type>
+<label>Border size:</label>
+<value>1</value>
+<range/>
+</property>
+<property id="brdAlpha">
+<type>Number</type>
+<label>Border alpha:</label>
+<value>100</value>
+<range/>
+</property>
+<property id="cornerRadius">
+<type>Number</type>
+<label>Corner radius:</label>
+<value>3</value>
+<range/>
+</property>
+<property id="fillDirection">
+<type>Combobox</type>
+<label>Fill direction:</label>
+<value>Top to bottom</value>
+<range>Top to bottom,Left to right,Bottom to top,Right to left</range>
+</property>
+<property id="useShadow">
+<type>Boolean</type>
+<label>Use shadow:</label>
+<value>false</value>
+<range/>
+</property>
+<property id="shadowDistance">
+<type>Number</type>
+<label>Shadow distance:</label>
+<value>3</value>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="shadowAlpha">
+<type>String</type>
+<label>Shadow alpha:</label>
+<value>0.5</value>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="shadowStrength">
+<type>String</type>
+<label>Shadow strength:</label>
+<value>1</value>
+<range/>
+</property>
+<property id="shadowBlur">
+<type>Number</type>
+<label>Shadow blur:</label>
+<value>4</value>
+<range/>
+</property>
+<property id="shadowAngle">
+<type>Number</type>
+<label>Shadow angle:</label>
+<value>45</value>
+<range/>
+</property>
+<property id="shadowColor">
+<type>Color</type>
+<label>Shadow color:</label>
+<value>0</value>
+<range/>
+</property>
+<property id="media">
+<type>Media</type>
+<label>Media:</label>
+<value/>
+<range/>
+</property>
+<property id="imagePlacement">
+<type>Combobox</type>
+<label>Placement:</label>
+<value>right</value>
+<range>right,left,top,bottom</range>
+</property>
+</category>
+</component>
+<component id="12010319215962207">
+<category id="GeneralSettings" label="General settings">
+<property XLIFF="_level0.template_mc.picholder12010319215962207.holder.holder_child.mcTextbox" id="feedback">
+<type>String_HTML</type>
+<label>Text:</label>
+<value>&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Verdana" SIZE="24" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Without interaction&lt;FONT SIZE="14"&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</value>
+<range/>
+</property>
+<property XLIFF="_level0.template_mc.picholder12010319215962207.holder.holder_child.mcSpeaker" id="speaker">
+<type>Sound</type>
+<label>Speaker:</label>
+<value/>
+<range/>
+</property>
+<property id="isDisplayingClose">
+<type>Boolean</type>
+<label>Display close button:</label>
+<value>false</value>
+<range/>
+</property>
+<property id="minWidth">
+<type>Number</type>
+<label>MinWidth:</label>
+<value>30</value>
+<range/>
+</property>
+<property id="minHeight">
+<type>Number</type>
+<label>MinHeight:</label>
+<value>20</value>
+<range/>
+</property>
+<property id="maxWidth">
+<type>Number</type>
+<label>MaxWidth:</label>
+<value>300</value>
+<range/>
+</property>
+<property id="maxHeight">
+<type>Number</type>
+<label>MaxHeight:</label>
+<value>300</value>
+<range/>
+</property>
+<property id="margins">
+<type>Number</type>
+<label>Margins:</label>
+<value>5</value>
+<range/>
+</property>
+<property id="bgColor">
+<type>Color</type>
+<label>Background color:</label>
+<value>16777215</value>
+<range/>
+</property>
+<property id="bgColor2">
+<type>Color</type>
+<label>Background color 2:</label>
+<value>16777215</value>
+<range/>
+</property>
+<property id="bgAlpha">
+<type>Number</type>
+<label>Background alpha:</label>
+<value>100</value>
+<range/>
+</property>
+<property id="bgAlpha2">
+<type>Number</type>
+<label>Background alpha 2:</label>
+<value>100</value>
+<range/>
+</property>
+<property id="brdColor">
+<type>Color</type>
+<label>Border color:</label>
+<value>0</value>
+<range/>
+</property>
+<property id="brdSize">
+<type>Number</type>
+<label>Border size:</label>
+<value>1</value>
+<range/>
+</property>
+<property id="brdAlpha">
+<type>Number</type>
+<label>Border alpha:</label>
+<value>100</value>
+<range/>
+</property>
+<property id="cornerRadius">
+<type>Number</type>
+<label>Corner radius:</label>
+<value>3</value>
+<range/>
+</property>
+<property id="fillDirection">
+<type>Combobox</type>
+<label>Fill direction:</label>
+<value>Top to bottom</value>
+<range>Top to bottom,Left to right,Bottom to top,Right to left</range>
+</property>
+<property id="useShadow">
+<type>Boolean</type>
+<label>Use shadow:</label>
+<value>false</value>
+<range/>
+</property>
+<property id="shadowDistance">
+<type>Number</type>
+<label>Shadow distance:</label>
+<value>3</value>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="shadowAlpha">
+<type>String</type>
+<label>Shadow alpha:</label>
+<value>0.5</value>
+<range/>
+</property>
+<property XLIFF="[object Object]" id="shadowStrength">
+<type>String</type>
+<label>Shadow strength:</label>
+<value>1</value>
+<range/>
+</property>
+<property id="shadowBlur">
+<type>Number</type>
+<label>Shadow blur:</label>
+<value>4</value>
+<range/>
+</property>
+<property id="shadowAngle">
+<type>Number</type>
+<label>Shadow angle:</label>
+<value>45</value>
+<range/>
+</property>
+<property id="shadowColor">
+<type>Color</type>
+<label>Shadow color:</label>
+<value>0</value>
+<range/>
+</property>
+<property id="media">
+<type>Media</type>
+<label>Media:</label>
+<value/>
+<range/>
+</property>
+<property id="imagePlacement">
+<type>Combobox</type>
+<label>Placement:</label>
+<value>right</value>
+<range>right,left,top,bottom</range>
+</property>
+</category>
+</component>
+</components>
+</innhold_c>
+</page>

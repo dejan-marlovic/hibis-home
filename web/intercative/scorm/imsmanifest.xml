@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="CBNO00001703" version="1.00"
+    xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+    xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+    <organizations default="BB4480">
+        <organization identifier="BB4480">
+            <title>Fraud and Corruption - Forgiveness and Compassion</title>
+            <item identifier="SA4481" identifierref="RSA4481" isvisible="true">
+                <title>Fraud and Corruption - Forgiveness and Compassion</title>
+                <metadata>
+                    <schema>ADL SCORM</schema>
+                    <schemaversion>1.2</schemaversion>
+                    <adlcp:location>metadata/SA4481.xml</adlcp:location>
+                </metadata>
+            </item>
+            <metadata>
+                <schema>ADL SCORM</schema>
+                <schemaversion>1.2</schemaversion>
+                <adlcp:location>metadata/BB4480.xml</adlcp:location>
+            </metadata>
+        </organization>
+    </organizations>
+    <resources>
+        <resource adlcp:scormtype="sco"
+            href="content/SCO000000004699.html?width=1000&amp;height=480"
+            identifier="RSA4481" type="webcontent">
+            <metadata>
+                <schema>ADL SCORM</schema>
+                <schemaversion>1.2</schemaversion>
+                <adlcp:location>metadata/RSA4481.xml</adlcp:location>
+            </metadata>
+            <file href="content/SCO000000004699.html"/>
+            <file href="content/000000004699/000000004699.xml"/>
+            <file href="images/57924.swf"/>
+            <file href="content/000000004699/en/1201023115513611.xml"/>
+            <file href="images/92613.swf"/>
+            <file href="content/000000004699/en/1201031921481877.xml"/>
+            <file href="images/98684.jpg"/>
+            <file href="images/98679.jpg"/>
+            <file href="images/98683.jpg"/>
+            <file href="images/98680.jpg"/>
+            <file href="images/98685.jpg"/>
+            <file href="content/000000004699/en/12010312211915515.xml"/>
+            <file href="images/57944.swf"/>
+            <file href="images/98812.swf"/>
+            <file href="images/93051.swf"/>
+            <file href="images/97449.flv"/>
+            <file href="images/97450.flv"/>
+            <file href="images/97451.flv"/>
+            <file href="images/97452.flv"/>
+            <file href="images/98820.jpg"/>
+            <file href="content/000000004699/en/1201031814090.xml"/>
+            <file href="images/98813.swf"/>
+            <file href="content/000000004699/en/120103141930953164.xml"/>
+            <file href="content/000000004699/en/120103142043881302.xml"/>
+            <file href="images/57930.swf"/>
+            <file href="images/51878.swf"/>
+            <file href="images/99007.swf"/>
+            <file href="content/000000004699/en/12010318246103314.xml"/>
+            <file href="images/99152.flv"/>
+            <file href="content/000000004699/en/120103192156218120.xml"/>
+            <dependency identifierref="skin_septia_moodle"/>
+            <dependency identifierref="asset_player"/>
+        </resource>
+        <resource adlcp:scormtype="asset"
+            href="skin/septia_moodle/assets/answer.swf"
+            identifier="skin_septia_moodle" type="webcontent">
+            <file href="skin/septia_moodle/assets/answer.swf"/>
+            <file href="skin/septia_moodle/assets/correct.swf"/>
+            <file href="skin/septia_moodle/assets/dot.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_E.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_N.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_NE.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_NW.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_S.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_SE.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_SW.swf"/>
+            <file href="skin/septia_moodle/assets/external_marker_W.swf"/>
+            <file href="skin/septia_moodle/assets/fasit2.swf"/>
+            <file href="skin/septia_moodle/assets/line_between_dots.swf"/>
+            <file href="skin/septia_moodle/assets/my.swf"/>
+            <file href="skin/septia_moodle/assets/neste.swf"/>
+            <file href="skin/septia_moodle/assets/radiobutton.swf"/>
+            <file href="skin/septia_moodle/assets/restart.swf"/>
+            <file href="skin/septia_moodle/assets/review.swf"/>
+            <file href="skin/septia_moodle/assets/teori2.swf"/>
+            <file href="skin/septia_moodle/assets/test2.swf"/>
+            <file href="skin/septia_moodle/assets/warning2.swf"/>
+            <file href="skin/septia_moodle/css/styles.css"/>
+            <file href="skin/septia_moodle/septia_moodle.jpg"/>
+            <file href="skin/septia_moodle/septia_moodle.swf"/>
+            <file href="skin/septia_moodle/skin.xml"/>
+        </resource>
+        <resource adlcp:scormtype="asset" href="player/APIWrapper.js"
+            identifier="asset_player" type="webcontent">
+            <file href="player/APIWrapper.js"/>
+            <file href="player/build.js"/>
+            <file href="player/config.js"/>
+            <file href="player/id.html"/>
+            <file href="player/launch.js"/>
+            <file href="player/LessonLib.js"/>
+            <file href="player/Note.doc"/>
+            <file href="player/Player.html"/>
+            <file href="player/player.js"/>
+            <file href="player/player7.swf"/>
+            <file href="player/player8.swf"/>
+            <file href="player/player9.swf"/>
+            <file href="player/PlayerWin.html"/>
+            <file href="player/PlayerX.html"/>
+            <file href="player/swfobject.js"/>
+            <file href="player/tracewin.html"/>
+            <file href="player/0550/blank.swf"/>
+            <file href="player/0550/innhold_A.swf"/>
+            <file href="player/0550/innhold_B.swf"/>
+            <file href="player/0550/innhold_C.swf"/>
+            <file href="player/0550/innhold_D.swf"/>
+            <file href="player/0550/innhold_E_FO.swf"/>
+            <file href="player/0550/innhold_F.swf"/>
+            <file href="player/0550/innhold_G.swf"/>
+            <file href="player/0550/innhold_H.swf"/>
+            <file href="player/0550/innhold_I.swf"/>
+            <file href="player/0550/innhold_J.swf"/>
+            <file href="player/0550/innhold_K.swf"/>
+            <file href="player/0550/innhold_L.swf"/>
+            <file href="player/0550/innhold_M.swf"/>
+            <file href="player/0550/innhold_M_old.swf"/>
+            <file href="player/0550/innhold_N.swf"/>
+            <file href="player/0550/innhold_O.swf"/>
+            <file href="player/0550/innhold_P.swf"/>
+            <file href="player/0550/innhold_R.swf"/>
+            <file href="player/0550/Nopage.swf"/>
+            <file href="player/0550/summary.swf"/>
+            <file href="player/0550/summary_narvesen.swf"/>
+            <file href="player/0550/summary_nsikr.swf"/>
+            <file href="player/0550/innhold_Q.swf"/>
+            <file href="player/0550/innhold_P_test.swf"/>
+            <file href="player/launch.js.bak"/>
+            <file href="player/config.js"/>
+        </resource>
+        <resource adlcp:scormtype="asset" href="autorun.inf"
+            identifier="asset_system" type="webcontent">
+            <file href="autorun.inf"/>
+            <file href="index.html"/>
+            <file href="start.exe"/>
+            <file href="start.ini"/>
+            <file href="systemfiles/config.js"/>
+            <file href="systemfiles/launcher.js"/>
+            <file href="systemfiles/index.js"/>
+            <file href="systemfiles/CM_key.js"/>
+        </resource>
+        <resource adlcp:scormtype="asset" href="coursebuilder.xml"
+            identifier="asset_cb" type="webcontent">
+            <file href="coursebuilder.xml"/>
+            <file href="imsmanifest.xml"/>
+            <file href="metadata/BB4480.xml"/>
+        </resource>
+        <resource adlcp:scormtype="asset" href="converter.html"
+            identifier="asset_aicc" type="webcontent">
+            <file href="converter.html"/>
+            <file href="scorm2aicc.html"/>
+            <file href="scorm2aicc/API.class"/>
+            <file href="scorm2aicc/ErrorManager.class"/>
+            <file href="scorm2aicc/LMSComm.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/AiccDataParser.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/CMICoreData.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/CMIResponse.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/CMIScoreData.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/CMIStatusData.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/CMITime.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/DataValidator.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/GroupObject.class"/>
+            <file href="scorm2aicc/com/coursekeeper/cmi/KeywordObject.class"/>
+            <file href="course.AU"/>
+            <file href="course.CRS"/>
+            <file href="course.CST"/>
+            <file href="course.DES"/>
+        </resource>
+    </resources>
+</manifest>

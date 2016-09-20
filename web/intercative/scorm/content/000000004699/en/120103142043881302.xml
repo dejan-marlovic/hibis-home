@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page version="3.10">
+<innhold_a>
+<header XLIFF="12010319154091241" left="50" top="92" width="386">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</header>
+<medialist transition="0" transitionDuration="1" transitionEasing="0" transitionOut="0">
+<media height="281.5" id="12010315129156357" left="-76" top="78" width="354.2">
+<url>../images/57924.swf</url>
+<originalfilename>stickman.swf</originalfilename>
+<href/>
+<flip>0</flip>
+<mirror>0</mirror>
+<flashlabels/>
+<mediabackground>
+</mediabackground>
+</media>
+</medialist>
+<pictext XLIFF="12010319154091242" left="50" top="475" width="336">
+<string/>
+<plaintext/>
+<textbackground>
+</textbackground>
+</pictext>
+<textbackground>
+</textbackground>
+<textgroup groupTextItemsInBox="false" left="242" top="67" width="568">
+<text XLIFF="120103142047115627" id="0" left="361" top="51" width="568.05">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;All in all, it’s not easy to decide the best approach for dealing with misbehaviour.  Both Clive and Andrew have valid arguments.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;However one thing is pretty clear.  Dealing with incidents and investigating suspected fraud and corruption, even relatively small incidents like this, is hard work and stressful.  There can be unintended consequences whatever you do.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>120103142043881302/sound/</soundurl>
+<mediacontrol>
+<action media_id="12010315129156357" type="display"/>
+</mediacontrol>
+<stop>0</stop>
+<pause>5</pause>
+<speaktext/>
+<plaintext>All in all, it’s not easy to decide the best approach for dealing with misbehaviour.  Both Clive and Andrew have valid arguments.
+
+However one thing is pretty clear.  Dealing with incidents and investigating suspected fraud and corruption, even relatively small incidents like this, is hard work and stressful.  There can be unintended consequences whatever you do.
+</plaintext>
+<textbackground>
+<type>box.rectangle</type>
+<subtype>0</subtype>
+<margin>5</margin>
+<h>112</h>
+<tweenBackground>true</tweenBackground>
+<lineThickness>1</lineThickness>
+<lineColor>0xCCCCCC</lineColor>
+<boxColor/>
+<boxAlpha>100</boxAlpha>
+<cornerRadius>0</cornerRadius>
+<dropShadow>false</dropShadow>
+<dropShadowAlpha>20</dropShadowAlpha>
+<dropShadowX>5</dropShadowX>
+<dropShadowY>5</dropShadowY>
+<gradient>false</gradient>
+<gradientDirection>Top to bottom</gradientDirection>
+<gradientStartColor>0xFFFFFF</gradientStartColor>
+<gradientEndColor>0xAABBCC</gradientEndColor>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+<text XLIFF="120103142047178628" id="1" left="360" top="179.9" width="569.15">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;Preventing Fraud and Corruption, or detecting and dealing with it at an early stage is certainly preferable to investigating and addressing systematic misbehaviour or complex fraud. &lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;It&amp;apos;s worth investing up-front in the development of an anti-fraud culture by talking openly with employees about the risks, and with them detecting the warning signs early before too much damage is done. Prevention is so much more effective than cure!&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>120103142043881302/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<stop>0</stop>
+<pause>5</pause>
+<speaktext/>
+<plaintext>Preventing Fraud and Corruption, or detecting and dealing with it at an early stage is certainly preferable to investigating and addressing systematic misbehaviour or complex fraud. 
+
+It's worth investing up-front in the development of an anti-fraud culture by talking openly with employees about the risks, and with them detecting the warning signs early before too much damage is done. Prevention is so much more effective than cure!
+</plaintext>
+<textbackground>
+<type>box.rectangle</type>
+<subtype>0</subtype>
+<margin>5</margin>
+<h>129.9</h>
+<tweenBackground>true</tweenBackground>
+<lineThickness>1</lineThickness>
+<lineColor>0xCCCCCC</lineColor>
+<boxColor/>
+<boxAlpha>100</boxAlpha>
+<cornerRadius>0</cornerRadius>
+<dropShadow>false</dropShadow>
+<dropShadowAlpha>20</dropShadowAlpha>
+<dropShadowX>5</dropShadowX>
+<dropShadowY>5</dropShadowY>
+<gradient>false</gradient>
+<gradientDirection>Top to bottom</gradientDirection>
+<gradientStartColor>0xFFFFFF</gradientStartColor>
+<gradientEndColor>0xAABBCC</gradientEndColor>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+<text XLIFF="120103142047256629" id="2" left="358" top="329.75" width="571.05">
+<string>&lt;HTML&gt;&lt;TEXTFORMAT LEADING="2"&gt;&lt;P ALIGN="LEFT"&gt;&lt;FONT FACE="Arial" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0"&gt;When investigation is necessary however, there is still no cause for panic. A carefully controlled investigation is sometimes needed to discover and address the root causes of serious incidents, and to return the organization to normal. Even with investigation, the long term objective is to establish and support a culture resistant to future incidents of fraud and corruption.&lt;/FONT&gt;&lt;/P&gt;&lt;/TEXTFORMAT&gt;</string>
+<soundurl>120103142043881302/sound/</soundurl>
+<mediacontrol>
+</mediacontrol>
+<stop>0</stop>
+<pause>0</pause>
+<speaktext/>
+<plaintext>When investigation is necessary however, there is still no cause for panic. A carefully controlled investigation is sometimes needed to discover and address the root causes of serious incidents, and to return the organization to normal. Even with investigation, the long term objective is to establish and support a culture resistant to future incidents of fraud and corruption.
+</plaintext>
+<textbackground>
+<type>box.rectangle</type>
+<subtype>0</subtype>
+<margin>5</margin>
+<h>93.9</h>
+<tweenBackground>true</tweenBackground>
+<lineThickness>1</lineThickness>
+<lineColor>0xCCCCCC</lineColor>
+<boxColor/>
+<boxAlpha>100</boxAlpha>
+<cornerRadius>0</cornerRadius>
+<dropShadow>false</dropShadow>
+<dropShadowAlpha>20</dropShadowAlpha>
+<dropShadowX>5</dropShadowX>
+<dropShadowY>5</dropShadowY>
+<gradient>false</gradient>
+<gradientDirection>Top to bottom</gradientDirection>
+<gradientStartColor>0xFFFFFF</gradientStartColor>
+<gradientEndColor>0xAABBCC</gradientEndColor>
+</textbackground>
+<removeEarlierTexts>false</removeEarlierTexts>
+<accessibility>
+<visual_description/>
+<read_speakText>true</read_speakText>
+<read_textOnScreen>true</read_textOnScreen>
+<read_visual_description>true</read_visual_description>
+</accessibility>
+</text>
+</textgroup>
+<components>
+</components>
+</innhold_a>
+</page>

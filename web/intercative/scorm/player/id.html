@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta http-equiv=Content-Type content="text/html;  charset=">
+<TITLE>Page ID</TITLE>
+</HEAD>
+<SCRIPT LANGUAGE = "JavaScript"> 
+searchStr=unescape(location.search.toLowerCase());
+spageid=searchStr.indexOf("pageid=");
+if (spageid!=-1)
+{
+	pageid=unescape(location.search).substr(spageid+7);
+	idx=pageid.indexOf("&");
+	if (idx!=-1)
+		pageid=pageid.substr(0,idx);
+}
+document.write("<CENTER>");
+document.write("Page ID: " +pageid);
+</SCRIPT>
+<p>
+<a HREF=javascript:window.close()>Close</A>
+</CENTER>
+</HTML>

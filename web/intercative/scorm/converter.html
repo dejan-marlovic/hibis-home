@@ -1,0 +1,64 @@
+<!--
+
+SCORM 2 AICC API v1.1
+
+Copyright (c) 2002-2004 Boxer Technologies AS. All rights reserved.
+
+
+THE "SCORM 2 AICC API" IS PROTECTED BY COPYRIGHT. NO PORTION OF THE INFORMATION AND CODE MAY BE
+REPRODUCED IN ANY FORM, OR BY ANY MEANS, WITHOUT PRIOR WRITTEN PERMISSION FROM BOXER TECHNOLOGIES. 
+YOU ARE NOT PERMITTED TO MODIFY, DECOMPILE, REVERSE ENGINEER, DISTRIBUTE, PUBLISH, TRANSMIT OR
+CREATE DERIVATIVE WORKS OF ANY MATERIAL CONTAINED IN THE "SCORM 2 AICC API" FOR ANY PUBLIC OR 
+COMMERCIAL PURPOSES. 
+
+-->
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<title>SCORM2AICC Converter API</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+var navWnd=null
+
+function init()
+{
+    // wait for applet to load
+    if (this.document.APIApplet!=null && this.document.APIApplet.isActive())
+    {
+        ScormApiReady()
+        return
+    }
+    else
+    {
+        window.setTimeout("init()",100)
+    }
+}
+
+function ScormApiReady()
+{
+   // Set API reference in parent frame
+   parent.API = this.document.APIApplet
+   // API is now ready
+   parent.openContent()
+}
+
+
+//-->
+</SCRIPT>
+			 
+</head>
+<body leftmargin="0" topmargin="0" onload="init()">
+
+<APPLET 
+    code="API.class" MAYSCRIPT
+    codebase="scorm2aicc"
+    height="0" 
+    width="0"
+    id="APIApplet" 
+    name="APIApplet">
+</APPLET>
+
+</body>
+</html>
