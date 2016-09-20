@@ -1,0 +1,20 @@
+div.row.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial; }
+
+label.required::after {
+  content: " *"; }
+
+table tr td {
+  font-size: 0.8rem !important; }
+  table tr td input, table tr td textarea, table tr td select, table tr td button {
+    font-size: 0.8rem !important;
+    margin: 0 !important;
+    padding: 0.4em !important;
+    height: auto !important; }
+table tr td.required::after {
+  content: " *"; }
+
+/*# sourceMappingURL=admin.css.map */
