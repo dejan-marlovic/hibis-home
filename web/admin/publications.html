@@ -32,7 +32,7 @@
         <div class="row"><div class="columns" id="table_container"></div></div>
     </div>
 </div>
-<div class="row full-width" id="add-container">
+<div class="row" id="add-container">
     <div class="columns">
         <h3 class="lang-exp" data-exp="Add">Add</h3>
     </div>
@@ -61,15 +61,17 @@
         <input type="url" id="url_publisher" maxlength="256" />
     </div>
     <div class="columns">
-        <label for="url_pdf" class="lang-exp" data-exp="pdf">PDF</label>
-        <input type="file" id="url_pdf" accept=".pdf" />
+        <label for="pdf" class="lang-exp" data-exp="pdf">PDF</label>
+        <input type="file" id="pdf" accept=".pdf" />
     </div>
     <div class="columns">
-        <label for="url_icon" class="lang-exp" data-exp="icon">Icon</label>
-        <input type="file" id="url_icon" accept=".png, .jpg" />
+        <label for="icon" class="lang-exp" data-exp="icon">Icon</label>
+        <input type="file" id="icon" accept=".png, .jpg" />
     </div>
     <div class="medium-2 medium-offset-10 columns"><button class="button expanded lang-exp" data-exp="add" id="add">Add</button></div>
 </div>
-<div id="footer" class="row"></div>
+<div id="footer" class="row">
+    <div class="columns"><p class="text-right"><a href="index.html" class="lang-exp" data-exp="back">Back</a></p></div>
+</div>
 </body>
 </html>

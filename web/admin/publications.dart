@@ -11,10 +11,11 @@ final DateInputElement date = querySelector("#date");
 final TextAreaElement brief = querySelector("#brief");
 final UrlInputElement urlInfo = querySelector("#url_info");
 final UrlInputElement urlPublisher = querySelector("#url_publisher");
-final FileUploadInputElement pdf = querySelector("#url_pdf");
-final FileUploadInputElement icon = querySelector("#url_icon");
+final FileUploadInputElement pdf = querySelector("#pdf");
+final FileUploadInputElement icon = querySelector("#icon");
 
 final List<dynamic> inputElements = [name, publisher, date, brief, urlInfo, urlPublisher];
+final List<FileUploadInputElement> fileElements = [pdf, icon];
 
 Future main() async
 {
@@ -24,16 +25,14 @@ Future main() async
   table.addColumnSet({"id":"name", "type":"input-text", "maxlength":"128", "required":"1", "width":"30em"});
   table.addColumnSet({"id":"brief", "type":"input-textarea", "maxlength":"1024", "width":"30em", "rows":"3"});
   table.addColumnSet({"id":"url_info", "type":"input-url", "maxlength":"256", "width":"20em"});
-  table.addColumnSet({"id":"url_pdf", "type":"input-file", "accept":".pdf", "width":"13em"});
-  table.addColumnSet({"id":"url_icon", "type":"input-file", "accept":".png, .jpg", "width":"13em"});
+  table.addColumnSet({"id":"pdf", "type":"input-file", "accept":".pdf", "width":"13em"});
+  table.addColumnSet({"id":"icon", "type":"input-file", "accept":".png, .jpg", "width":"13em"});
   table.addColumnSet({"id":"date", "type":"input-date", "required":"1"});
   table.addColumnSet({"id":"publisher", "type":"input-text", "maxlength":"256", "required":"1", "width":"15em"});
   table.addColumnSet({"id":"url_publisher", "type":"input-url", "maxlength":"256", "width":"20em"});
-
   await table.qLoad("get_rows", "publications", "date DESC");
 
   add.onClick.listen((_) async => await qAdd("publications", inputElements));
-
 
   Page.show();
 }
@@ -61,31 +60,20 @@ Future qAdd(String system, List<dynamic> input_elements) async
     e.disabled = true;
   });
 
-  //params["url_icon"] = icon.value;
-
-  int fileUploadIndex = 0;
-
-
-  await Messenger.post(new Request("add", system, params));
- // window.location.reload();
+  loadFileUploadElementsRecursive(0, fileElements, system, params);
 }
 
-void loadFileUploadElementsRecursive(int index)
+void loadFileUploadElementsRecursive(int index, List<FileUploadInputElement> file_inputs, String system, Map<String, String> params)
 {
-  FileReader reader = new FileReader();
-  reader.readAsDataUrl(icon.files.first);
-  reader.onLoad.listen((_)
+  if (index < file_inputs.length)
   {
-    //print(reader.result);
-
-
-    index++;
-    loadFileUploadElementsRecursive(index);
-
-
-
-
-
-  });
-
+    FileReader reader = new FileReader();
+    reader.readAsDataUrl(file_inputs[index].files.first);
+    reader.onLoad.listen((_)
+    {
+      params[file_inputs[index].id] = reader.result;
+      loadFileUploadElementsRecursive(index + 1, file_inputs, system, params);
+    });
+  }
+  else Messenger.post(new Request("add", system, params)).then((_) => window.location.reload());
 }

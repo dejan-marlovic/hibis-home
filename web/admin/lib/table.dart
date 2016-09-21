@@ -122,6 +122,18 @@ class Table
     _defaultProperties(properties, input);
     if (properties["required"] == "1") input.required = true;
     if (properties["accept"] != null) input.accept = properties["accept"];
+
+
+    FileReader reader = new FileReader();
+    reader.readAsDataUrl(input.files.first);
+    reader.onLoad.listen((_)
+    {
+      properties[file_inputs[index].id] = reader.result;
+    });
+
+
+
+
     return input;
   }
 
@@ -172,7 +184,6 @@ class Table
   {
     element.onBlur.listen((_) async
     {
-      print(element.value);
       element.disabled = true;
       await _qUpdateColumn(column, element.value, id);
       element.disabled = false;

@@ -9,7 +9,7 @@ class DynamicHtml
     DivElement column = new DivElement();
     HeadingElement name = new HeadingElement.h4();
     ParagraphElement date = new ParagraphElement();
-    AnchorElement link = new AnchorElement(href:data["url_pdf"]);
+    AnchorElement link = new AnchorElement(href:data["pdf"]);
     DivElement viewPdfContainer = new DivElement();
     ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
     SpanElement viewPdfLabel = new SpanElement();
@@ -17,13 +17,14 @@ class DynamicHtml
     column.append(date);
     column.append(link);
 
+    link.target = "_blank";
     link.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
-    if (data.containsKey("url_icon") && data["url_icon"] != null)
+    if (data.containsKey("icon") && data["icon"] != null)
     {
       ImageElement icon = new ImageElement();
-      icon.src = data["url_icon"];
+      icon.src = data["icon"];
       if (data.containsKey("url_publisher") && data["url_publisher"] != null)
       {
         icon.onClick.listen((e)
@@ -60,7 +61,7 @@ class DynamicHtml
     DivElement col2 = new DivElement();
     HeadingElement name = new HeadingElement.h4();
     SpanElement date = new SpanElement();
-    AnchorElement link = new AnchorElement(href:data["url_pdf"]);
+    AnchorElement link = new AnchorElement(href:data["pdf"]);
     DivElement viewPdfContainer = new DivElement();
     ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
     SpanElement viewPdfLabel = new SpanElement();
@@ -69,11 +70,11 @@ class DynamicHtml
     col2.append(name);
     col2.append(date);
     col2.append(link);
-    print(data["url_icon"]);
+
+    link.target = "_blank";
     link.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
-
 
     row.className = "bold row collapse";
     col1.className = "small-1 columns";
@@ -247,17 +248,18 @@ class DynamicHtml
     DivElement row = new DivElement();
     DivElement column = new DivElement();
     DivElement row1 = new DivElement();
-    DivElement hidden = new DivElement();
+    DivElement hiddenContainer = new DivElement();
     DivElement row2 = new DivElement();
     DivElement row3 = new DivElement();
+
     row.append(column);
     column.append(row1);
-    column.append(hidden);
-    hidden.append(row2);
-    hidden.append(row3);
+    column.append(hiddenContainer);
+    hiddenContainer.append(row2);
+    hiddenContainer.append(row3);
     row.className = "row collapse";
     column.className = "columns top-blue-border";
-    hidden.className = "is-hidden";
+    hiddenContainer.className = "is-hidden";
 
     /// Row 1 (name + short desc + toggle)
     DivElement row1Col = new DivElement();
@@ -283,15 +285,15 @@ class DynamicHtml
     {
       if (e.button == 0)
       {
-        if (hidden.classes.contains("is-hidden"))
+        if (hiddenContainer.classes.contains("is-hidden"))
         {
-          hidden.classes.remove("is-hidden");
+          hiddenContainer.classes.remove("is-hidden");
           toggle.setInnerHtml("&lt;Show less&gt;");
-          hidden.append(toggle);
+          hiddenContainer.append(toggle);
         }
         else
         {
-          hidden.classes.add("is-hidden");
+          hiddenContainer.classes.add("is-hidden");
           toggle.setInnerHtml("&lt;Read more&gt;");
           row1Col.append(toggle);
         }
