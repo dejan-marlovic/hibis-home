@@ -25,7 +25,7 @@ Future main() async
   DateTime now = new DateTime.now();
   String strNow = Utility.dfMySql.format(now);
   DivElement upcomingEventsContainer = querySelector("#upcoming-events");
-  response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start > '$strNow'", "order_by":"date_start ASC", "limit":"3"}));
+  response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start > '$strNow'", "order_by":"date_start ASC", "limit":"999"}));
   row = response.getNextRow();
 
   while (row != null)
