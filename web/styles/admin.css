@@ -14,6 +14,8 @@ table tr td {
     margin: 0 !important;
     padding: 0.4em !important;
     height: auto !important; }
+  table tr td img.thumb {
+    width: 5em; }
 table tr td.required::after {
   content: " *"; }
 

@@ -17,7 +17,6 @@ class DynamicHtml
     column.append(date);
     column.append(link);
 
-    link.target = "_blank";
     link.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
@@ -27,10 +26,7 @@ class DynamicHtml
       icon.src = data["icon"];
       if (data.containsKey("url_publisher") && data["url_publisher"] != null)
       {
-        icon.onClick.listen((e)
-        {
-          window.location.href = data["url_publisher"];
-        });
+        icon.onClick.listen((e) => window.location.href = data["url_publisher"]);
       }
       icon.className = "icon";
       column.append(icon);
@@ -70,8 +66,6 @@ class DynamicHtml
     col2.append(name);
     col2.append(date);
     col2.append(link);
-
-    link.target = "_blank";
     link.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
@@ -100,7 +94,7 @@ class DynamicHtml
     DivElement column = new DivElement();
     DivElement row1 = new DivElement();
     DivElement col1 = new DivElement();
-    ImageElement cover = new ImageElement(src:data["image_url"]);
+    ImageElement cover = new ImageElement(src:data["image"]);
     DivElement col2 = new DivElement();
     HeadingElement title = new HeadingElement.h4();
     ParagraphElement info = new ParagraphElement();
@@ -212,13 +206,13 @@ class DynamicHtml
 
     name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}");
     where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
-    /// TODO phrase this
+    /// TODO phrase
     readMore.setInnerHtml("Read more");
     readMore.onClick.listen((MouseEvent e)
     {
       if (e.button == 0) /// LMB
       {
-        window.open(data["url_pdf"], data["name"]);
+        window.open(data["pdf"], data["name"]);
       }
     });
 
@@ -248,18 +242,19 @@ class DynamicHtml
     DivElement row = new DivElement();
     DivElement column = new DivElement();
     DivElement row1 = new DivElement();
-    DivElement hiddenContainer = new DivElement();
+    DivElement hidden = new DivElement();
     DivElement row2 = new DivElement();
     DivElement row3 = new DivElement();
-
+    DivElement row4 = new DivElement();
+    DivElement row4Column = new DivElement();
     row.append(column);
     column.append(row1);
-    column.append(hiddenContainer);
-    hiddenContainer.append(row2);
-    hiddenContainer.append(row3);
+    column.append(hidden);
+    hidden.append(row2);
+    hidden.append(row3);
+    column.append(row4);
     row.className = "row collapse";
-    column.className = "columns top-blue-border";
-    hiddenContainer.className = "is-hidden";
+    hidden.className = "is-hidden";
 
     /// Row 1 (name + short desc + toggle)
     DivElement row1Col = new DivElement();
@@ -270,7 +265,6 @@ class DynamicHtml
     row1.append(row1Col);
     row1Col.append(name);
     row1Col.append(shortDescription);
-
 
     row1.className = "row";
     row1Col.className = "columns";
@@ -285,17 +279,15 @@ class DynamicHtml
     {
       if (e.button == 0)
       {
-        if (hiddenContainer.classes.contains("is-hidden"))
+        if (hidden.classes.contains("is-hidden"))
         {
-          hiddenContainer.classes.remove("is-hidden");
+          hidden.classes.remove("is-hidden");
           toggle.setInnerHtml("&lt;Show less&gt;");
-          hiddenContainer.append(toggle);
         }
         else
         {
-          hiddenContainer.classes.add("is-hidden");
+          hidden.classes.add("is-hidden");
           toggle.setInnerHtml("&lt;Read more&gt;");
-          row1Col.append(toggle);
         }
       }
     });
@@ -306,8 +298,7 @@ class DynamicHtml
     ParagraphElement longDescription = new ParagraphElement();
     row2.append(row2Col);
     row2Col.append(longDescription);
-    ImageElement  portrait_image = new ImageElement();
-    portrait_image.src = data["profile_image"];
+    ImageElement  portrait_image = new ImageElement(src:data["image"]);
 
     row2.className = "row";
     row2Col.className = "columns";
@@ -329,16 +320,19 @@ class DynamicHtml
     row3Col2.append(contactHeader);
     row3Col2.append(email);
     row3Col2.append(phone);
+    row4.append(row4Column);
+    row4Column.append(toggle);
 
     row3.className = "row";
     row3Col1.className = "large-2 medium-3 small-4 columns";
     row3Col2.className = "large-10 medium-9 small-8 columns";
     contactHeader.className = "bold";
-
+    row4.className = "row";
+    row4Column.className = "columns";
     contactHeader.setInnerHtml("Contact");
     email.setInnerHtml(data["email"]);
     phone.setInnerHtml("${data["phone"]} <br />${data["phone_2"]}");
-    row1Col.append(toggle);
+
 
     return row;
   }

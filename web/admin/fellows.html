@@ -32,52 +32,54 @@
         <div class="row"><div class="columns" id="table_container"></div></div>
     </div>
 </div>
-<div class="row full-width" id="add-container">
+<div class="row" id="add-container">
     <div class="columns">
         <h3 class="lang-exp" data-exp="Add">Add</h3>
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-6 columns">
         <label for="firstname" class="lang-exp required" data-exp=firstname">Firstname</label>
         <input type="text" id="firstname" maxlength="256" required />
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-6 columns">
         <label for="lastname" class="lang-exp required" data-exp=lastname">Lastname</label>
         <input type="text" id="lastname" maxlength="256" required />
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-6 columns">
         <label for="email" class="lang-exp required" data-exp="email">Email</label>
         <input type="email" id="email" maxlength="256" required />
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-3 columns">
         <label for="phone" class="lang-exp required" data-exp="phone">Phone</label>
         <input type="tel" id="phone" maxlength="32" required />
     </div>
-    <div class="medium-4 columns">
-        <label for="phone_2" class="lang-exp required" data-exp="phone">Phone 2</label>
-        <input type="tel" id="phone_2" maxlength="32" required />
+    <div class="medium-3 columns">
+        <label for="phone_2" class="lang-exp" data-exp="phone">Phone 2</label>
+        <input type="tel" id="phone_2" maxlength="32" />
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-6 columns">
         <label for="city" class="lang-exp required" data-exp="city">City</label>
         <input type="text" id="city" maxlength="128" required />
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-6 columns">
         <label for="country" class="lang-exp required" data-exp="country">Country</label>
         <input type="text" id="country" maxlength="128" required />
     </div>
-    <div class="medium-4 columns">
-        <label for="description_short" class="lang-exp required" data-exp="description_short">Description Short</label>
-        <input type="text" id="description_short" maxlength="1024" required />
-    </div>
-    <div class="medium-4 columns">
-        <label for="description_long" class="lang-exp required" data-exp="description_long">Description Long</label>
-        <textarea type="text" id="description_long" maxlength="2048" required></textarea>
+    <div class="columns">
+        <label for="description_short" class="lang-exp required" data-exp="description_short">Short Description</label>
+        <textarea id="description_short" maxlength="1024" rows="2" required></textarea>
     </div>
     <div class="columns">
-        <label for="profile_image" class="lang-exp" data-exp="profile_image">Profile Image</label>
-        <input type="file" id="profile_image" maxlength="256" accept=".png, .jpg" required/>
+        <label for="description_long" class="lang-exp required" data-exp="description_long">Long Description</label>
+        <textarea id="description_long" maxlength="2048" rows="4" required></textarea>
+    </div>
+    <div class="columns">
+        <label for="image" class="lang-exp" data-exp="profile_image">Profile Image</label>
+        <input type="file" id="image" accept=".jpg" required />
     </div>
     <div class="medium-2 medium-offset-10 columns"><button class="button expanded lang-exp" data-exp="add" id="add">Add</button></div>
 </div>
-<div id="footer" class="row"></div>
+<div id="footer" class="row">
+    <div class="columns"><p class="text-right"><a href="index.html" class="lang-exp" data-exp="back">Back</a></p></div>
+</div>
 </body>
 </html>

@@ -36,7 +36,8 @@ class Publications
         $properties["pdf"] = Utility::valid_or_null("pdf", $properties);
         $properties["icon"] = Utility::valid_or_null("icon", $properties);
 
-        $DB->execute("INSERT INTO publications (name, publisher, date, brief, url_info, url_publisher, pdf, icon) VALUES (:name, :publisher, :date, :brief, :url_info, :url_publisher, :pdf, :icon)", $properties);
+        $DB->execute("INSERT INTO publications (name, publisher, date, brief, url_info, url_publisher, pdf, icon) 
+                      VALUES (:name, :publisher, :date, :brief, :url_info, :url_publisher, :pdf, :icon)", $properties);
     }
 
     private static function delete($id)

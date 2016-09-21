@@ -25,6 +25,12 @@ table
         padding:0.4em !important;
         height: auto !important;
       }
+
+      img.thumb
+      {
+        width:5em;
+      }
+
     }
     td.required::after
     {

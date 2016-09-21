@@ -32,32 +32,28 @@
         <div class="row"><div class="columns" id="table_container"></div></div>
     </div>
 </div>
-<div class="row full-width" id="add-container">
+<div class="row" id="add-container">
     <div class="columns">
         <h3 class="lang-exp" data-exp="Add">Add</h3>
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-6 columns">
         <label for="name" class="lang-exp required" data-exp="name">Name</label>
         <input type="text" id="name" maxlength="256" required />
     </div>
-    <div class="medium-4 columns">
-        <label for="description" class="lang-exp required" data-exp="description">Description</label>
-        <input type="text" id="description" maxlength="1024" />
+    <div class="columns">
+        <label for="description" class="lang-exp" data-exp="description">Description</label>
+        <textarea id="description" maxlength="1024" rows="4"></textarea>
     </div>
     <div class="medium-6 columns">
         <label for="url_description" class="lang-exp" data-exp="url_description">Description URL</label>
         <input type="url" id="url_description" maxlength="256" />
     </div>
-    <div class="columns">
-        <label for="url_pdf" class="lang-exp" data-exp="pdf">PDF</label>
-        <input type="file" id="url_pdf" accept=".pdf" maxlength="256" />
-    </div>
     <div class="medium-6 columns">
-        <label for="url_signup" class="lang-exp" data-exp="url_signup">Signup URL</label>
-        <input type="url" id="url_signup" maxlength="256" />
+        <label for="url_signup" class="lang-exp required" data-exp="url_signup">Signup URL</label>
+        <input type="url" id="url_signup" maxlength="256" required />
     </div>
     <div class="medium-4 columns">
-        <label for="date_start" class="lang-exp" data-exp="date_start">Date Start</label>
+        <label for="date_start" class="lang-exp required" data-exp="date_start">Date Start</label>
         <input type="date" id="date_start" required />
     </div>
     <div class="medium-4 columns">
@@ -66,7 +62,7 @@
     </div>
     <div class="medium-4 columns">
         <label for="street" class="lang-exp required" data-exp="street">Street</label>
-        <input type="text" id="street" maxlength="128"/>
+        <input type="text" id="street" maxlength="128" required />
     </div>
     <div class="medium-4 columns">
         <label for="city" class="lang-exp required" data-exp="city">City</label>
@@ -80,8 +76,14 @@
         <label for="lang" class="lang-exp required" data-exp="lang">Lang</label>
         <input type="text" id="lang" maxlength="128" required />
     </div>
+    <div class="columns">
+        <label for="pdf" class="lang-exp required" data-exp="pdf">PDF</label>
+        <input type="file" id="pdf" accept=".pdf" required />
+    </div>
     <div class="medium-2 medium-offset-10 columns"><button class="button expanded lang-exp" data-exp="add" id="add">Add</button></div>
 </div>
-<div id="footer" class="row"></div>
+<div id="footer" class="row">
+    <div class="columns"><p class="text-right"><a href="index.html" class="lang-exp" data-exp="back">Back</a></p></div>
+</div>
 </body>
 </html>

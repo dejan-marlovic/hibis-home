@@ -46,6 +46,7 @@ class Table
     Request req = new Request(msg, _system, {"columns":columnList.join(", "), "order_by":order_by});
     Response r = await Messenger.post(req);
 
+
     Map<String, String> publicationData = r.getNextRow();
     while (publicationData != null)
     {
@@ -59,6 +60,10 @@ class Table
         {
           case "input-date":
             td.append(_generateInputDate(row, value, id));
+            break;
+
+          case "input-email":
+            td.append(_generateInputEmail(row, value, id));
             break;
 
           case "input-file":
@@ -112,29 +117,54 @@ class Table
     _defaultProperties(properties, input);
     _defaultInputProperties(properties, input, value);
     _defaultUpdate(input, properties["id"], row_id);
-    input.value = value;
     return input;
   }
 
-  FileUploadInputElement _generateInputFile(Map<String, String> properties, String value, String row_d)
+  EmailInputElement _generateInputEmail(Map<String, String> properties, String value, String row_id)
   {
+    EmailInputElement input = new EmailInputElement();
+    _defaultProperties(properties, input);
+    _defaultInputProperties(properties, input, value);
+    _defaultUpdate(input, properties["id"], row_id);
+    return input;
+  }
+
+  DivElement _generateInputFile(Map<String, String> properties, String value, String row_id)
+  {
+    DivElement container = new DivElement();
+    ImageElement thumb = new ImageElement();
+    thumb.className = "thumb";
+    if (value != null)
+    {
+      if (value.startsWith("data:image/")) thumb.src = value;
+      else thumb.src = "../gfx/pdf-icon.png";
+
+      container.append(thumb);
+    }
+
     FileUploadInputElement input = new FileUploadInputElement();
+
+    container.append(input);
     _defaultProperties(properties, input);
     if (properties["required"] == "1") input.required = true;
     if (properties["accept"] != null) input.accept = properties["accept"];
 
-
-    FileReader reader = new FileReader();
-    reader.readAsDataUrl(input.files.first);
-    reader.onLoad.listen((_)
+    input.onChange.listen((_)
     {
-      properties[file_inputs[index].id] = reader.result;
+      if (_system == null) return;
+      input.disabled = true;
+      FileReader reader = new FileReader();
+      reader.readAsDataUrl(input.files.first);
+      reader.onLoad.listen((_) async
+      {
+        await Messenger.post(new Request("update", _system, {"column":properties["id"], "value":reader.result, "id":row_id}));
+        if (reader.result.toString().startsWith("data:image/")) thumb.src = reader.result;
+        else thumb.src = "../gfx/pdf-icon.png";
+        input.disabled = false;
+      });
     });
 
-
-
-
-    return input;
+    return container;
   }
 
   TextInputElement _generateInputText(Map<String, String> properties, String value, String row_id)

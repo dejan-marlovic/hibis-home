@@ -6,19 +6,47 @@ class Books
     {
         switch ($msg)
         {
-            case "list_all":
-                return self::list_all();
+            case "add":
+                self::add($params);
+                break;
+
+            case "delete":
+                self::delete(Utility::valid_or_die($params["id"], "id"));
+                break;
+
+            case "update":
+                self::update(Utility::valid_or_die($params["id"], "id"),
+                    Utility::valid_or_die($params["column"], "column"),
+                    Utility::valid_or_die($params["value"], "value"));
                 break;
         }
 
         return null;
     }
 
-    private static function list_all()
+    private static function add($properties)
     {
         global $DB;
-        $rs = $DB->query_all("SELECT id, name, author, format, brief, image_url FROM books WHERE 1", null);
-        return $rs;
+        $properties["name"] = Utility::valid_or_die($properties["name"], "name");
+        $properties["author"] = Utility::valid_or_die($properties["author"], "author");
+        $properties["format"] = Utility::valid_or_die($properties["format"], "format");
+        $properties["brief"] = Utility::valid_or_die($properties["brief"], "brief");
+        $properties["image"] = Utility::valid_or_die($properties["image"], "image");
+
+        $DB->execute("INSERT INTO books(name, author, format, brief, image) 
+                      VALUES (:name, :author, :format, :brief, :image)", $properties);
+    }
+
+    private static function delete($id)
+    {
+        global $DB;
+        $DB->execute("DELETE FROM books WHERE id = ?", array($id));
+    }
+
+    private static function update($id, $column, $value)
+    {
+        global $DB;
+        $DB->execute("UPDATE books SET $column = ? WHERE id = ?", array($value, $id));
     }
 
 

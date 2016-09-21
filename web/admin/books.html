@@ -32,7 +32,7 @@
         <div class="row"><div class="columns" id="table_container"></div></div>
     </div>
 </div>
-<div class="row full-width" id="add-container">
+<div class="row" id="add-container">
     <div class="columns">
         <h3 class="lang-exp" data-exp="Add">Add</h3>
     </div>
@@ -49,15 +49,17 @@
         <input type="text" id="format" maxlength="128" required />
     </div>
     <div class="columns">
-        <label for="brief" class="lang-exp">Brief</label>
+        <label for="brief" class="lang-exp required">Brief</label>
         <textarea id="brief" maxlength="2046" rows="4" required></textarea>
     </div>
     <div class="medium-6 columns">
-        <label for="image_url" class="lang-exp" data-exp="image_url">Image URL</label>
-        <input type="url" id="image_url" maxlength="256" required/>
+        <label for="image" class="lang-exp required" data-exp="image">Image</label>
+        <input type="file" id="image" accept=".png, .jpg" required />
     </div>
     <div class="medium-2 medium-offset-10 columns"><button class="button expanded lang-exp" data-exp="add" id="add">Add</button></div>
 </div>
-<div id="footer" class="row"></div>
+<div id="footer" class="row">
+    <div class="columns"><p class="text-right"><a href="index.html" class="lang-exp" data-exp="back">Back</a></p></div>
+</div>
 </body>
 </html>

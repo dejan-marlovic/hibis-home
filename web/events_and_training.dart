@@ -25,7 +25,7 @@ Future main() async
   DateTime now = new DateTime.now();
   String strNow = Utility.dfMySql.format(now);
   DivElement upcomingEventsContainer = querySelector("#upcoming-events");
-  response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start > '$strNow'", "order_by":"date_start DESC", "limit":"3"}));
+  response = await Messenger.post(new Request("get_rows", "events", {"where":"date_start > '$strNow'", "order_by":"date_start ASC", "limit":"3"}));
   row = response.getNextRow();
 
   while (row != null)
@@ -80,9 +80,9 @@ DivElement generateCourseRow(Map<String, String> data)
   row.append(col);
   col.append(name);
   col.append(descShort);
-  col.append(toggle);
   col.append(descLongContainer);
   descLongContainer.append(descLong);
+  col.append(toggle);
 
   name.className = "bold color-1 no-margin";
   descShort.className = "bold no-margin text-left";

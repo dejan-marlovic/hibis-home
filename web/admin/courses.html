@@ -26,38 +26,40 @@
     <div class="columns">
         <div class="row">
             <div class="columns">
-                <h2 class="lang-exp" data-exp="courses">Courses</h2>
+                <h2 class="lang-exp" data-exp="courses">Flagship Courses</h2>
             </div>
         </div>
         <div class="row"><div class="columns" id="table_container"></div></div>
     </div>
 </div>
-<div class="row full-width" id="add-container">
+<div class="row" id="add-container">
     <div class="columns">
         <h3 class="lang-exp" data-exp="Add">Add</h3>
     </div>
-    <div class="medium-4 columns">
+    <div class="medium-6 columns">
         <label for="name" class="lang-exp required" data-exp="name">Name</label>
         <input type="text" id="name" maxlength="128" required />
     </div>
-    <div class="medium-4 columns">
-        <label for="description_short" class="lang-exp required" data-exp="description_short">Description Short</label>
+    <div class="medium-6 columns">
+        <label for="description_short" class="lang-exp required" data-exp="description_short">Short description</label>
         <input type="text" id="description_short" maxlength="1024" required />
     </div>
-    <div class="medium-4 columns">
-        <label for="description_long" class="lang-exp required" data-exp="description_long">Description Long</label>
-        <textarea type="text" id="description_long" maxlength="4096" required></textarea>
+    <div class="columns">
+        <label for="description_long" class="lang-exp required" data-exp="description_long">Long description</label>
+        <textarea type="text" id="description_long" maxlength="4096" rows="5" required></textarea>
     </div>
     <div class="medium-6 columns">
-        <label for="url_info" class="lang-exp" data-exp="url_info">Info URL</label>
+        <label for="url_info" class="lang-exp required" data-exp="url_info">Info URL</label>
         <input type="url" id="url_info" maxlength="256" required />
     </div>
     <div class="medium-6 columns">
-        <label for="url_pdf" class="lang-exp" data-exp="url_pdf">Info Pdf</label>
-        <input type="url" id="url_pdf" maxlength="256" required/>
+        <label for="pdf" class="lang-exp required" data-exp="pdf">PDF</label>
+        <input type="file" id="pdf" accept=".pdf" required/>
     </div>
     <div class="medium-2 medium-offset-10 columns"><button class="button expanded lang-exp" data-exp="add" id="add">Add</button></div>
 </div>
-<div id="footer" class="row"></div>
+<div id="footer" class="row">
+    <div class="columns"><p class="text-right"><a href="index.html" class="lang-exp" data-exp="back">Back</a></p></div>
+</div>
 </body>
 </html>
