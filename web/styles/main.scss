@@ -298,6 +298,11 @@ a.highlighted
 {
   @include box-shadow(5px 10px 30px #999999);  }
 
+.inline
+{
+  display: inline;
+}
+
 .clickable
 {
   @include user-select(none);

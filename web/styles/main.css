@@ -194,6 +194,9 @@ a.highlighted {
   -moz-box-shadow: 5px 10px 30px #999999;
   box-shadow: 5px 10px 30px #999999; }
 
+.inline {
+  display: inline; }
+
 .clickable {
   -webkit-user-select: none;
   -moz-user-select: none;

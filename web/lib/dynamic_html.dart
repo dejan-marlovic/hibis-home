@@ -1,6 +1,7 @@
 library dynamic_html;
 import 'dart:html';
 import 'utility.dart';
+import 'messenger.dart';
 
 class DynamicHtml
 {
@@ -9,15 +10,15 @@ class DynamicHtml
     DivElement column = new DivElement();
     HeadingElement name = new HeadingElement.h4();
     ParagraphElement date = new ParagraphElement();
-    AnchorElement link = new AnchorElement(href:data["pdf"]);
+    DivElement pdfLink = new DivElement();
     DivElement viewPdfContainer = new DivElement();
     ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
     SpanElement viewPdfLabel = new SpanElement();
     column.append(name);
     column.append(date);
-    column.append(link);
+    column.append(pdfLink);
 
-    link.append(viewPdfContainer);
+    pdfLink.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
     if (data.containsKey("icon") && data["icon"] != null)
@@ -37,6 +38,7 @@ class DynamicHtml
     date.className = "link_description normal no-margin";
     viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
     viewPdfLabel.className = "normal";
+    pdfLink.className = "clickable inline";
 
 
     name.setInnerHtml(data["name"]);
@@ -46,6 +48,20 @@ class DynamicHtml
     ///
     viewPdfLabel.setInnerHtml(" view PDF");
 
+
+    pdfLink.onClick.listen((MouseEvent e) async
+    {
+      if (e.button == 0)
+      {
+        Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
+        Response r = await Messenger.post(req);
+        if (r.success && !r.isEmpty)
+        {
+          Map<String, String> row = r.getNextRow();
+          if (row["pdf"] != null) window.location.href = row["pdf"];
+        }
+      }
+    });
 
     return column;
   }
@@ -57,7 +73,7 @@ class DynamicHtml
     DivElement col2 = new DivElement();
     HeadingElement name = new HeadingElement.h4();
     SpanElement date = new SpanElement();
-    AnchorElement link = new AnchorElement(href:data["pdf"]);
+    DivElement pdfLink = new DivElement();
     DivElement viewPdfContainer = new DivElement();
     ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
     SpanElement viewPdfLabel = new SpanElement();
@@ -65,8 +81,8 @@ class DynamicHtml
     row.append(col2);
     col2.append(name);
     col2.append(date);
-    col2.append(link);
-    link.append(viewPdfContainer);
+    col2.append(pdfLink);
+    pdfLink.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
 
@@ -77,6 +93,7 @@ class DynamicHtml
     date.className = "link_description normal";
     viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
     viewPdfLabel.className = "normal";
+    pdfLink.className = "clickable inline";
 
     col1.setInnerHtml("&raquo;");
     name.setInnerHtml(data["name"]);
@@ -85,6 +102,22 @@ class DynamicHtml
     date.setInnerHtml(Utility.dfMonthYear.format(dt));
     /// TODO phrase
     viewPdfLabel.setInnerHtml(" view PDF");
+
+    pdfLink.onClick.listen((MouseEvent e) async
+    {
+      if (e.button == 0)
+      {
+        Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
+        Response r = await Messenger.post(req);
+        if (r.success && !r.isEmpty)
+        {
+          Map<String, String> row = r.getNextRow();
+          if (row["pdf"] != null) window.location.href = row["pdf"];
+        }
+      }
+    });
+
+
 
     return row;
   }
@@ -208,11 +241,17 @@ class DynamicHtml
     where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
     /// TODO phrase
     readMore.setInnerHtml("Read more");
-    readMore.onClick.listen((MouseEvent e)
+    readMore.onClick.listen((MouseEvent e) async
     {
       if (e.button == 0) /// LMB
       {
-        window.open(data["pdf"], data["name"]);
+        Request req = new Request("get_rows", "events", {"columns":"id, pdf", "where":"id=${data["id"]}", "limit":"1"});
+        Response r = await Messenger.post(req);
+        if (r.success && !r.isEmpty)
+        {
+          Map<String, String> row = r.getNextRow();
+          if (row["pdf"] != null) window.location.href = row["pdf"];
+        }
       }
     });
 
@@ -227,7 +266,7 @@ class DynamicHtml
       {
         if (e.button == 0)
         {
-          window.open(data["url_signup"], data["name"]);
+          window.location.href = data["url_signup"];
         }
       });
 
@@ -271,7 +310,7 @@ class DynamicHtml
 
     name.className = "color-1 bolder padding-top-1";
     toggle.className = "clickable no-margin";
-    name.setInnerHtml("${data["firstname"]} ${data["lastname"]} +");
+    name.setInnerHtml("${data["firstname"]} ${data["lastname"]}");
     shortDescription.setInnerHtml(data["description_short"]);
     toggle.setInnerHtml("&lt;Read more&gt;");
 

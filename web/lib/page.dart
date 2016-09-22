@@ -23,7 +23,7 @@ class Page
 
       DivElement container = panelRight.querySelector("#pdf_publications_box");
       /// List latest publications
-      Response response = await Messenger.post(new Request("get_rows", "publications", {"columns":"name, date, pdf", "order_by":"id DESC", "limit":"3"}));
+      Response response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date", "order_by":"id DESC", "limit":"3"}));
       Map<String, String> row = response.getNextRow();
       while (row != null)
       {

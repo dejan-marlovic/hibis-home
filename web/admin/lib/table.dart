@@ -35,7 +35,7 @@ class Table
       td.setInnerHtml(row["id"]);
       if (row["required"] == "1") td.classes.add("required");
       headRow.append(td);
-      columnList.add(row["id"]);
+      if (row["type"] != "input-file") columnList.add(row["id"]);
     });
 
     /// Add buttons column
@@ -214,6 +214,8 @@ class Table
   {
     element.onBlur.listen((_) async
     {
+      String value = element.value;
+      if (value == "undefined") value = "";
       element.disabled = true;
       await _qUpdateColumn(column, element.value, id);
       element.disabled = false;
