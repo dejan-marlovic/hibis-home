@@ -204,6 +204,9 @@ a.highlighted {
   user-select: none;
   cursor: pointer; }
 
+.fb-share-button {
+  float: right; }
+
 .invalid {
   background-color: #ffeeee !important; }
 
