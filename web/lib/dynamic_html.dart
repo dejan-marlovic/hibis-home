@@ -292,7 +292,7 @@ class DynamicHtml
     hidden.append(row2);
     hidden.append(row3);
     column.append(row4);
-    row.className = "row collapse";
+    row.className = "row no-margin collapse";
     hidden.className = "is-hidden";
 
     /// Row 1 (name + short desc + toggle)
@@ -305,7 +305,7 @@ class DynamicHtml
     row1Col.append(name);
     row1Col.append(shortDescription);
 
-    row1.className = "row";
+    row1.className = "row no-margin";
     row1Col.className = "columns";
 
     name.className = "color-1 bolder padding-top-1";
@@ -362,11 +362,11 @@ class DynamicHtml
     row4.append(row4Column);
     row4Column.append(toggle);
 
-    row3.className = "row";
+    row3.className = "row no-margin";
     row3Col1.className = "large-2 medium-3 small-4 columns";
     row3Col2.className = "large-10 medium-9 small-8 columns";
     contactHeader.className = "bold";
-    row4.className = "row";
+    row4.className = "row no-margin";
     row4Column.className = "columns";
     contactHeader.setInnerHtml("Contact");
     email.setInnerHtml(data["email"]);

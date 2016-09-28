@@ -302,7 +302,10 @@ a.highlighted
 {
   display: inline;
 }
-
+.inline-block
+{
+  display: inline-block;
+}
 .clickable
 {
   @include user-select(none);
