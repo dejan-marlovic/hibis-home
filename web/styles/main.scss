@@ -29,7 +29,7 @@ iframe
       li
       {
         display: inline-block;
-        margin-left: 0.22em;
+        margin-left: 0.55em;
         a
         {
           font-size: 0.94em;
@@ -465,3 +465,23 @@ a.highlighted
 }
 
 
+@media screen and (max-width: 1200px)
+{
+  #header
+  {
+    nav
+    {
+      ul
+      {
+        li
+        {
+          margin-left: 0.3em;
+          a
+          {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

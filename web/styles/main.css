@@ -17,7 +17,7 @@ iframe {
   margin: 0; }
   #header nav ul li {
     display: inline-block;
-    margin-left: 0.22em; }
+    margin-left: 0.55em; }
     #header nav ul li a {
       font-size: 0.94em; }
 
@@ -314,5 +314,10 @@ a.highlighted {
 
   .large-margin-left-1 {
     margin: 0; } }
+@media screen and (max-width: 1200px) {
+  #header nav ul li {
+    margin-left: 0.3em; }
+    #header nav ul li a {
+      font-size: 0.8em; } }
 
 /*# sourceMappingURL=main.css.map */
