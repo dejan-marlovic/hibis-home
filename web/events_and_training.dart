@@ -36,7 +36,7 @@ Future main() async
 
   DivElement pastEventsContainer = querySelector("#past-events");
   ParagraphElement toggle = querySelector("#past_events_show");
-  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang", "where":"date_start < '$strNow'", "order_by":"date_start DESC"}));
+  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang", "where":"date_start < '$strNow'", "order_by":"date_start ASC"}));
   row = response.getNextRow();
   pastEventsContainer.className = "is-hidden";
   while (row != null)
