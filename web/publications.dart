@@ -14,7 +14,7 @@ Future main() async
 
   /// List all books
   final DivElement booksContainer = querySelector("#books-container");
-  Response response = await Messenger.post(new Request("get_rows", "books", {"columns":"id, name, author, format, brief, image", "order_by":"id ASC"}));
+  Response response = await Messenger.post(new Request("get_rows", "books", {"columns":"id, name, author, format, brief, image, url_supplier, supplier", "order_by":"id ASC"}));
   Map<String, String> row = response.getNextRow();
   while (row != null)
   {

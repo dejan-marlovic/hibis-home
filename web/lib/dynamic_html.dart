@@ -122,6 +122,8 @@ class DynamicHtml
     return row;
   }
 
+
+
   static DivElement generateBookColumn(Map<String, String> data)
   {
     DivElement column = new DivElement();
@@ -131,6 +133,7 @@ class DynamicHtml
     DivElement col2 = new DivElement();
     HeadingElement title = new HeadingElement.h4();
     ParagraphElement info = new ParagraphElement();
+
 
     column.append(row1);
     row1.append(col1);
@@ -154,6 +157,7 @@ class DynamicHtml
     if (data["brief"] != null && data["brief"].isNotEmpty)
     {
       ParagraphElement toggle = new ParagraphElement();
+      AnchorElement bookSupplierLink  = new AnchorElement();
       col2.append(toggle);
       DivElement row2 = new DivElement();
       DivElement col3 = new DivElement();
@@ -167,6 +171,16 @@ class DynamicHtml
       brief.className = "book-brief";
       toggle.setInnerHtml("&lt;Read more&gt;");
       brief.setInnerHtml(data["brief"]);
+      if (data["supplier"] != null && data["supplier"].isNotEmpty)
+      {
+        bookSupplierLink.innerHtml = data["supplier"];
+        bookSupplierLink.target = "_blank";
+        brief.append(bookSupplierLink);
+      }
+      if (data["url_supplier"] != null && data["url_supplier"].isNotEmpty)
+      {
+        bookSupplierLink.href = data["url_supplier"];
+      }
       toggle.onClick.listen((MouseEvent e)
       {
         if (e.button == 0)
@@ -286,6 +300,7 @@ class DynamicHtml
     DivElement row3 = new DivElement();
     DivElement row4 = new DivElement();
     DivElement row4Column = new DivElement();
+
     row.append(column);
     column.append(row1);
     column.append(hidden);
