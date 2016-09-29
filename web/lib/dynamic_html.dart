@@ -2,6 +2,7 @@ library dynamic_html;
 import 'dart:html';
 import 'utility.dart';
 import 'messenger.dart';
+import 'page.dart';
 
 class DynamicHtml
 {
@@ -157,7 +158,6 @@ class DynamicHtml
     if (data["brief"] != null && data["brief"].isNotEmpty)
     {
       ParagraphElement toggle = new ParagraphElement();
-      AnchorElement bookSupplierLink  = new AnchorElement();
       col2.append(toggle);
       DivElement row2 = new DivElement();
       DivElement col3 = new DivElement();
@@ -170,17 +170,7 @@ class DynamicHtml
       toggle.className = "clickable";
       brief.className = "book-brief";
       toggle.setInnerHtml("&lt;Read more&gt;");
-      brief.setInnerHtml(data["brief"]);
-      if (data["supplier"] != null && data["supplier"].isNotEmpty)
-      {
-        bookSupplierLink.innerHtml = data["supplier"];
-        bookSupplierLink.target = "_blank";
-        brief.append(bookSupplierLink);
-      }
-      if (data["url_supplier"] != null && data["url_supplier"].isNotEmpty)
-      {
-        bookSupplierLink.href = data["url_supplier"];
-      }
+      brief.setInnerHtml(data["brief"], validator:Page.htmlValidator);
       toggle.onClick.listen((MouseEvent e)
       {
         if (e.button == 0)
@@ -198,8 +188,6 @@ class DynamicHtml
         }
       });
     }
-
-
 
     return column;
   }
