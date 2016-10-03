@@ -1,7 +1,10 @@
+p.long-description-container {
+  border-bottom: 0.5em solid #98D9EB;
+  padding-top: 1em; }
+
 div.long-description-container {
   border-top: 1px solid #98D9EB;
-  border-bottom: 0.5em solid #98D9EB;
-  margin-bottom: 2em;
+  border-bottom: 1px solid #98D9EB;
   padding-top: 1em; }
 
 /*# sourceMappingURL=events.css.map */

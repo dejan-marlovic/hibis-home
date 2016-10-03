@@ -28,7 +28,11 @@ class DynamicHtml
       icon.src = data["icon"];
       if (data.containsKey("url_publisher") && data["url_publisher"] != null)
       {
-        icon.onClick.listen((e) => window.location.href = data["url_publisher"]);
+        icon.onClick.listen((e)
+        {
+          WindowBase w = window.open("","_blank");
+          w.location.href = data["url_publisher"];
+        });
       }
       icon.className = "icon";
       column.append(icon);
@@ -54,12 +58,13 @@ class DynamicHtml
     {
       if (e.button == 0)
       {
+        WindowBase w = window.open("","_blank");
         Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
         Response r = await Messenger.post(req);
         if (r.success && !r.isEmpty)
         {
           Map<String, String> row = r.getNextRow();
-          if (row["pdf"] != null) window.location.href = row["pdf"];
+          if (row["pdf"] != null) w.location.href = row["pdf"];
         }
       }
     });
@@ -108,12 +113,13 @@ class DynamicHtml
     {
       if (e.button == 0)
       {
+        WindowBase w = window.open("","_blank");
         Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
         Response r = await Messenger.post(req);
         if (r.success && !r.isEmpty)
         {
           Map<String, String> row = r.getNextRow();
-          if (row["pdf"] != null) window.location.href = row["pdf"];
+          if (row["pdf"] != null) w.location.href = row["pdf"];
         }
       }
     });
@@ -243,16 +249,18 @@ class DynamicHtml
     where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
     /// TODO phrase
     readMore.setInnerHtml("Read more");
+
     readMore.onClick.listen((MouseEvent e) async
     {
       if (e.button == 0) /// LMB
       {
+        WindowBase w = window.open("","_blank");
         Request req = new Request("get_rows", "events", {"columns":"id, pdf", "where":"id=${data["id"]}", "limit":"1"});
         Response r = await Messenger.post(req);
         if (r.success && !r.isEmpty)
         {
           Map<String, String> row = r.getNextRow();
-          if (row["pdf"] != null) window.location.href = row["pdf"];
+          if (row["pdf"] != null) w.location.href = row["pdf"];
         }
       }
     });
@@ -268,7 +276,7 @@ class DynamicHtml
       {
         if (e.button == 0)
         {
-          window.location.href = data["url_signup"];
+          window.open(data["url_signup"],"_blank");
         }
       });
 

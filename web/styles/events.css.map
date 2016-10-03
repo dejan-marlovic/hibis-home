@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAEA,8BACA;EACE,UAAU,EAAE,iBAAwB;EACpC,aAAa,EAAE,mBAA0B;EACzC,aAAa,EAAE,GAAG;EAClB,WAAW,EAAE,GAAG",
+"mappings": "AAEA,4BACA;EACE,aAAa,EAAE,mBAA0B;EACzC,WAAW,EAAE,GAAG;;AAElB,8BACA;EACE,UAAU,EAAE,iBAAwB;EACpC,aAAa,EAAE,iBAAwB;EACvC,WAAW,EAAE,GAAG",
 "sources": ["events.scss"],
 "names": [],
 "file": "events.css"

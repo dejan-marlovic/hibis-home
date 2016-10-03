@@ -36,7 +36,7 @@ Future main() async
 
   DivElement pastEventsContainer = querySelector("#past-events");
   ParagraphElement toggle = querySelector("#past_events_show");
-  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang", "where":"date_start < '$strNow'", "order_by":"date_start ASC"}));
+  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang", "where":"date_start < '$strNow'", "order_by":"date_start DESC"}));
   row = response.getNextRow();
   pastEventsContainer.className = "is-hidden";
   while (row != null)
@@ -87,7 +87,7 @@ DivElement generateFlagshipCourseRow(Map<String, String> data)
   name.className = "bold color-1 no-margin";
   descShort.className = "bold no-margin text-left";
   toggle.className = "color-1 clickable";
-  descLongContainer.className = "long-description-container is-hidden";
+  descLongContainer.className = "is-hidden long-description-container";
 
   name.setInnerHtml(data["name"]);
   descShort.setInnerHtml(data["description_short"]);
@@ -101,11 +101,13 @@ DivElement generateFlagshipCourseRow(Map<String, String> data)
       if (descLongContainer.classes.contains("is-hidden"))
       {
         descLongContainer.classes.remove("is-hidden");
+        toggle.classes.add("long-description-container");
         toggle.setInnerHtml("&lt;less&gt;");
       }
       else
       {
         descLongContainer.classes.add("is-hidden");
+        toggle.classes.remove("long-description-container");
         toggle.setInnerHtml("&lt;more&gt;");
       }
     }

@@ -207,8 +207,8 @@ a.highlighted {
   user-select: none;
   cursor: pointer; }
 
-.fb-share-button {
-  float: right; }
+img.email-icon {
+  margin-left: 0.5em; }
 
 .invalid {
   background-color: #ffeeee !important; }
