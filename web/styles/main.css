@@ -208,6 +208,8 @@ a.highlighted {
   cursor: pointer; }
 
 img.email-icon {
+  width: 1.5em;
+  display: block;
   margin-left: 0.5em; }
 
 .invalid {

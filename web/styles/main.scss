@@ -312,12 +312,16 @@ a.highlighted
   cursor: pointer;
 }
 
-.fb-share-button
+.fb_iframe_widget
 {
+
 }
+
 img.email-icon
 {
-  margin-left:0.5em;
+  width:1.5em;
+  display: block;
+  margin-left: 0.5em;
 }
 
 .invalid

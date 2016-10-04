@@ -30,8 +30,7 @@ class DynamicHtml
       {
         icon.onClick.listen((e)
         {
-          WindowBase w = window.open("","_blank");
-          w.location.href = data["url_publisher"];
+          window.open(data["url_publisher"],"_blank");
         });
       }
       icon.className = "icon";
