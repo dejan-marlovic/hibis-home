@@ -57,7 +57,7 @@ class DynamicHtml
     {
       if (e.button == 0)
       {
-        WindowBase w = window.open("","_blank");
+        WindowBase w = window.open("loading.pdf","_blank");
         Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
         Response r = await Messenger.post(req);
         if (r.success && !r.isEmpty)
@@ -204,18 +204,38 @@ class DynamicHtml
     HeadingElement name = new HeadingElement.h4();
     DivElement description = new DivElement();
     SpanElement where = new SpanElement();
-    ButtonElement readMore = new ButtonElement();
     description.append(where);
     column.append(name);
     column.append(description);
-    column.append(readMore);
+    if (data["has_pdf"] == "1")
+    {
+      ButtonElement readMore = new ButtonElement();
+      /// TODO phrase
+      readMore.setInnerHtml("Read more");
+      readMore.className = "large-margin-left-1";
+      readMore.onClick.listen((MouseEvent e) async
+      {
+        if (e.button == 0)
+        {
+          WindowBase w = window.open("loading.html", "_blank");
+          Request req = new Request("get_rows", "events", {"columns":"id, pdf", "where":"id=${data["id"]}", "limit":"1"});
+          Response r = await Messenger.post(req);
+          if (r.success && !r.isEmpty)
+          {
+            Map<String, String> row = r.getNextRow();
+            if (row["pdf"] != null) w.location.href = row["pdf"];
+          }
+        }
+      });
+      column.append(readMore);
+    }
     row.append(column);
 
     row.className = "row";
     column.className = "columns";
     name.className = "bold color-2 no-margin";
     description.className = "large-margin-left-1 link_description";
-    readMore.className = "large-margin-left-1";
+
 
     DateTime dateStart = DateTime.parse(data["date_start"]);
     DateTime dateEnd = DateTime.parse(data["date_end"]);
@@ -246,23 +266,6 @@ class DynamicHtml
 
     name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}");
     where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
-    /// TODO phrase
-    readMore.setInnerHtml("Read more");
-
-    readMore.onClick.listen((MouseEvent e) async
-    {
-      if (e.button == 0) /// LMB
-      {
-        WindowBase w = window.open("","_blank");
-        Request req = new Request("get_rows", "events", {"columns":"id, pdf", "where":"id=${data["id"]}", "limit":"1"});
-        Response r = await Messenger.post(req);
-        if (r.success && !r.isEmpty)
-        {
-          Map<String, String> row = r.getNextRow();
-          if (row["pdf"] != null) w.location.href = row["pdf"];
-        }
-      }
-    });
 
     if (sign_up == true)
     {
@@ -302,13 +305,14 @@ class DynamicHtml
     hidden.append(row2);
     hidden.append(row3);
     column.append(row4);
-    row.className = "row no-margin collapse";
+    row.className = "row margin-top-0-5 margin-bottom-0-5 collapse";
     hidden.className = "is-hidden";
 
     /// Row 1 (name + short desc + toggle)
     DivElement row1Col = new DivElement();
     HeadingElement name = new HeadingElement.h4();
     ParagraphElement shortDescription = new ParagraphElement();
+    shortDescription.className = "no-margin";
     ParagraphElement toggle = new ParagraphElement();
 
     row1.append(row1Col);
@@ -318,8 +322,8 @@ class DynamicHtml
     row1.className = "row no-margin";
     row1Col.className = "columns";
 
-    name.className = "color-1 bolder padding-top-1";
-    toggle.className = "clickable no-margin";
+    name.className = "color-1 bolder";
+    toggle.className = "clickable no-margin color-1";
     name.setInnerHtml("${data["firstname"]} ${data["lastname"]}");
     shortDescription.setInnerHtml(data["description_short"]);
     toggle.setInnerHtml("&lt;Read more&gt;");

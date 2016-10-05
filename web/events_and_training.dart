@@ -25,7 +25,7 @@ Future main() async
   DateTime now = new DateTime.now();
   String strNow = Utility.dfMySql.format(now);
   DivElement upcomingEventsContainer = querySelector("#upcoming-events");
-  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang", "where":"date_start > '$strNow'", "order_by":"date_start ASC", "limit":"999"}));
+  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang, CASE WHEN pdf IS NULL THEN '0' ELSE '1' END AS has_pdf", "where":"date_start > '$strNow'", "order_by":"date_start ASC", "limit":"999"}));
   row = response.getNextRow();
 
   while (row != null)
@@ -36,7 +36,7 @@ Future main() async
 
   DivElement pastEventsContainer = querySelector("#past-events");
   ParagraphElement toggle = querySelector("#past_events_show");
-  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang", "where":"date_start < '$strNow'", "order_by":"date_start DESC"}));
+  response = await Messenger.post(new Request("get_rows", "events", {"columns":"id, name, description, url_description, url_signup, date_start, date_end, street, city, country, lang, CASE WHEN pdf IS NULL THEN '0' ELSE '1' END AS has_pdf", "where":"date_start < '$strNow'", "order_by":"date_start DESC"}));
   row = response.getNextRow();
   pastEventsContainer.className = "is-hidden";
   while (row != null)
