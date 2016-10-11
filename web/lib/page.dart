@@ -53,8 +53,21 @@ class Page
       document.body.append(twitterWidget);
     }
 
-    if (header != null) await importHtml("inc-header.html", header);
+    if (header != null)
+    {
+      await importHtml("inc-header.html", header);
+      ImageElement hamburger = header.querySelector("#hamburger");
+      UListElement smallLinks = header.querySelector("#small-links");
+      hamburger.onClick.listen((_)
+      {
+        if (smallLinks.classes.contains("is-hidden")) smallLinks.classes.remove("is-hidden");
+        else smallLinks.classes.add("is-hidden");
+      });
+    }
     if (footer != null) await importHtml("inc-footer.html", footer);
+
+
+
 
 
     search.onKeyUp.listen((KeyboardEvent e)

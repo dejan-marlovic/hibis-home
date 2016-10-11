@@ -13,12 +13,12 @@ video {
 iframe {
   width: 100%; }
 
-#header nav ul {
+#header nav#large ul {
   margin: 0; }
-  #header nav ul li {
+  #header nav#large ul li {
     display: inline-block;
     margin-left: 0.55em; }
-    #header nav ul li a {
+    #header nav#large ul li a {
       font-size: 0.94em; }
 
 #content div#flagship-courses img {
@@ -326,9 +326,34 @@ img.email-icon {
   .large-margin-left-1 {
     margin: 0; } }
 @media screen and (max-width: 1200px) {
-  #header nav ul li {
-    margin-left: 0.3em; }
-    #header nav ul li a {
-      font-size: 0.8em; } }
+  #header {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    z-index: 99; }
+    #header nav#large ul li {
+      margin-left: 0.3em; }
+      #header nav#large ul li a {
+        font-size: 0.8em; }
+    #header nav#small img#hamburger {
+      float: right;
+      width: 1.5em;
+      margin-top: 0.3em; }
+    #header nav#small ul#small-links {
+      position: absolute;
+      top: 3em;
+      right: 0.6em;
+      list-style-type: none;
+      text-align: right;
+      background-color: white;
+      border: 1px solid #E4E4E4; }
+      #header nav#small ul#small-links li {
+        padding: 0 0.7em; }
+      #header nav#small ul#small-links li:hover {
+        background-color: #1E3362; }
+        #header nav#small ul#small-links li:hover a {
+          color: white; } }
 
 /*# sourceMappingURL=main.css.map */

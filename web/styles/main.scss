@@ -21,7 +21,7 @@ iframe
 }
 #header
 {
-  nav
+  nav#large
   {
     ul
     {
@@ -492,7 +492,10 @@ img.email-icon
 {
   #header
   {
-    nav
+    @include user-select(none);
+    position: relative;
+    z-index:99;
+    nav#large
     {
       ul
       {
@@ -505,6 +508,40 @@ img.email-icon
           }
         }
       }
+    }
+
+    nav#small
+    {
+      img#hamburger
+      {
+        float:right;
+        width:1.5em;
+        margin-top:0.3em;
+      }
+      ul#small-links
+      {
+        position: absolute;
+        top: 3em;
+        right: 0.6em;
+        list-style-type: none;
+        text-align: right;
+        background-color: white;
+        border: 1px solid $color-3;
+        li
+        {
+          padding: 0 0.7em;
+        }
+        li:hover
+        {
+          background-color: $color-2;
+          a
+          {
+            color: white;
+          }
+
+        }
+      }
+
     }
   }
 }
