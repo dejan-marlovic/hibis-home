@@ -207,10 +207,13 @@ a.highlighted {
   user-select: none;
   cursor: pointer; }
 
+.fb_iframe_widget {
+  line-height: 0;
+  margin-left: 0.5em;
+  margin-right: 0.5em; }
+
 img.email-icon {
-  width: 1.5em;
-  display: block;
-  margin-left: 0.5em; }
+  line-height: 0; }
 
 .invalid {
   background-color: #ffeeee !important; }
