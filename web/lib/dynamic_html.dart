@@ -207,26 +207,35 @@ class DynamicHtml
     description.append(where);
     column.append(name);
     column.append(description);
-    if (data["has_pdf"] == "1")
+    if (data["has_pdf"] == "1" || (data["url_readmore"] != null && data["url_readmore"].isNotEmpty))
     {
       ButtonElement readMore = new ButtonElement();
-      /// TODO phrase
       readMore.setInnerHtml("Read more");
       readMore.className = "large-margin-left-1";
-      readMore.onClick.listen((MouseEvent e) async
+      if (data["has_pdf"] == "1")
       {
-        if (e.button == 0)
+        readMore.onClick.listen((MouseEvent e) async
         {
-          WindowBase w = window.open("loading.html", "_blank");
-          Request req = new Request("get_rows", "events", {"columns":"id, pdf", "where":"id=${data["id"]}", "limit":"1"});
-          Response r = await Messenger.post(req);
-          if (r.success && !r.isEmpty)
+          if (e.button == 0)
           {
-            Map<String, String> row = r.getNextRow();
-            if (row["pdf"] != null) w.location.href = row["pdf"];
+            WindowBase w = window.open("loading.html", "_blank");
+            Request req = new Request("get_rows", "events", {"columns":"id, pdf", "where":"id=${data["id"]}", "limit":"1"});
+            Response r = await Messenger.post(req);
+            if (r.success && !r.isEmpty)
+            {
+              Map<String, String> row = r.getNextRow();
+              if (row["pdf"] != null) w.location.href = row["pdf"];
+            }
           }
-        }
-      });
+        });
+      }
+      else if (data["url_readmore"] != null)
+      {
+        readMore.onClick.listen((MouseEvent e)
+        {
+          window.open(data["url_readmore"], "_blank");
+        });
+      }
       column.append(readMore);
     }
     row.append(column);
