@@ -50,7 +50,7 @@ Future main() async
   where = "1";
   if (keywords.isNotEmpty) where = generateWhereString(["name", "author", "format"], keywords);
   final DivElement booksContainer = querySelector("#books-container");
-  response = await Messenger.post(new Request("get_rows", "books", {"columns":"name, author, format, brief, image_url", "order_by":"name ASC", "where":where}));
+  response = await Messenger.post(new Request("get_rows", "books", {"columns":"id, name, author, format, brief, image", "order_by":"name ASC", "where":where}));
 
   if (response.isEmpty)
   {
@@ -73,7 +73,7 @@ Future main() async
   where = "1";
   if (keywords.isNotEmpty) where = generateWhereString(["name"], keywords);
   final DivElement articlesContainer = querySelector("#publications-container");
-  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"name, date, url_pdf", "order_by":"date DESC", "where":where}));
+  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date, url_pdf", "order_by":"date DESC", "where":where}));
 
   if (response.isEmpty)
   {

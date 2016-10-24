@@ -90,9 +90,9 @@ DivElement generateFlagshipCourseRow(Map<String, String> data)
   descLongContainer.className = "is-hidden long-description-container";
 
   name.setInnerHtml(data["name"]);
-  descShort.setInnerHtml(data["description_short"]);
+  descShort.setInnerHtml(data["description_short"], validator: Page.htmlValidator);
   toggle.setInnerHtml("&lt;more&gt;");
-  descLong.setInnerHtml(data["description_long"]);
+  descLong.setInnerHtml(data["description_long"], validator: Page.htmlValidator);
 
   toggle.onClick.listen((MouseEvent e)
   {

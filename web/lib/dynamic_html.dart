@@ -58,6 +58,7 @@ class DynamicHtml
       if (e.button == 0)
       {
         WindowBase w = window.open("loading.html","_blank");
+        print(data["id"]);
         Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
         Response r = await Messenger.post(req);
         if (r.success && !r.isEmpty)

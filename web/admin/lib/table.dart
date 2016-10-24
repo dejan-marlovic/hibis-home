@@ -9,7 +9,6 @@ class Table
   Table(this._container)
   {
     _columnSet.add({"id":"id", "type":"text"});
-
   }
 
   void addColumnSet(Map<String, String> properties)
