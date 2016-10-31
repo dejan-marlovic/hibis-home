@@ -13,7 +13,7 @@ class Events
             case "delete":
                 self::delete(Utility::valid_or_die($params["id"], "id"));
                 break;
-
+				
             case "update":
                 self::update(Utility::valid_or_die($params["id"], "id"),
                     Utility::valid_or_die($params["column"], "column"),
@@ -48,7 +48,6 @@ class Events
         global $DB;
         $DB->execute("DELETE FROM events WHERE id = ?", array($id));
     }
-
 
     private static function update($id, $column, $value)
     {
