@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:html';
-import '../lib/messenger.dart';
 import '../lib/page.dart';
 import 'lib/table.dart';
 import 'lib/query_context.dart';

@@ -67,7 +67,7 @@ class Customers
         $message = "Email: ${params["email"]}\r\nComments:${dbVal["comments"]}";
 
         mail("patrick.minogue@gmail.com", $subject, $message);
-		mail("info@hibis.com", $subject, $message);
+		mail("fraud.academy@hibis.com", $subject, $message);
 
         return $id;
     }

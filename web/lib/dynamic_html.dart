@@ -30,7 +30,7 @@ class DynamicHtml
       {
         icon.onClick.listen((e)
         {
-          window.open(data["url_publisher"],"_blank");
+          window.open(data["url_publisher"], "_blank");
         });
       }
       icon.className = "icon";
@@ -48,13 +48,14 @@ class DynamicHtml
     name.setInnerHtml(data["name"]);
     DateTime dt = DateTime.parse(data["date"]);
     date.setInnerHtml(Utility.dfMonthYear.format(dt));
-    /// TODO phrase
-    ///
+
     viewPdfLabel.setInnerHtml(" view PDF");
 
 
     pdfLink.onClick.listen((MouseEvent e) async
     {
+      window.open(data["url_pdf"], "_blank");
+      /*
       if (e.button == 0)
       {
         WindowBase w = window.open("loading.html","_blank");
@@ -66,7 +67,7 @@ class DynamicHtml
           Map<String, String> row = r.getNextRow();
           if (row["pdf"] != null) w.location.href = row["pdf"];
         }
-      }
+      }*/
     });
 
     return column;

@@ -33,11 +33,24 @@ class Publications
         $properties["brief"] = Utility::valid_or_null("brief", $properties);
         $properties["url_info"] = Utility::valid_or_null("url_info", $properties);
         $properties["url_publisher"] = Utility::valid_or_null("url_publisher", $properties);
-        $properties["pdf"] = Utility::valid_or_null("pdf", $properties);
         $properties["icon"] = Utility::valid_or_null("icon", $properties);
 
-        $DB->execute("INSERT INTO publications (name, publisher, date, brief, url_info, url_publisher, pdf, icon) 
-                      VALUES (:name, :publisher, :date, :brief, :url_info, :url_publisher, :pdf, :icon)", $properties);
+        $pdfFile = Utility::valid_or_null("pdf", $properties);
+        unset($properties["pdf"]);
+
+        $DB->execute("INSERT INTO publications (name, publisher, date, brief, url_info, url_publisher, icon) 
+                      VALUES (:name, :publisher, :date, :brief, :url_info, :url_publisher, :icon)", $properties);
+
+        if (isset($pdfFile))
+        {
+            $targetDir = __DIR__ . '/../public_html/academy/pdf/';
+            $targetFile = $targetDir . basename($pdfFile);
+            $fileType = pathinfo($targetFile, PATHINFO_EXTENSION);
+            if ($fileType != "pdf") Messenger::respond("invalid_file_type ($fileType)", false);
+
+            move_uploaded_file($pdfFile, $targetFile);
+            Messenger::respond("file_uploaded", true, $pdfFile);
+        }
     }
 
     private static function delete($id)
@@ -50,6 +63,22 @@ class Publications
     private static function update($id, $column, $value)
     {
         global $DB;
-        $DB->execute("UPDATE publications SET $column = ? WHERE id = ?", array($value, $id));
+        if ($column == "pdf")
+        {
+            $value = substr($value, strlen("data:application/pdf;base64,"));
+            $pdf_decoded = base64_decode($value);
+            //Write data back to pdf file
+            $pdf = fopen(__DIR__ . '/../public_html/academy/pdf/publication-' . $id . '.pdf','w');
+            fwrite($pdf,$pdf_decoded);
+            fclose($pdf);
+            $DB->execute("UPDATE publications SET url_pdf = ? WHERE id = ?", array("http://fraudacademy.hibis.com/pdf/publication-$id.pdf", $id));
+
+            Messenger::respond("file_uploaded", true);
+        }
+
+        else
+        {
+            $DB->execute("UPDATE publications SET $column = ? WHERE id = ?", array($value, $id));
+        }
     }
 }

@@ -25,7 +25,7 @@ Future main() async
 
   /// List all publications
   final DivElement articlesContainer = querySelector("#publications-container");
-  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date, icon, url_publisher", "order_by":"date DESC"}));
+  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date, icon, url_pdf, url_publisher", "order_by":"date DESC"}));
   row = response.getNextRow();
   while (row != null)
   {

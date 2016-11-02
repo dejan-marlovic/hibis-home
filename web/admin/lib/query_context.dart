@@ -38,6 +38,8 @@ class QueryContext
       e.disabled = true;
     });
 
+    print("hej");
+
     loadFileUploadElementsRecursive(0, file_elements, system, params);
   }
 
@@ -53,7 +55,10 @@ class QueryContext
         loadFileUploadElementsRecursive(index + 1, file_inputs, system, params);
       });
     }
-    else Messenger.post(new Request("add", system, params)).then((_) => window.location.reload());
+    else
+    {
+      Messenger.post(new Request("add", system, params)).then((_) => window.location.reload());
+    }
   }
 
 
