@@ -15,9 +15,10 @@ final TextInputElement country = querySelector("#country");
 final TextAreaElement descShort = querySelector("#description_short");
 final TextAreaElement descLong = querySelector("#description_long");
 final FileUploadInputElement image = querySelector("#image");
+final FileUploadInputElement logo = querySelector("#logo");
 
 final List<dynamic> inputElements = [firstname, lastname, email, phone, phone2, city, country, descShort, descLong];
-final List<FileUploadInputElement> fileElements = [image];
+final List<FileUploadInputElement> fileElements = [image, logo];
 
 Future main() async
 {
@@ -33,6 +34,7 @@ Future main() async
   table.addColumnSet({"id":"description_short", "type":"input-textarea", "maxlength":"1024", "required":"1", "width":"20em", "rows":"3"});
   table.addColumnSet({"id":"description_long", "type":"input-textarea", "maxlength":"2048", "required":"1", "width":"30em", "rows":"3"});
   table.addColumnSet({"id":"image", "type":"input-file", "required":"1", "accept":".jpg", "width":"13em"});
+  table.addColumnSet({"id":"logo", "type":"input-file", "required":"0", "accept":".png", "width":"13em"});
   await table.qLoad("get_rows", "fellows", "firstname DESC, lastname DESC");
 
   add.onClick.listen((_) async => await QueryContext.qAdd(add, "fellows", inputElements, fileElements));

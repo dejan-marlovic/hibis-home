@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,eACA;EACE,MAAM,EAAE,OAAO;EACf,UAAU,EAAE,GAAG",
+"sources": ["fellows_and_facilitators.scss"],
+"names": [],
+"file": "fellows_and_facilitators.css"
+}

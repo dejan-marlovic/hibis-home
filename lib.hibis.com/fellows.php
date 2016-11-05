@@ -37,11 +37,12 @@ class Fellows
         $properties["description_short"] = Utility::valid_or_die($properties["description_short"], "description_short");
         $properties["description_long"] = Utility::valid_or_die($properties["description_long"], "description_long");
         $properties["image"] = Utility::valid_or_die($properties["image"], "image");
+        $properties["logo"] = Utility::valid_or_null("logo", $properties);
 
         file_put_contents(__DIR__ . '/info.txt', print_r($properties, true));
 
-        $DB->execute("INSERT INTO fellows (firstname, lastname, email, phone, phone_2, city, country, description_short, description_long, image) 
-                      VALUES (:firstname, :lastname, :email, :phone, :phone_2, :city, :country, :description_short, :description_long, :image)", $properties);
+        $DB->execute("INSERT INTO fellows (firstname, lastname, email, phone, phone_2, city, country, description_short, description_long, image, logo) 
+                      VALUES (:firstname, :lastname, :email, :phone, :phone_2, :city, :country, :description_short, :description_long, :image, :logo)", $properties);
     }
 
     private static function delete($id)

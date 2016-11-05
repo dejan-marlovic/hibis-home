@@ -51,25 +51,7 @@ class DynamicHtml
 
     viewPdfLabel.setInnerHtml(" view PDF");
 
-
-    pdfLink.onClick.listen((MouseEvent e) async
-    {
-      window.open(data["url_pdf"], "_blank");
-      /*
-      if (e.button == 0)
-      {
-        WindowBase w = window.open("loading.html","_blank");
-        print(data["id"]);
-        Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
-        Response r = await Messenger.post(req);
-        if (r.success && !r.isEmpty)
-        {
-          Map<String, String> row = r.getNextRow();
-          if (row["pdf"] != null) w.location.href = row["pdf"];
-        }
-      }*/
-    });
-
+    pdfLink.onClick.listen((MouseEvent e) async => window.open(data["url_pdf"], "_blank"));
     return column;
   }
 
@@ -129,8 +111,6 @@ class DynamicHtml
 
     return row;
   }
-
-
 
   static DivElement generateBookColumn(Map<String, String> data)
   {
@@ -301,6 +281,7 @@ class DynamicHtml
 
   static DivElement generateFellowRow(Map<String, String> data)
   {
+    print(data);
     DivElement row = new DivElement();
     DivElement column = new DivElement();
     DivElement row1 = new DivElement();
@@ -309,13 +290,16 @@ class DynamicHtml
     DivElement row3 = new DivElement();
     DivElement row4 = new DivElement();
     DivElement row4Column = new DivElement();
+    DivElement row5 = new DivElement();
+    DivElement row5Column = new DivElement();
 
     row.append(column);
     column.append(row1);
     column.append(hidden);
     hidden.append(row2);
     hidden.append(row3);
-    column.append(row4);
+    hidden.append(row4);
+    column.append(row5);
     row.className = "row margin-top-0-5 margin-bottom-0-5 collapse";
     hidden.className = "is-hidden";
 
@@ -384,15 +368,23 @@ class DynamicHtml
     row3Col2.append(contactHeader);
     row3Col2.append(email);
     row3Col2.append(phone);
+
+    if (data.containsKey("logo"))
+    {
+      ImageElement logo = new ImageElement(src:data["logo"])..className = "fellow-logo";
+      row4Column.append(logo);
+    }
     row4.append(row4Column);
-    row4Column.append(toggle);
+
+    row5.append(row5Column);
+    row5Column.append(toggle);
 
     row3.className = "row no-margin";
     row3Col1.className = "large-2 medium-3 small-4 columns";
     row3Col2.className = "large-10 medium-9 small-8 columns";
     contactHeader.className = "bold";
-    row4.className = "row no-margin";
-    row4Column.className = "columns";
+    row5.className = "row no-margin";
+    row5Column.className = "columns";
     contactHeader.setInnerHtml("Contact");
     email.setInnerHtml(data["email"]);
     phone.setInnerHtml("${data["phone"]} <br />${data["phone_2"]}");
