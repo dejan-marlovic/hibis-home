@@ -79,8 +79,4 @@ class Customers
 
         return Utility::valid_or_null("id", $rs);
     }
-
-
-
-
 }
