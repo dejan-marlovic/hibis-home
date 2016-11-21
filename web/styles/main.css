@@ -39,7 +39,7 @@ iframe {
     padding: 0.3em;
     width: 4em;
     display: inline; }
-    #content #pdf_publications_box .pdf_download_button img {
+    #content #pdf_publications_box .pdf_download_button img.arrow {
       height: 2.5em;
       width: 2.5em;
       transform: rotate(90deg);
@@ -136,7 +136,7 @@ a.highlighted {
   padding: 0.3em;
   width: 4em;
   display: inline; }
-  .pdf_download_button img {
+  .pdf_download_button img.arrow {
     height: 2.5em;
     width: 2.5em;
     transform: rotate(90deg);

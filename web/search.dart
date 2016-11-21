@@ -73,7 +73,7 @@ Future main() async
   where = "1";
   if (keywords.isNotEmpty) where = generateWhereString(["name"], keywords);
   final DivElement articlesContainer = querySelector("#publications-container");
-  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date, url_pdf", "order_by":"date DESC", "where":where}));
+  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date, url_pdf, author", "order_by":"date DESC", "where":where}));
 
   if (response.isEmpty)
   {

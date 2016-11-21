@@ -107,8 +107,8 @@ class Page
 
   static final NodeValidator htmlValidator = new NodeValidatorBuilder.common()
   ..allowElement('a', attributes: ['data-exp', 'data-tweet-limit', 'data-chrome', 'data-link-color', 'href'])
-  ..allowElement('span', attributes: ['data-exp'])
-  ..allowElement('h4', attributes: ['data-exp'])
+  ..allowElement('span', attributes: ['data-exp', 'style'])
+  ..allowElement('h4', attributes: ['data-exp', 'style'])
   ..allowElement('i', attributes: ['aria-hidden'])
   ..allowNavigation(new UriPolicyExternal());
 

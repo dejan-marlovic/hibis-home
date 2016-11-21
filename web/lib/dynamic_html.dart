@@ -9,15 +9,18 @@ class DynamicHtml
   static DivElement generateArticleColumn(Map<String, String> data)
   {
     DivElement column = new DivElement();
+    DivElement content = new DivElement();
     HeadingElement name = new HeadingElement.h4();
-    ParagraphElement date = new ParagraphElement();
+    ParagraphElement dateAndAuthor = new ParagraphElement();
     DivElement pdfLink = new DivElement();
     DivElement viewPdfContainer = new DivElement();
-    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
+    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png")..className = "arrow";
     SpanElement viewPdfLabel = new SpanElement();
-    column.append(name);
-    column.append(date);
-    column.append(pdfLink);
+    ParagraphElement shareButtonsContainer = new ParagraphElement();
+
+    content.append(name);
+    content.append(dateAndAuthor);
+    content.append(pdfLink);
 
     pdfLink.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
@@ -34,24 +37,58 @@ class DynamicHtml
         });
       }
       icon.className = "icon";
-      column.append(icon);
+      //ParagraphElement p = new ParagraphElement();
+      //p.append(icon);
+      viewPdfContainer.append(icon);
     }
+    content.append(shareButtonsContainer);
 
     column.className = "large-6 columns article-column";
     name.className = "color-2 bold no-margin";
-    date.className = "link_description normal no-margin";
+    dateAndAuthor.className = "link_description normal no-margin";
     viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
     viewPdfLabel.className = "normal";
     pdfLink.className = "clickable inline";
 
-
     name.setInnerHtml(data["name"]);
     DateTime dt = DateTime.parse(data["date"]);
-    date.setInnerHtml(Utility.dfMonthYear.format(dt));
+    String dateFormatted = Utility.dfMonthYear.format(dt);
+
+    //String author = (data["author"] == null) ? "" : data["author"];
+    if (data["author"] != null) dateAndAuthor.setInnerHtml("${data["author"]}, $dateFormatted");
+    else dateAndAuthor.setInnerHtml(dateFormatted);
+
+    //dateAndAuthor.setInnerHtml("$author, $dateFormatted");
 
     viewPdfLabel.setInnerHtml(" view PDF");
-
     pdfLink.onClick.listen((MouseEvent e) async => window.open(data["url_pdf"], "_blank"));
+
+    ImageElement shareEmailImage = new ImageElement(src: "gfx/email-icon.png")..className = "email-icon float-right";
+    AnchorElement shareEmailAnchor = new AnchorElement();
+    String subject = data["name"];
+    String link = data["url_pdf"];
+    shareEmailAnchor.href = "mailto:?Subject=$subject&body=$link";
+    shareEmailAnchor.append(shareEmailImage);
+    shareButtonsContainer.append(shareEmailAnchor);
+
+    DivElement shareFacebook = new DivElement();
+    shareFacebook.className = "fb-share-button float-right";
+    shareFacebook.dataset["href"] = link;
+    shareFacebook.dataset["layout"] = "button";
+    shareFacebook.dataset["size"] = "small";
+    shareFacebook.dataset["mobile-iframe"] = "true";
+    AnchorElement shareFacebookAnchor = new AnchorElement(href:"https://www.facebook.com/sharer/sharer.php?$link");
+    shareFacebookAnchor.className = "fb-xfbml-parse-ignore";
+    shareFacebookAnchor.target = "_blank";
+    shareFacebook.append(shareFacebookAnchor);
+    shareButtonsContainer.append(shareFacebook);
+/*
+    ScriptElement linkedInScript = new ScriptElement();
+    linkedInScript.type = "IN/Share";
+    linkedInScript.className = "float-right";
+    shareButtonsContainer.append(linkedInScript);
+*/
+    column.append(content);
     return column;
   }
 
@@ -255,7 +292,7 @@ class DynamicHtml
     }
     else dateString = "$day $monthYear";
 
-    name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}");
+    name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}", validator: Page.htmlValidator);
     where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
 
     if (sign_up == true)

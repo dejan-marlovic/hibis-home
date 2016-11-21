@@ -10,6 +10,7 @@ import 'lib/messenger.dart';
 Future main() async
 {
   await Page.init();
+
   Page.highlightNavigationLink(querySelector("#nav_publications"));
 
   /// List all books
@@ -25,7 +26,7 @@ Future main() async
 
   /// List all publications
   final DivElement articlesContainer = querySelector("#publications-container");
-  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date, icon, url_pdf, url_publisher", "order_by":"date DESC"}));
+  response = await Messenger.post(new Request("get_rows", "publications", {"columns":"id, name, date, icon, url_pdf, url_publisher, author", "order_by":"date DESC"}));
   row = response.getNextRow();
   while (row != null)
   {
@@ -34,6 +35,29 @@ Future main() async
   }
   if (articlesContainer.children.isNotEmpty) articlesContainer.children.last.classes.add("end");
 
+
+  ScriptElement shareFacebookScript = new ScriptElement();
+  shareFacebookScript.innerHtml =
+  """
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    """;
+  DivElement shareFacebookRoot = new DivElement();
+  shareFacebookRoot.id = "fb-root";
+  document.body.children.insert(0, shareFacebookRoot);
+  document.body.children.insert(1, shareFacebookScript);
+
+  ScriptElement shareLinkedInScript = new ScriptElement();
+  shareLinkedInScript.src = "//platform.linkedin.com/in.js";
+  shareLinkedInScript.type = "text/javascript";
+  shareLinkedInScript.setInnerHtml(" lang: en_US");
+  document.body.children.insert(2, shareLinkedInScript);
 
   Page.show();
 }

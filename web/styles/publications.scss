@@ -27,14 +27,20 @@ div.book-column
 
 div.article-column
 {
-  .icon
+  div:first-child
   {
-    cursor: pointer;
-    width:3em;
-    margin-left:0.3em;
+    .icon
+    {
+      cursor: pointer;
+      width:3em;
+      margin-left:0.5em;
+    }
+    padding: 0.5em;
+    min-height: 9em;
+    padding-top: 0.5em;
+    margin-bottom: 2em;
+    margin-right: 0.2em;
+    background-color: $color-3-light;
+
   }
-  min-height: 9em;
-  padding-top: 0.5em;
-  margin-bottom: 2em;
-  background-color: $color-3-light;
 }

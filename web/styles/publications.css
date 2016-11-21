@@ -18,14 +18,16 @@ div.book-column {
   -moz-box-shadow: 1px 1px 2px #0BADDB;
   box-shadow: 1px 1px 2px #0BADDB; }
 
-div.article-column {
+div.article-column div:first-child {
+  padding: 0.5em;
   min-height: 9em;
   padding-top: 0.5em;
   margin-bottom: 2em;
+  margin-right: 0.2em;
   background-color: #F0F0F0; }
-  div.article-column .icon {
+  div.article-column div:first-child .icon {
     cursor: pointer;
     width: 3em;
-    margin-left: 0.3em; }
+    margin-left: 0.5em; }
 
 /*# sourceMappingURL=publications.css.map */
