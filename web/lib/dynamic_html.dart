@@ -17,6 +17,7 @@ class DynamicHtml
     ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png")..className = "arrow";
     SpanElement viewPdfLabel = new SpanElement();
     ParagraphElement shareButtonsContainer = new ParagraphElement();
+    shareButtonsContainer.className = "share-buttons-container";
 
     content.append(name);
     content.append(dateAndAuthor);
@@ -37,8 +38,6 @@ class DynamicHtml
         });
       }
       icon.className = "icon";
-      //ParagraphElement p = new ParagraphElement();
-      //p.append(icon);
       viewPdfContainer.append(icon);
     }
     content.append(shareButtonsContainer);
@@ -82,12 +81,15 @@ class DynamicHtml
     shareFacebookAnchor.target = "_blank";
     shareFacebook.append(shareFacebookAnchor);
     shareButtonsContainer.append(shareFacebook);
-/*
+
+    DivElement linkedInScriptContainer = new DivElement()..className = "float-right";
     ScriptElement linkedInScript = new ScriptElement();
     linkedInScript.type = "IN/Share";
+    linkedInScript.dataset["url"] = link;
     linkedInScript.className = "float-right";
-    shareButtonsContainer.append(linkedInScript);
-*/
+    linkedInScriptContainer.append(linkedInScript);
+    shareButtonsContainer.append(linkedInScriptContainer);
+
     column.append(content);
     return column;
   }
@@ -101,7 +103,7 @@ class DynamicHtml
     SpanElement date = new SpanElement();
     DivElement pdfLink = new DivElement();
     DivElement viewPdfContainer = new DivElement();
-    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png");
+    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png")..className = "arrow";
     SpanElement viewPdfLabel = new SpanElement();
     row.append(col1);
     row.append(col2);

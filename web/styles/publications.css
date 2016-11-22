@@ -19,15 +19,23 @@ div.book-column {
   box-shadow: 1px 1px 2px #0BADDB; }
 
 div.article-column div:first-child {
+  position: relative;
   padding: 0.5em;
-  min-height: 9em;
+  height: 9.5em;
   padding-top: 0.5em;
   margin-bottom: 2em;
   margin-right: 0.2em;
-  background-color: #F0F0F0; }
+  background-color: #F0F0F0;
+  overflow: hidden; }
   div.article-column div:first-child .icon {
     cursor: pointer;
-    width: 3em;
+    max-width: 3em;
+    max-height: 2rem;
     margin-left: 0.5em; }
+  div.article-column div:first-child .share-buttons-container {
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+    height: 1em; }
 
 /*# sourceMappingURL=publications.css.map */

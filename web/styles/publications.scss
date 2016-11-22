@@ -29,18 +29,28 @@ div.article-column
 {
   div:first-child
   {
+    position: relative;
     .icon
     {
       cursor: pointer;
-      width:3em;
+      max-width:3em;
+      max-height: 2rem;
       margin-left:0.5em;
     }
     padding: 0.5em;
-    min-height: 9em;
+    height: 9.5em;
     padding-top: 0.5em;
     margin-bottom: 2em;
     margin-right: 0.2em;
     background-color: $color-3-light;
+    overflow: hidden;
 
+    .share-buttons-container
+  {
+      position: absolute;
+      bottom: 0;
+      right: 0.5rem;
+      height: 1em;
+    }
   }
 }
