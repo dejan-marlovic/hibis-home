@@ -20,8 +20,8 @@ div.book-column {
 
 div.article-column div:first-child {
   position: relative;
-  padding: 0.5em;
   height: 9.5em;
+  padding: 0.5em;
   padding-top: 0.5em;
   margin-bottom: 2em;
   margin-right: 0.2em;
