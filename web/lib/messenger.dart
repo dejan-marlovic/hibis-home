@@ -19,6 +19,13 @@ class Messenger
     headers["content-type"] = "application/x-www-form-urlencoded";
     HttpRequest request = await HttpRequest.postFormData(parserUrl, post, requestHeaders: headers);
     Response response = new Response(request.responseText);
+
+    if (response.success == false)
+    {
+      print(response._result);
+      print("Request message:${req.msg}, system:${req.system}, params:${req.paramsJSON}");
+    }
+
     return response;
   }
 
