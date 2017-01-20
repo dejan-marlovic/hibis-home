@@ -52,7 +52,6 @@ Future querySubmit(MouseEvent e) async
       if (radio.checked) params["forum"] = radio.value;
     });
 
-
     Response r = await Messenger.post(new Request("contact", "customers", params));
     if (r.success)
     {

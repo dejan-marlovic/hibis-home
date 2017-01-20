@@ -1,1 +1,81 @@
-<h1>HEJ</h1>
+<div class="row">
+    <div class="columns">
+        <modal [visible]="dialogMessage != null">
+            <material-dialog class="basic-dialog">
+
+                <h3 header>{{dialogTitle}}</h3>
+                <p>{{dialogMessage}}</p>
+
+                <div footer>
+                    <material-button autoFocus
+                                     clear-size
+                                     (trigger)="dialogMessage = null"
+                                     class="white">
+                        Close
+                    </material-button>
+                </div>
+
+            </material-dialog>
+        </modal>
+    </div>
+</div>
+
+<div class="row">
+    <div class="columns">
+        <h3>{{eventTitle}}</h3>
+        <h4>{{eventCity}},&nbsp;{{eventDateStart | date:'MMMMd'}}&nbsp;-&nbsp;{{eventDateEnd | date:'MMMMd'}}&nbsp;{{eventDateEnd | date:'y'}}</h4>
+    </div>
+</div>
+
+<div class="row">
+    <form [ngFormModel]="form" #f="ngForm">
+        <fieldset [disabled]="loading">
+            <div class="medium-6 columns">
+                <h4>Billing information</h4>
+
+                <material-input floatingLabel [maxCount]="128" type="text" label="Organization*" ngControl="organisation"></material-input>
+                <material-input floatingLabel [maxCount]="128" type="text" label="Department" ngControl="department"></material-input>
+                <material-input floatingLabel [maxCount]="128" type="text" label="Payment reference*" ngControl="payment_reference"></material-input>
+                <material-input floatingLabel [maxCount]="128" type="text" label="Street address*" ngControl="street"></material-input>
+
+                <div class="row collapse">
+                    <div class="small-4 columns">
+                        <material-input floatingLabel [maxCount]="32" type="text" label="Zip*" ngControl="zip"></material-input>
+                    </div>
+                    <div class="small-8 columns">
+                        <material-input floatingLabel [maxCount]="128" type="text" label="City*" ngControl="city"></material-input>
+                    </div>
+                </div>
+                <material-input floatingLabel [maxCount]="128" type="text" label="Country*" ngControl="country"></material-input>
+            </div>
+            <div class="medium-6 columns">
+                <h4>Participant details</h4>
+
+                <material-input floatingLabel [maxCount]="128" type="text" label="Firstname*" ngControl="firstname" [(ngModel)]="firstname"></material-input>
+                <material-input floatingLabel [maxCount]="128" type="text" label="Lastname*" ngControl="lastname" [(ngModel)]="lastname"></material-input>
+                <material-input floatingLabel [maxCount]="64" type="text" label="Title*" ngControl="title" [(ngModel)]="title"></material-input>
+                <material-input floatingLabel type="email" label="Email*" ngControl="email" [(ngModel)]="email"></material-input>
+                <material-input floatingLabel type="text" label="Phone" ngControl="telephone" [(ngModel)]="phone"></material-input>
+
+                <div class="row collapse">
+                    <div class="small-6 columns">
+                        <material-input floatingLabel [maxCount]="4" type="text" label="Anti-spam*" ngControl="antispam"></material-input>
+                    </div>
+                    <div class="small-6 columns" style="margin-top:1.3rem; font-size:0.8em; color:#888;">
+                        <label>&laquo;&nbsp;{{randomNumber}}</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="columns">
+                <material-input floatingLabel [maxCount]="2000" type="text" label="Requests/comments" ngControl="comments" multiline rows="4"></material-input>
+            </div>
+            <div class="columns text-center">
+                <material-checkbox #terms id="terms"></material-checkbox>
+                <label for="terms">I have read and accept the&nbsp;<a href='terms.html' target='_blank'>standard terms</a></label>
+            </div>
+            <div class="columns text-center"><button [disabled]="!f.valid || !terms.checked || loading" (click)="onSubmit()">Send application</button></div>
+        </fieldset>
+    </form>
+</div>
+

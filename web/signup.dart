@@ -3,16 +3,16 @@
 
 import 'package:angular2/platform/browser.dart';
 import 'package:angular2/common.dart';
-import 'components/signup_component.dart';
+import 'package:angular2/router.dart';
+import 'package:angular2_components/angular2_components.dart';
+import 'components/app_component.dart';
 
 import 'dart:async';
 import 'lib/page.dart';
 
 Future main() async
 {
-  bootstrap(SignupComponent, [FORM_PROVIDERS]);
-
-
+  bootstrap(AppComponent, [FORM_PROVIDERS, ROUTER_PROVIDERS, materialProviders]);
 
   await Page.init();
   Page.show();

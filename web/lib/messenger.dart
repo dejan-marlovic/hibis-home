@@ -1,5 +1,7 @@
 library messenger;
 
+import 'package:angular2/core.dart';
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
@@ -38,18 +40,16 @@ class Request
 {
   Request(this._msg, this._system, [this._params = null])
   {
-    _paramsJSON = JSON.encode(_params);
   }
 
   String get msg => _msg;
   String get system => _system;
   Map<String, dynamic> get params => _params;
-  String get paramsJSON => _paramsJSON;
+  String get paramsJSON => JSON.encode(_params);
 
   String _msg;
   String _system;
   Map<String, dynamic> _params;
-  String _paramsJSON;
 }
 
 class Response
@@ -94,6 +94,8 @@ class Response
       return list;
     }
   }
+
+  dynamic get result => _result;
 
   bool get isEmpty => _result.isEmpty;
   bool get isList => _result is List<Map>;

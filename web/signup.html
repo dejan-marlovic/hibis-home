@@ -13,12 +13,15 @@
     <meta name="description=" content="Fill in the contact form if you'd like to hear more about the Fraud Academy.">
     <title>Hibis - registration</title>
     <link rel="icon" type="image/png" href="gfx/favicon.png">
-    <link rel="stylesheet" href="styles/foundation/foundation.min.css">
+    <link rel="stylesheet" href="styles/foundation/foundation-no-forms.min.css">
     <link rel="stylesheet" href="styles/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/publications.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script defer src="signup.dart" type="application/dart"></script>
     <script defer src="packages/browser/dart.js"></script>
+    <!--<base href="/hibis-home/web/">-->
+    <base href="/">
 </head>
 <body>
 <div id="header" class="row"></div>
@@ -35,7 +38,7 @@
                             Enter your details below, one submission per applicant.
                             Fields marked with and asterisk (*) are required.
                         </p>
-                        <hibis-signup></hibis-signup>
+                        <hibis-signup-app></hibis-signup-app>
                     </div>
                 </div>
                 <!-- fields

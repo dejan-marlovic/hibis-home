@@ -60,6 +60,7 @@ iframe {
   margin-top: -3em;
   padding: 1.5rem; }
   #content div#search_box input {
+    width: 100%;
     height: 2rem;
     margin-bottom: 0;
     color: #1E3362;
@@ -109,24 +110,13 @@ p {
   color: #6D6E72;
   font-size: 0.9em; }
 
-.form .row {
-  margin-bottom: 0.5rem !important;
-  margin-top: 0.5rem !important; }
-.form input[type="email"], .form input[type="text"] {
-  height: 1.5em;
-  background-color: #F0F0F0;
-  padding-left: 0.1em; }
-.form input [type="checkbox"] {
+form div.row {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+form input [type="checkbox"] {
   background-color: #F0F0F0; }
-.form textarea {
-  background-color: #F0F0F0; }
-.form span {
-  font-size: 0.7em; }
-.form button#submit {
-  background: white;
-  color: #98D9EB;
-  border: solid 1px #98D9EB;
-  font-weight: bolder; }
+form textarea {
+  background-color: #FBFBFB; }
 
 a.highlighted {
   text-decoration: underline; }
