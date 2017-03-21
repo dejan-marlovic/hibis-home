@@ -6,7 +6,6 @@ library page;
 import 'dart:async';
 import 'dart:html';
 import 'messenger.dart';
-import 'utility.dart';
 import 'dynamic_html.dart';
 
 class Page

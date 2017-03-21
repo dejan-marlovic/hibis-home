@@ -3,10 +3,6 @@
 
 import 'dart:async';
 import 'dart:html';
-import '../lib/messenger.dart';
-import '../lib/dynamic_html.dart';
-import '../lib/utility.dart';
-
 
 Future main() async
 {
