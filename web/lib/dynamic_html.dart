@@ -131,22 +131,7 @@ class DynamicHtml
     /// TODO phrase
     viewPdfLabel.setInnerHtml(" view PDF");
 
-    pdfLink.onClick.listen((MouseEvent e) async
-    {
-      if (e.button == 0)
-      {
-        WindowBase w = window.open("","_blank");
-        Request req = new Request("get_rows", "publications", {"columns":"pdf", "where":"id=${data["id"]}", "limit":"1"});
-        Response r = await Messenger.post(req);
-        if (r.success && !r.isEmpty)
-        {
-          Map<String, String> row = r.getNextRow();
-          if (row["pdf"] != null) w.location.href = row["pdf"];
-        }
-      }
-    });
-
-
+    pdfLink.onClick.listen((MouseEvent e) async => window.open(data["url_pdf"], "_blank"));
 
     return row;
   }
@@ -320,7 +305,6 @@ class DynamicHtml
 
   static DivElement generateFellowRow(Map<String, String> data)
   {
-    print(data);
     DivElement row = new DivElement();
     DivElement column = new DivElement();
     DivElement row1 = new DivElement();

@@ -61,7 +61,6 @@ class SignupComponent implements OnActivate
     else
     {
       eventId = nextInstruction.urlParams.first.split("=").last;
-      print(eventId);
       Request req = new Request("get_properties", "events", {"id":eventId.toString()});
       Response r = await Messenger.post(req);
       if (r.result == false)
