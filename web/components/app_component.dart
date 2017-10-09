@@ -2,10 +2,9 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 library app_component;
 
-import 'package:angular2/core.dart';
-import 'package:angular2/router.dart';
+import 'package:angular/angular.dart';
 import 'signup_component.dart';
-import '../lib/messenger.dart';
+import 'package:angular_router/angular_router.dart';
 
 @Component(
     selector: 'hibis-signup-app',

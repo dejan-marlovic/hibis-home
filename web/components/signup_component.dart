@@ -4,19 +4,18 @@ library signup_component;
 
 import 'dart:async';
 import 'dart:math';
-import 'package:angular2/core.dart';
-import 'package:angular2/common.dart';
-import 'package:angular2/router.dart';
-import 'package:angular2_components/angular2_components.dart';
+import 'package:angular_components/angular_components.dart';
+import 'package:angular/angular.dart';
+import 'package:angular_forms/angular_forms.dart';
 import '../lib/messenger.dart';
+import 'package:angular_router/angular_router.dart';
 
 @Component(
     selector: 'hibis-signup',
     styleUrls: const ['signup_component.css'],
     templateUrl: 'signup_component.html',
-    directives: const [FORM_DIRECTIVES, materialDirectives],
+    directives: const [formDirectives, materialDirectives],
     providers: const [],
-    viewBindings: const [FORM_BINDINGS],
     pipes: const [DatePipe],
     preserveWhitespace: false
 )

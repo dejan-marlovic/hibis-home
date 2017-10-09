@@ -1,7 +1,5 @@
 library messenger;
 
-import 'package:angular2/core.dart';
-
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
