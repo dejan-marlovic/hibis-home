@@ -4,6 +4,7 @@
 packages/
 build/
 *.packages
+pubspec.lock
 
 
 # Windows image file caches
