@@ -4,14 +4,17 @@ version: 0.0.1
 environment:
   sdk: '>=1.24.2 <2.0.0'
 dependencies:
-  angular: ^4.0.0-beta
-  angular_components: ^0.6.0-beta
+  angular: ^4.0.0
+  angular_components: ^0.7.1
   angular_router: ^1.0.2
-
 dev_dependencies:
   browser: ^0.10.0
-  dart_to_js_script_rewriter: ^1.0.1
+  dart_to_js_script_rewriter: ^1.0.3
 transformers:
 - angular:
     entry_points: web/signup.dart
 - dart_to_js_script_rewriter
+web:
+  compiler:
+    debug: dartdevc
+    #release: dartdevc

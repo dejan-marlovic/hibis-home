@@ -49,7 +49,8 @@ Future querySubmit(MouseEvent e) async
     /// Specials
     querySelectorAll(".forum").toList(growable:false).forEach((radio)
     {
-      if (radio.checked) params["forum"] = radio.value;
+      RadioButtonInputElement r = radio;
+      if (r.checked) params["forum"] = r.value;
     });
 
     Response r = await Messenger.post(new Request("contact", "customers", params));
