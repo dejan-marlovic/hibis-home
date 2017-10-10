@@ -9,5 +9,28 @@ Future main() async
 {
   await Page.init();
   Page.highlightNavigationLink(querySelector("#nav_watch_play_act"));
+
+  List<Element> clickableElements = querySelectorAll(".clickable");
+
+  for(Element clickableElement in clickableElements)
+  {
+    clickableElement.onClick.listen((MouseEvent e)
+    {
+      SpanElement longDescription = querySelector("#" + clickableElement.dataset["target"]);
+
+      if (longDescription.classes.contains("is-hidden"))
+      {
+        clickableElement.setInnerHtml("&lt;Show less&gt;");
+        longDescription.classes.remove("is-hidden");
+      }
+      else
+      {
+        clickableElement.setInnerHtml("&lt;Show more&gt;");
+        longDescription.classes.add("is-hidden");
+      }
+
+    });
+  }
   Page.show();
 }
+
