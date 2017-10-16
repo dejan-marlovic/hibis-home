@@ -29,7 +29,7 @@ class Messenger
     return response;
   }
 
-  static final String parserUrl = "http://api.hibis.com";
+  static final String parserUrl = "https://api.hibis.com";
   static final String _user = "auto";
   static final String _password = "lok13rum";
 }

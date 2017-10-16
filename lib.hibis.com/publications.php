@@ -71,7 +71,7 @@ class Publications
             $pdf = fopen(__DIR__ . '/../public_html/academy/pdf/publication-' . $id . '.pdf','w');
             fwrite($pdf, $pdf_decoded);
             fclose($pdf);
-            $DB->execute("UPDATE publications SET url_pdf = ? WHERE id = ?", array("http://fraudacademy.hibis.com/pdf/publication-$id.pdf", $id));
+            $DB->execute("UPDATE publications SET url_pdf = ? WHERE id = ?", array("https://fraudacademy.hibis.com/pdf/publication-$id.pdf", $id));
 
             Messenger::respond("file_uploaded", true);
         }
