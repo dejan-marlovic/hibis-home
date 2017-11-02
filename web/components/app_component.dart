@@ -10,6 +10,7 @@ import 'package:angular_router/angular_router.dart';
     selector: 'hibis-signup-app',
     styleUrls: const ['app_component.css'],
     templateUrl: 'app_component.html',
+    providers: const[ROUTER_PROVIDERS],
     directives: const [ROUTER_DIRECTIVES],
     preserveWhitespace: false
 )

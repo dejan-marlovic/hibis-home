@@ -15,7 +15,7 @@ import 'package:angular_router/angular_router.dart';
     styleUrls: const ['signup_component.css'],
     templateUrl: 'signup_component.html',
     directives: const [formDirectives, materialDirectives],
-    providers: const [],
+    providers: const [FORM_PROVIDERS],
     pipes: const [DatePipe],
     preserveWhitespace: false
 )
