@@ -14,7 +14,6 @@ import 'package:angular_router/angular_router.dart';
     selector: 'hibis-signup',
     styleUrls: const ['signup_component.css'],
     templateUrl: 'signup_component.html',
-    directives: const [formDirectives, materialDirectives],
     providers: const [FORM_PROVIDERS],
     pipes: const [DatePipe],
     preserveWhitespace: false
@@ -30,7 +29,7 @@ class SignupComponent implements OnActivate
         {
           "organisation":["", Validators.compose([Validators.required, Validators.maxLength(128)])],
           "department":["", Validators.compose([Validators.maxLength(128)])],
-          "payment_reference":["", Validators.compose([Validators.required, Validators.maxLength(128)])],
+          "payment_reference":["", Validators.compose([Validators.maxLength(128)])],
           "street":["", Validators.compose([Validators.required, Validators.maxLength(128)])],
           "zip":["", Validators.compose([Validators.required, Validators.maxLength(32)])],
           "city":["", Validators.compose([Validators.required, Validators.maxLength(128)])],

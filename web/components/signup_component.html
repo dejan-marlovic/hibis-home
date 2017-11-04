@@ -23,7 +23,11 @@
 <div class="row">
     <div class="columns">
         <h3>{{eventTitle}}</h3>
-        <h4>{{eventCity}},&nbsp;{{eventDateStart | date:'MMMMd'}}&nbsp;-&nbsp;{{eventDateEnd | date:'MMMMd'}}&nbsp;{{eventDateEnd | date:'y'}}</h4>
+        <h4>{{eventCity}},&nbsp;{{eventDateStart | date:'MMMMd'}}&nbsp;
+
+            <span *ngIf="eventDateEnd != eventDateStart">-&nbsp;&nbsp;{{eventDateEnd | date:'MMMMd'}}</span>
+
+            &nbsp;&nbsp;{{eventDateEnd | date:'y'}}</h4>
     </div>
 </div>
 
@@ -35,7 +39,7 @@
 
                 <material-input floatingLabel [maxCount]="128" type="text" label="Organization*" ngControl="organisation"></material-input>
                 <material-input floatingLabel [maxCount]="128" type="text" label="Department" ngControl="department"></material-input>
-                <material-input floatingLabel [maxCount]="128" type="text" label="Payment reference*" ngControl="payment_reference"></material-input>
+                <material-input floatingLabel [maxCount]="128" type="text" label="Payment reference" ngControl="payment_reference"></material-input>
                 <material-input floatingLabel [maxCount]="128" type="text" label="Street address*" ngControl="street"></material-input>
 
                 <div class="row collapse">
