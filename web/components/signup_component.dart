@@ -14,6 +14,7 @@ import 'package:angular_router/angular_router.dart';
     selector: 'hibis-signup',
     styleUrls: const ['signup_component.css'],
     templateUrl: 'signup_component.html',
+    directives: const [formDirectives, materialDirectives, NgIf],
     providers: const [FORM_PROVIDERS],
     pipes: const [DatePipe],
     preserveWhitespace: false
