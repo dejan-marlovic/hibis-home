@@ -76,7 +76,7 @@
             </div>
             <div class="columns text-center">
                 <material-checkbox #terms id="terms"></material-checkbox>
-                <label for="terms">I have read and accept the&nbsp;<a href='terms.html' target='_blank'>standard terms</a></label>
+                <label for="terms">I have read and accept the&nbsp;<a href='terms.pdf' target='_blank'>standard terms</a></label>
             </div>
             <div class="columns text-center"><button [disabled]="!f.valid || !terms.checked || loading" (click)="onSubmit()">Send application</button></div>
         </fieldset>
