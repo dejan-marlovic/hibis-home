@@ -6,18 +6,18 @@ import 'dart:html';
 
 class Messenger {
   static Future<Response> post(Request req) async {
-    Map<String, String> post = Map();
+    final post = <String, String>{};
     post["msg"] = req.msg;
     post["system"] = req.system;
     post["params"] = req.paramsJSON;
 
-    Map<String, String> headers = Map();
-    String auth = base64.encode(utf8.encode("$_user:$_password"));
+    final headers = <String, String>{};
+    final auth = base64.encode(utf8.encode("$_user:$_password"));
     headers["authorization"] = "Basic $auth";
     headers["content-type"] = "application/x-www-form-urlencoded";
-    HttpRequest request = await HttpRequest.postFormData(parserUrl, post,
+    final request = await HttpRequest.postFormData(parserUrl, post,
         requestHeaders: headers);
-    Response response = Response(request.responseText);
+    final response = Response(request.responseText);
 
     if (response.success == false) {
       print(response._result);
@@ -34,7 +34,7 @@ class Messenger {
 }
 
 class Request {
-  Request(this._msg, this._system, [this._params = null]) {}
+  Request(this._msg, this._system, [this._params]) {}
 
   String get msg => _msg;
   String get system => _system;
@@ -49,10 +49,10 @@ class Request {
 class Response {
   Response(String response) {
     if (response.isEmpty) {
-      _result = Map<String, String>();
+      _result = <String, String>{};
       _success = true;
     } else {
-      Map<String, dynamic> r = json.decode(response);
+      final r = json.decode(response);
       _success = r["success"];
       _result = r["result"];
     }
@@ -60,18 +60,22 @@ class Response {
 
   Map<String, String> getRow([int index = 0]) {
     if (isEmpty) throw Exception(emptyResultMsg);
+        
     if (isMap && index != 0 ||
         isList && index >= (_result as List).length ||
         index < 0) throw Exception("Row index out of bounds ($index)");
-    return isMap ? (_result as Map) : (_result as List)[index];
+    return isMap ? _result as Map<String, dynamic> : (_result as List<Map<String, dynamic>>)[index];
+    
   }
 
-  Map<String, String> getNextRow() {
+  Map<String, String> getNextRow() {          
     if (isEmpty ||
         (isMap && _nextRowIndex != 0) ||
         (isList && _nextRowIndex >= (_result as List).length)) return null;
     _nextRowIndex++;
-    return isMap ? (_result as Map) : (_result as List)[_nextRowIndex - 1];
+    print(_nextRowIndex);
+    return isMap ? _result as Map<String, dynamic> : (_result)[_nextRowIndex - 1].cast<String, String>();
+    
   }
 
   List<Map<String, String>> getTable() {
@@ -79,8 +83,7 @@ class Response {
     if (isList)
       return _result;
     else {
-      List<Map> list = List();
-      list.add(_result);
+      final list = [_result];      
       return list;
     }
   }
@@ -88,7 +91,7 @@ class Response {
   dynamic get result => _result;
 
   bool get isEmpty => _result.isEmpty;
-  bool get isList => _result is List<Map>;
+  bool get isList => _result is List;
   bool get isMap => _result is Map;
 
   bool get success => _success;
@@ -96,5 +99,5 @@ class Response {
   dynamic _result;
   int _nextRowIndex = 0;
 
-  static final emptyResultMsg = "Result is empty";
+  static final String emptyResultMsg = "Result is empty";
 }

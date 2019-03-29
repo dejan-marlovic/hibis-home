@@ -13,8 +13,8 @@ Future main() async {
   Page.highlightNavigationLink(querySelector("#nav_contact"));
 
   Element form = querySelector(".form");
-  formInputs = form.querySelectorAll("input").toList(growable: false);
-  formTextAreas = form.querySelectorAll("textarea").toList(growable: false);
+  formInputs = form.querySelectorAll("input").toList(growable: false).cast<InputElement>();
+  formTextAreas = form.querySelectorAll("textarea").toList(growable: false).cast<TextAreaElement>();
   formInputs.first.focus();
 
   Random rng = Random();
