@@ -72,8 +72,7 @@ class Response {
     if (isEmpty ||
         (isMap && _nextRowIndex != 0) ||
         (isList && _nextRowIndex >= (_result as List).length)) return null;
-    _nextRowIndex++;
-    print(_nextRowIndex);
+    _nextRowIndex++;    
     return isMap ? _result as Map<String, dynamic> : (_result)[_nextRowIndex - 1].cast<String, String>();
     
   }
