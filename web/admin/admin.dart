@@ -4,12 +4,6 @@
 import 'dart:async';
 import 'dart:html';
 
-Future main() async
-{
-
-
+Future main() async {
   document.body.style.opacity = "1";
-
 }
-
-

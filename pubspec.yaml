@@ -2,19 +2,13 @@ name: hibis_academy
 description: Hibis academy website
 version: 0.0.2
 environment:
-  sdk: '>=1.24.2 <2.0.0'
+  sdk: '>=2.0.0 <3.0.0'
+
 dependencies:
-  angular_router: ^1.0.2
-  angular: ^4.0.0
-  angular_components: ^0.7.1
+  angular: ^5.2.0
+  angular_components: ^0.11.0
+  angular_router: ^2.0.0-alpha+21
+
 dev_dependencies:
-  browser: ^0.10.0
-  dart_to_js_script_rewriter: ^1.0.3
-transformers:
-- angular:
-    entry_points: web/signup.dart
-- dart_to_js_script_rewriter
-web:
-  compiler:
-    debug: dartdevc
-    #release: dartdevc
+  build_runner: ^1.2.0
+  build_web_compilers: ^1.2.0

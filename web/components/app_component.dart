@@ -3,24 +3,21 @@
 library app_component;
 
 import 'package:angular/angular.dart';
-import 'signup_component.dart';
 import 'package:angular_router/angular_router.dart';
+import 'signup_component.template.dart' as signup_comp;
 
 @Component(
     selector: 'hibis-signup-app',
-    styleUrls: const ['app_component.css'],
+    styleUrls: ['app_component.css'],
     templateUrl: 'app_component.html',
-    providers: const[ROUTER_PROVIDERS],
-    directives: const [ROUTER_DIRECTIVES],
-    preserveWhitespace: false
-)
-
-@RouteConfig(const
-[
-  const Route(path:'/signup.html', name:'Signup', component: SignupComponent, useAsDefault: true)
-])
-
-class AppComponent
-{
+    providers: [routerProviders],
+    directives: [routerDirectives])
+class AppComponent {
   AppComponent();
+
+  final List<RouteDefinition> routes = [
+    RouteDefinition(
+        routePath: RoutePath(path: '/signup.html', useAsDefault: true),
+        component: signup_comp.SignupComponentNgFactory)
+  ];
 }

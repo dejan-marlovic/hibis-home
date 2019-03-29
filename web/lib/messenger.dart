@@ -4,26 +4,25 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 
-class Messenger
-{
-  static Future<Response> post(Request req) async
-  {
-    Map<String, String> post = new Map();
+class Messenger {
+  static Future<Response> post(Request req) async {
+    Map<String, String> post = Map();
     post["msg"] = req.msg;
     post["system"] = req.system;
     post["params"] = req.paramsJSON;
 
-    Map<String, String> headers = new Map();
-    String auth = BASE64.encode(UTF8.encode("$_user:$_password"));
+    Map<String, String> headers = Map();
+    String auth = base64.encode(utf8.encode("$_user:$_password"));
     headers["authorization"] = "Basic $auth";
     headers["content-type"] = "application/x-www-form-urlencoded";
-    HttpRequest request = await HttpRequest.postFormData(parserUrl, post, requestHeaders: headers);
-    Response response = new Response(request.responseText);
+    HttpRequest request = await HttpRequest.postFormData(parserUrl, post,
+        requestHeaders: headers);
+    Response response = Response(request.responseText);
 
-    if (response.success == false)
-    {
+    if (response.success == false) {
       print(response._result);
-      print("Request message:${req.msg}, system:${req.system}, params:${req.paramsJSON}");
+      print(
+          "Request message:${req.msg}, system:${req.system}, params:${req.paramsJSON}");
     }
 
     return response;
@@ -34,60 +33,53 @@ class Messenger
   static final String _password = "lok13rum";
 }
 
-class Request
-{
-  Request(this._msg, this._system, [this._params = null])
-  {
-  }
+class Request {
+  Request(this._msg, this._system, [this._params = null]) {}
 
   String get msg => _msg;
   String get system => _system;
   Map<String, dynamic> get params => _params;
-  String get paramsJSON => JSON.encode(_params);
+  String get paramsJSON => json.encode(_params);
 
   String _msg;
   String _system;
   Map<String, dynamic> _params;
 }
 
-class Response
-{
-  Response(String response)
-  {
-    if (response.isEmpty)
-    {
-      _result = new Map<String, String>();
+class Response {
+  Response(String response) {
+    if (response.isEmpty) {
+      _result = Map<String, String>();
       _success = true;
-    }
-    else
-    {
-      Map<String, dynamic> r = JSON.decode(response);
+    } else {
+      Map<String, dynamic> r = json.decode(response);
       _success = r["success"];
       _result = r["result"];
     }
   }
 
-  Map<String, String> getRow([int index = 0])
-  {
-    if (isEmpty) throw new Exception(emptyResultMsg);
-    if (isMap && index != 0 || isList && index >= (_result as List).length || index < 0) throw new Exception("Row index out of bounds ($index)");
+  Map<String, String> getRow([int index = 0]) {
+    if (isEmpty) throw Exception(emptyResultMsg);
+    if (isMap && index != 0 ||
+        isList && index >= (_result as List).length ||
+        index < 0) throw Exception("Row index out of bounds ($index)");
     return isMap ? (_result as Map) : (_result as List)[index];
   }
 
-  Map<String, String> getNextRow()
-  {
-    if (isEmpty || (isMap && _nextRowIndex != 0) || (isList && _nextRowIndex >= (_result as List).length)) return null;
+  Map<String, String> getNextRow() {
+    if (isEmpty ||
+        (isMap && _nextRowIndex != 0) ||
+        (isList && _nextRowIndex >= (_result as List).length)) return null;
     _nextRowIndex++;
-    return isMap ? (_result as Map) : (_result as List)[_nextRowIndex-1];
+    return isMap ? (_result as Map) : (_result as List)[_nextRowIndex - 1];
   }
 
-  List<Map<String, String>> getTable()
-  {
-    if (isEmpty) throw new Exception(emptyResultMsg);
-    if (isList) return _result;
-    else
-    {
-      List<Map> list = new List();
+  List<Map<String, String>> getTable() {
+    if (isEmpty) throw Exception(emptyResultMsg);
+    if (isList)
+      return _result;
+    else {
+      List<Map> list = List();
       list.add(_result);
       return list;
     }

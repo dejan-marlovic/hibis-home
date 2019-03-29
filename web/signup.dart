@@ -2,15 +2,11 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular/angular.dart';
-import 'package:angular_components/angular_components.dart';
-import 'components/app_component.dart';
-
-import 'dart:async';
+import 'components/app_component.template.dart' as ng;
 import 'lib/page.dart';
 
-Future main() async
-{
-  bootstrap(AppComponent, [materialProviders]);
+void main() async {
+  runApp(ng.AppComponentNgFactory);
 
   await Page.init();
   Page.show();

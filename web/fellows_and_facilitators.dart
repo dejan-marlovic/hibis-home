@@ -7,16 +7,15 @@ import 'lib/dynamic_html.dart';
 import 'lib/messenger.dart';
 import 'lib/page.dart';
 
-Future main() async
-{
+Future main() async {
   await Page.init();
   Page.highlightNavigationLink(querySelector("#nav_fellows_and_facilitators"));
 
   final DivElement fellowsContainer = querySelector("#fellows-container");
-  Response response = await Messenger.post(new Request("get_rows", "fellows", {"order_by":"hibis DESC, lastname ASC"}));
+  Response response = await Messenger.post(
+      Request("get_rows", "fellows", {"order_by": "hibis DESC, lastname ASC"}));
   Map<String, String> rowData = response.getNextRow();
-  while (rowData != null)
-  {
+  while (rowData != null) {
     fellowsContainer.append(DynamicHtml.generateFellowRow(rowData));
     rowData = response.getNextRow();
   }

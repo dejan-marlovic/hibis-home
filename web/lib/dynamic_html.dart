@@ -1,22 +1,23 @@
 library dynamic_html;
+
 import 'dart:html';
-import 'utility.dart';
+
 import 'messenger.dart';
 import 'page.dart';
+import 'utility.dart';
 
-class DynamicHtml
-{
-  static DivElement generateArticleColumn(Map<String, String> data)
-  {
-    DivElement column = new DivElement();
-    DivElement content = new DivElement();
-    HeadingElement name = new HeadingElement.h4();
-    ParagraphElement dateAndAuthor = new ParagraphElement();
-    DivElement pdfLink = new DivElement();
-    DivElement viewPdfContainer = new DivElement();
-    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png")..className = "arrow";
-    SpanElement viewPdfLabel = new SpanElement();
-    ParagraphElement shareButtonsContainer = new ParagraphElement();
+class DynamicHtml {
+  static DivElement generateArticleColumn(Map<String, String> data) {
+    DivElement column = DivElement();
+    DivElement content = DivElement();
+    HeadingElement name = HeadingElement.h4();
+    ParagraphElement dateAndAuthor = ParagraphElement();
+    DivElement pdfLink = DivElement();
+    DivElement viewPdfContainer = DivElement();
+    ImageElement viewPdfIcon = ImageElement(src: "gfx/blue_arrow.png")
+      ..className = "arrow";
+    SpanElement viewPdfLabel = SpanElement();
+    ParagraphElement shareButtonsContainer = ParagraphElement();
     shareButtonsContainer.className = "share-buttons-container";
 
     content.append(name);
@@ -26,14 +27,11 @@ class DynamicHtml
     pdfLink.append(viewPdfContainer);
     viewPdfContainer.append(viewPdfIcon);
     viewPdfContainer.append(viewPdfLabel);
-    if (data.containsKey("icon") && data["icon"] != null)
-    {
-      ImageElement icon = new ImageElement();
+    if (data.containsKey("icon") && data["icon"] != null) {
+      ImageElement icon = ImageElement();
       icon.src = data["icon"];
-      if (data.containsKey("url_publisher") && data["url_publisher"] != null)
-      {
-        icon.onClick.listen((e)
-        {
+      if (data.containsKey("url_publisher") && data["url_publisher"] != null) {
+        icon.onClick.listen((e) {
           window.open(data["url_publisher"], "_blank");
         });
       }
@@ -45,7 +43,8 @@ class DynamicHtml
     column.className = "large-6 columns article-column";
     name.className = "color-2 bold no-margin";
     dateAndAuthor.className = "link_description normal no-margin";
-    viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
+    viewPdfContainer.className =
+        "pdf_download_button background-color-3-light color-2";
     viewPdfLabel.className = "normal";
     pdfLink.className = "clickable inline";
 
@@ -54,36 +53,42 @@ class DynamicHtml
     String dateFormatted = Utility.dfMonthYear.format(dt);
 
     //String author = (data["author"] == null) ? "" : data["author"];
-    if (data["author"] != null) dateAndAuthor.setInnerHtml("${data["author"]}, $dateFormatted");
-    else dateAndAuthor.setInnerHtml(dateFormatted);
+    if (data["author"] != null)
+      dateAndAuthor.setInnerHtml("${data["author"]}, $dateFormatted");
+    else
+      dateAndAuthor.setInnerHtml(dateFormatted);
 
     //dateAndAuthor.setInnerHtml("$author, $dateFormatted");
 
     viewPdfLabel.setInnerHtml(" view PDF");
-    pdfLink.onClick.listen((MouseEvent e) async => window.open(data["url_pdf"], "_blank"));
+    pdfLink.onClick
+        .listen((MouseEvent e) async => window.open(data["url_pdf"], "_blank"));
 
-    ImageElement shareEmailImage = new ImageElement(src: "gfx/email-icon.png")..className = "email-icon float-right";
-    AnchorElement shareEmailAnchor = new AnchorElement();
+    ImageElement shareEmailImage = ImageElement(src: "gfx/email-icon.png")
+      ..className = "email-icon float-right";
+    AnchorElement shareEmailAnchor = AnchorElement();
     String subject = data["name"];
     String link = data["url_pdf"];
     shareEmailAnchor.href = "mailto:?Subject=$subject&body=$link";
     shareEmailAnchor.append(shareEmailImage);
     shareButtonsContainer.append(shareEmailAnchor);
 
-    DivElement shareFacebook = new DivElement();
+    DivElement shareFacebook = DivElement();
     shareFacebook.className = "fb-share-button float-right";
     shareFacebook.dataset["href"] = link;
     shareFacebook.dataset["layout"] = "button";
     shareFacebook.dataset["size"] = "small";
     shareFacebook.dataset["mobile-iframe"] = "true";
-    AnchorElement shareFacebookAnchor = new AnchorElement(href:"https://www.facebook.com/sharer/sharer.php?$link");
+    AnchorElement shareFacebookAnchor =
+        AnchorElement(href: "https://www.facebook.com/sharer/sharer.php?$link");
     shareFacebookAnchor.className = "fb-xfbml-parse-ignore";
     shareFacebookAnchor.target = "_blank";
     shareFacebook.append(shareFacebookAnchor);
     shareButtonsContainer.append(shareFacebook);
 
-    DivElement linkedInScriptContainer = new DivElement()..className = "float-right";
-    ScriptElement linkedInScript = new ScriptElement();
+    DivElement linkedInScriptContainer = DivElement()
+      ..className = "float-right";
+    ScriptElement linkedInScript = ScriptElement();
     linkedInScript.type = "IN/Share";
     linkedInScript.dataset["url"] = link;
     linkedInScript.className = "float-right";
@@ -94,17 +99,17 @@ class DynamicHtml
     return column;
   }
 
-  static DivElement generateArticleRow(Map<String, String> data)
-  {
-    DivElement row = new DivElement();
-    DivElement col1 = new DivElement();
-    DivElement col2 = new DivElement();
-    HeadingElement name = new HeadingElement.h4();
-    SpanElement date = new SpanElement();
-    DivElement pdfLink = new DivElement();
-    DivElement viewPdfContainer = new DivElement();
-    ImageElement viewPdfIcon = new ImageElement(src:"gfx/blue_arrow.png")..className = "arrow";
-    SpanElement viewPdfLabel = new SpanElement();
+  static DivElement generateArticleRow(Map<String, String> data) {
+    DivElement row = DivElement();
+    DivElement col1 = DivElement();
+    DivElement col2 = DivElement();
+    HeadingElement name = HeadingElement.h4();
+    SpanElement date = SpanElement();
+    DivElement pdfLink = DivElement();
+    DivElement viewPdfContainer = DivElement();
+    ImageElement viewPdfIcon = ImageElement(src: "gfx/blue_arrow.png")
+      ..className = "arrow";
+    SpanElement viewPdfLabel = SpanElement();
     row.append(col1);
     row.append(col2);
     col2.append(name);
@@ -119,7 +124,8 @@ class DynamicHtml
     col2.className = "small-11 columns";
     name.className = "color-2 bold no-margin";
     date.className = "link_description normal";
-    viewPdfContainer.className = "pdf_download_button background-color-3-light color-2";
+    viewPdfContainer.className =
+        "pdf_download_button background-color-3-light color-2";
     viewPdfLabel.className = "normal";
     pdfLink.className = "clickable inline";
 
@@ -128,24 +134,24 @@ class DynamicHtml
 
     DateTime dt = DateTime.parse(data["date"]);
     date.setInnerHtml(Utility.dfMonthYear.format(dt));
+
     /// TODO phrase
     viewPdfLabel.setInnerHtml(" view PDF");
 
-    pdfLink.onClick.listen((MouseEvent e) async => window.open(data["url_pdf"], "_blank"));
+    pdfLink.onClick
+        .listen((MouseEvent e) async => window.open(data["url_pdf"], "_blank"));
 
     return row;
   }
 
-  static DivElement generateBookColumn(Map<String, String> data)
-  {
-    DivElement column = new DivElement();
-    DivElement row1 = new DivElement();
-    DivElement col1 = new DivElement();
-    ImageElement cover = new ImageElement(src:data["image"]);
-    DivElement col2 = new DivElement();
-    HeadingElement title = new HeadingElement.h4();
-    ParagraphElement info = new ParagraphElement();
-
+  static DivElement generateBookColumn(Map<String, String> data) {
+    DivElement column = DivElement();
+    DivElement row1 = DivElement();
+    DivElement col1 = DivElement();
+    ImageElement cover = ImageElement(src: data["image"]);
+    DivElement col2 = DivElement();
+    HeadingElement title = HeadingElement.h4();
+    ParagraphElement info = ParagraphElement();
 
     column.append(row1);
     row1.append(col1);
@@ -154,7 +160,8 @@ class DynamicHtml
     col2.append(title);
     col2.append(info);
 
-    column.className = "large-6 large-offset-0 medium-10 medium-offset-1 columns";
+    column.className =
+        "large-6 large-offset-0 medium-10 medium-offset-1 columns";
     row1.className = "row";
 
     col1.className = "right-blue-border small-6 columns book-column";
@@ -164,15 +171,15 @@ class DynamicHtml
 
     cover.alt = data["name"];
     title.setInnerHtml(data["name"].toUpperCase());
-    info.setInnerHtml("<strong>Author:</strong><br />${data["author"]}<br /><strong>Format:</strong><br />${data["format"]}");
+    info.setInnerHtml(
+        "<strong>Author:</strong><br />${data["author"]}<br /><strong>Format:</strong><br />${data["format"]}");
 
-    if (data["brief"] != null && data["brief"].isNotEmpty)
-    {
-      ParagraphElement toggle = new ParagraphElement();
+    if (data["brief"] != null && data["brief"].isNotEmpty) {
+      ParagraphElement toggle = ParagraphElement();
       col2.append(toggle);
-      DivElement row2 = new DivElement();
-      DivElement col3 = new DivElement();
-      ParagraphElement brief = new ParagraphElement();
+      DivElement row2 = DivElement();
+      DivElement col3 = DivElement();
+      ParagraphElement brief = ParagraphElement();
       column.append(row2);
       row2.append(col3);
       col3.append(brief);
@@ -181,18 +188,13 @@ class DynamicHtml
       toggle.className = "clickable";
       brief.className = "book-brief";
       toggle.setInnerHtml("&lt;Read more&gt;");
-      brief.setInnerHtml(data["brief"], validator:Page.htmlValidator);
-      toggle.onClick.listen((MouseEvent e)
-      {
-        if (e.button == 0)
-        {
-          if (row2.classes.contains("is-hidden"))
-          {
+      brief.setInnerHtml(data["brief"], validator: Page.htmlValidator);
+      toggle.onClick.listen((MouseEvent e) {
+        if (e.button == 0) {
+          if (row2.classes.contains("is-hidden")) {
             row2.classes.remove("is-hidden");
             toggle.setInnerHtml("&lt;Show less&gt;");
-          }
-          else
-          {
+          } else {
             row2.classes.add("is-hidden");
             toggle.setInnerHtml("&lt;Read more&gt;");
           }
@@ -203,42 +205,39 @@ class DynamicHtml
     return column;
   }
 
-  static DivElement generateEventRow(Map<String, String> data, [bool sign_up = false])
-  {
-    DivElement row = new DivElement();
-    DivElement column = new DivElement();
-    HeadingElement name = new HeadingElement.h4();
-    DivElement description = new DivElement();
-    SpanElement where = new SpanElement();
+  static DivElement generateEventRow(Map<String, String> data,
+      [bool sign_up = false]) {
+    DivElement row = DivElement();
+    DivElement column = DivElement();
+    HeadingElement name = HeadingElement.h4();
+    DivElement description = DivElement();
+    SpanElement where = SpanElement();
     description.append(where);
     column.append(name);
     column.append(description);
-    if (data["has_pdf"] == "1" || (data["url_readmore"] != null && data["url_readmore"].isNotEmpty))
-    {
-      ButtonElement readMore = new ButtonElement();
+    if (data["has_pdf"] == "1" ||
+        (data["url_readmore"] != null && data["url_readmore"].isNotEmpty)) {
+      ButtonElement readMore = ButtonElement();
       readMore.setInnerHtml("Read more");
       readMore.className = "large-margin-left-1";
-      if (data["has_pdf"] == "1")
-      {
-        readMore.onClick.listen((MouseEvent e) async
-        {
-          if (e.button == 0)
-          {
+      if (data["has_pdf"] == "1") {
+        readMore.onClick.listen((MouseEvent e) async {
+          if (e.button == 0) {
             WindowBase w = window.open("loading.html", "_blank");
-            Request req = new Request("get_rows", "events", {"columns":"id, pdf", "where":"id=${data["id"]}", "limit":"1"});
+            Request req = Request("get_rows", "events", {
+              "columns": "id, pdf",
+              "where": "id=${data["id"]}",
+              "limit": "1"
+            });
             Response r = await Messenger.post(req);
-            if (r.success && !r.isEmpty)
-            {
+            if (r.success && !r.isEmpty) {
               Map<String, String> row = r.getNextRow();
               if (row["pdf"] != null) w.location.href = row["pdf"];
             }
           }
         });
-      }
-      else if (data["url_readmore"] != null)
-      {
-        readMore.onClick.listen((MouseEvent e)
-        {
+      } else if (data["url_readmore"] != null) {
+        readMore.onClick.listen((MouseEvent e) {
           window.open(data["url_readmore"], "_blank");
         });
       }
@@ -251,7 +250,6 @@ class DynamicHtml
     name.className = "bold color-2 no-margin";
     description.className = "large-margin-left-1 link_description";
 
-
     DateTime dateStart = DateTime.parse(data["date_start"]);
     DateTime dateEnd = DateTime.parse(data["date_end"]);
 
@@ -262,59 +260,51 @@ class DynamicHtml
     day_end += Utility.getDayOfMonthSuffix(int.parse(day_end));
     String monthYear = Utility.dfMonthYear.format(dateStart);
 
-    if (dateEnd.difference(dateStart).inDays > 0)
-    {
-      if (dateStart.month == dateEnd.month)
-      {
+    if (dateEnd.difference(dateStart).inDays > 0) {
+      if (dateStart.month == dateEnd.month) {
         /// Start/end date are in same month
         dateString = "$day - $day_end  of $monthYear";
-      }
-      else
-      {
+      } else {
         /// Course start/end are on different months
         String monthStart = Utility.dfMonth.format(dateStart);
         String monthYearEnd = Utility.dfMonthYear.format(dateEnd);
         dateString = "$day $monthStart - $day_end $monthYearEnd";
       }
-    }
-    else dateString = "$day $monthYear";
+    } else
+      dateString = "$day $monthYear";
 
-    name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}", validator: Page.htmlValidator);
-    where.setInnerHtml("${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
+    name.setInnerHtml("&raquo;&nbsp;&nbsp;${data["name"]}",
+        validator: Page.htmlValidator);
+    where.setInnerHtml(
+        "${data["city"]}, ${data["country"]} ($dateString) - in ${data["lang"]}");
 
-    if (sign_up == true)
-    {
-      ButtonElement signUp = new ButtonElement();
+    if (sign_up == true) {
+      ButtonElement signUp = ButtonElement();
       column.append(signUp);
       signUp.className = "large-margin-left-1";
       signUp.setInnerHtml("Register");
 
-      signUp.onClick.listen((MouseEvent e)
-      {
-        if (e.button == 0)
-        {
-          window.open(data["url_signup"],"_blank");
+      signUp.onClick.listen((MouseEvent e) {
+        if (e.button == 0) {
+          window.open(data["url_signup"], "_blank");
         }
       });
-
     }
-
 
     return row;
   }
 
-  static DivElement generateFellowRow(Map<String, String> data)
-  {
-    DivElement row = new DivElement();
-    DivElement column = new DivElement();
-    DivElement row1 = new DivElement();
-    DivElement hidden = new DivElement();
-    DivElement row2 = new DivElement();
-    DivElement row3 = new DivElement();
-    DivElement row4 = new DivElement();
-    DivElement row4Column = new DivElement();
-    DivElement row5 = new DivElement();
-    DivElement row5Column = new DivElement();
+  static DivElement generateFellowRow(Map<String, String> data) {
+    DivElement row = DivElement();
+    DivElement column = DivElement();
+    DivElement row1 = DivElement();
+    DivElement hidden = DivElement();
+    DivElement row2 = DivElement();
+    DivElement row3 = DivElement();
+    DivElement row4 = DivElement();
+    DivElement row4Column = DivElement();
+    DivElement row5 = DivElement();
+    DivElement row5Column = DivElement();
 
     row.append(column);
     column.append(row1);
@@ -327,11 +317,11 @@ class DynamicHtml
     hidden.className = "is-hidden";
 
     /// Row 1 (name + short desc + toggle)
-    DivElement row1Col = new DivElement();
-    HeadingElement name = new HeadingElement.h4();
-    ParagraphElement shortDescription = new ParagraphElement();
+    DivElement row1Col = DivElement();
+    HeadingElement name = HeadingElement.h4();
+    ParagraphElement shortDescription = ParagraphElement();
     shortDescription.className = "no-margin";
-    ParagraphElement toggle = new ParagraphElement();
+    ParagraphElement toggle = ParagraphElement();
 
     row1.append(row1Col);
     row1Col.append(name);
@@ -346,44 +336,37 @@ class DynamicHtml
     shortDescription.setInnerHtml(data["description_short"]);
     toggle.setInnerHtml("&lt;Read more&gt;");
 
-    toggle.onClick.listen((MouseEvent e)
-    {
-      if (e.button == 0)
-      {
-        if (hidden.classes.contains("is-hidden"))
-        {
+    toggle.onClick.listen((MouseEvent e) {
+      if (e.button == 0) {
+        if (hidden.classes.contains("is-hidden")) {
           hidden.classes.remove("is-hidden");
           toggle.setInnerHtml("&lt;Show less&gt;");
-        }
-        else
-        {
+        } else {
           hidden.classes.add("is-hidden");
           toggle.setInnerHtml("&lt;Read more&gt;");
         }
       }
     });
 
-
     /// Row 2 (long description)
-    DivElement row2Col = new DivElement();
-    ParagraphElement longDescription = new ParagraphElement();
+    DivElement row2Col = DivElement();
+    ParagraphElement longDescription = ParagraphElement();
     row2.append(row2Col);
     row2Col.append(longDescription);
-    ImageElement  portrait_image = new ImageElement(src:data["image"]);
+    ImageElement portrait_image = ImageElement(src: data["image"]);
 
     row2.className = "row";
     row2Col.className = "columns";
     longDescription.setInnerHtml(data["description_long"]);
 
     /// Row 3 (portrait + contact info)
-    DivElement row3Col1 = new DivElement();
-    DivElement row3Col2 = new DivElement();
-    DivElement portrait = new DivElement();
+    DivElement row3Col1 = DivElement();
+    DivElement row3Col2 = DivElement();
+    DivElement portrait = DivElement();
     portrait.append(portrait_image);
-    HeadingElement contactHeader = new HeadingElement.h5();
-    AnchorElement email = new AnchorElement(href:"mailto:" + data["email"]);
-    ParagraphElement phone = new ParagraphElement();
-
+    HeadingElement contactHeader = HeadingElement.h5();
+    AnchorElement email = AnchorElement(href: "mailto:" + data["email"]);
+    ParagraphElement phone = ParagraphElement();
 
     row3.append(row3Col1);
     row3Col1.append(portrait);
@@ -392,9 +375,9 @@ class DynamicHtml
     row3Col2.append(email);
     row3Col2.append(phone);
 
-    if (data.containsKey("logo"))
-    {
-      ImageElement logo = new ImageElement(src:data["logo"])..className = "fellow-logo";
+    if (data.containsKey("logo")) {
+      ImageElement logo = ImageElement(src: data["logo"])
+        ..className = "fellow-logo";
       row4Column.append(logo);
     }
     row4.append(row4Column);
@@ -411,7 +394,6 @@ class DynamicHtml
     contactHeader.setInnerHtml("Contact");
     email.setInnerHtml(data["email"]);
     phone.setInnerHtml("${data["phone"]} <br />${data["phone_2"]}");
-
 
     return row;
   }

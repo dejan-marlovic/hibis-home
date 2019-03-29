@@ -2,34 +2,28 @@ import 'dart:async';
 import 'dart:html';
 import '../../lib/messenger.dart';
 
-
-class Table
-{
-  Table(this._container)
-  {
-    _columnSet.add({"id":"id", "type":"text"});
+class Table {
+  Table(this._container) {
+    _columnSet.add({"id": "id", "type": "text"});
   }
 
-  void addColumnSet(Map<String, String> properties)
-  {
+  void addColumnSet(Map<String, String> properties) {
     _columnSet.add(properties);
   }
 
-  Future qLoad(String msg, String system, String order_by) async
-  {
+  Future qLoad(String msg, String system, String order_by) async {
     _system = system;
     _container.children.clear();
-    TableElement table = new TableElement();
+    TableElement table = TableElement();
     TableSectionElement head = table.createTHead();
-    TableRowElement headRow = new TableRowElement();
+    TableRowElement headRow = TableRowElement();
     head.append(headRow);
     TableSectionElement body = table.createTBody();
     _container.append(table);
 
-    List<String> columnList = new List();
-    _columnSet.forEach((row)
-    {
-      TableCellElement td = new TableCellElement();
+    List<String> columnList = List();
+    _columnSet.forEach((row) {
+      TableCellElement td = TableCellElement();
       td.setInnerHtml(row["id"]);
       if (row["required"] == "1") td.classes.add("required");
       headRow.append(td);
@@ -37,25 +31,22 @@ class Table
     });
 
     /// Add buttons column
-    TableCellElement td = new TableCellElement();
+    TableCellElement td = TableCellElement();
     td.setInnerHtml("Actions");
     headRow.append(td);
 
-    Request req = new Request(msg, _system, {"columns":columnList.join(", "), "order_by":order_by});
+    Request req = Request(
+        msg, _system, {"columns": columnList.join(", "), "order_by": order_by});
     Response r = await Messenger.post(req);
 
-
     Map<String, String> publicationData = r.getNextRow();
-    while (publicationData != null)
-    {
+    while (publicationData != null) {
       String id = publicationData["id"];
-      TableRowElement tr = new TableRowElement();
-      _columnSet.forEach((row)
-      {
-        TableCellElement td = new TableCellElement();
+      TableRowElement tr = TableRowElement();
+      _columnSet.forEach((row) {
+        TableCellElement td = TableCellElement();
         String value = publicationData[row["id"]];
-        switch (row["type"])
-        {
+        switch (row["type"]) {
           case "input-date":
             td.append(_generateInputDate(row, value, id));
             break;
@@ -88,8 +79,8 @@ class Table
         tr.append(td);
       });
 
-      TableCellElement td = new TableCellElement();
-      ButtonElement delete = new ButtonElement();
+      TableCellElement td = TableCellElement();
+      ButtonElement delete = ButtonElement();
       delete.className = "button";
       delete.setInnerHtml("Delete");
 
@@ -103,61 +94,65 @@ class Table
     }
   }
 
-  Future _qDelete(String id) async
-  {
-    await Messenger.post(new Request("delete", _system, {"id":id}));
+  Future _qDelete(String id) async {
+    await Messenger.post(Request("delete", _system, {"id": id}));
     window.location.reload();
   }
 
-  DateInputElement _generateInputDate(Map<String, String> properties, String value, String row_id)
-  {
-    DateInputElement input = new DateInputElement();
+  DateInputElement _generateInputDate(
+      Map<String, String> properties, String value, String row_id) {
+    DateInputElement input = DateInputElement();
     _defaultProperties(properties, input);
     _defaultInputProperties(properties, input, value);
     _defaultUpdate(input, properties["id"], row_id);
     return input;
   }
 
-  EmailInputElement _generateInputEmail(Map<String, String> properties, String value, String row_id)
-  {
-    EmailInputElement input = new EmailInputElement();
+  EmailInputElement _generateInputEmail(
+      Map<String, String> properties, String value, String row_id) {
+    EmailInputElement input = EmailInputElement();
     _defaultProperties(properties, input);
     _defaultInputProperties(properties, input, value);
     _defaultUpdate(input, properties["id"], row_id);
     return input;
   }
 
-  DivElement _generateInputFile(Map<String, String> properties, String value, String row_id)
-  {
-    DivElement container = new DivElement();
-    ImageElement thumb = new ImageElement();
+  DivElement _generateInputFile(
+      Map<String, String> properties, String value, String row_id) {
+    DivElement container = DivElement();
+    ImageElement thumb = ImageElement();
     thumb.className = "thumb";
-    if (value != null)
-    {
-      if (value.startsWith("data:image/")) thumb.src = value;
-      else thumb.src = "../gfx/pdf-icon.png";
+    if (value != null) {
+      if (value.startsWith("data:image/"))
+        thumb.src = value;
+      else
+        thumb.src = "../gfx/pdf-icon.png";
 
       container.append(thumb);
     }
 
-    FileUploadInputElement input = new FileUploadInputElement();
+    FileUploadInputElement input = FileUploadInputElement();
 
     container.append(input);
     _defaultProperties(properties, input);
     if (properties["required"] == "1") input.required = true;
     if (properties["accept"] != null) input.accept = properties["accept"];
 
-    input.onChange.listen((_)
-    {
+    input.onChange.listen((_) {
       if (_system == null) return;
       input.disabled = true;
-      FileReader reader = new FileReader();
+      FileReader reader = FileReader();
       reader.readAsDataUrl(input.files.first);
-      reader.onLoad.listen((_) async
-      {
-        await Messenger.post(new Request("update", _system, {"column":properties["id"], "value":reader.result, "id":row_id}));
-        if (reader.result.toString().startsWith("data:image/")) thumb.src = reader.result;
-        else thumb.src = "../gfx/pdf-icon.png";
+      reader.onLoad.listen((_) async {
+        await Messenger.post(Request("update", _system, {
+          "column": properties["id"],
+          "value": reader.result,
+          "id": row_id
+        }));
+        if (reader.result.toString().startsWith("data:image/"))
+          thumb.src = reader.result;
+        else
+          thumb.src = "../gfx/pdf-icon.png";
         input.disabled = false;
       });
     });
@@ -165,53 +160,53 @@ class Table
     return container;
   }
 
-  TextInputElement _generateInputText(Map<String, String> properties, String value, String row_id)
-  {
-    TextInputElement input = new TextInputElement();
+  TextInputElement _generateInputText(
+      Map<String, String> properties, String value, String row_id) {
+    TextInputElement input = TextInputElement();
     _defaultProperties(properties, input);
     _defaultInputProperties(properties, input, value);
     _defaultUpdate(input, properties["id"], row_id);
-    if (properties["maxlength"] != null) input.maxLength = int.parse(properties["maxlength"]);
+    if (properties["maxlength"] != null)
+      input.maxLength = int.parse(properties["maxlength"]);
     return input;
   }
 
-  TextAreaElement _generateInputTextArea(Map<String, String> properties, String value, String row_id)
-  {
-    TextAreaElement input = new TextAreaElement();
+  TextAreaElement _generateInputTextArea(
+      Map<String, String> properties, String value, String row_id) {
+    TextAreaElement input = TextAreaElement();
     _defaultProperties(properties, input);
     _defaultInputProperties(properties, input, value);
     _defaultUpdate(input, properties["id"], row_id);
-    if (properties["maxlength"] != null) input.maxLength = int.parse(properties["maxlength"]);
+    if (properties["maxlength"] != null)
+      input.maxLength = int.parse(properties["maxlength"]);
     if (properties["rows"] != null) input.rows = int.parse(properties["rows"]);
 
     return input;
   }
 
-  UrlInputElement _generateInputUrl(Map<String, String> properties, String value, String row_id)
-  {
-    UrlInputElement input = new UrlInputElement();
+  UrlInputElement _generateInputUrl(
+      Map<String, String> properties, String value, String row_id) {
+    UrlInputElement input = UrlInputElement();
     _defaultProperties(properties, input);
     _defaultInputProperties(properties, input, value);
     _defaultUpdate(input, properties["id"], row_id);
-    if (properties["maxlength"] != null) input.maxLength = int.parse(properties["maxlength"]);
+    if (properties["maxlength"] != null)
+      input.maxLength = int.parse(properties["maxlength"]);
     return input;
   }
 
-  void _defaultProperties(Map<String, String> properties, Element element)
-  {
+  void _defaultProperties(Map<String, String> properties, Element element) {
     if (properties["width"] != null) element.style.width = properties["width"];
   }
 
-  void _defaultInputProperties(Map<String, String> properties, dynamic input, String value)
-  {
+  void _defaultInputProperties(
+      Map<String, String> properties, dynamic input, String value) {
     if (properties["required"] == "1") input.required = true;
     input.value = value;
   }
 
-  void _defaultUpdate(dynamic element, String column, String id)
-  {
-    element.onBlur.listen((_) async
-    {
+  void _defaultUpdate(dynamic element, String column, String id) {
+    element.onBlur.listen((_) async {
       String value = element.value;
       if (value == "undefined") value = "";
       element.disabled = true;
@@ -220,14 +215,13 @@ class Table
     });
   }
 
-  Future _qUpdateColumn(String column, String value, String row_id) async
-  {
+  Future _qUpdateColumn(String column, String value, String row_id) async {
     if (_system == null) return;
-    await Messenger.post(new Request("update", _system, {"column":column, "value":value, "id":row_id}));
+    await Messenger.post(Request(
+        "update", _system, {"column": column, "value": value, "id": row_id}));
   }
 
-
-  List<Map<String, String>> _columnSet = new List();
+  List<Map<String, String>> _columnSet = List();
   final DivElement _container;
   String _system;
 }
